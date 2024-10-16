@@ -1,0 +1,146 @@
+body {
+	color: #000;
+	font-family: "Franklin Gothic Book", verdana, Arial, sans-serif, "Franklin Gothic Medium";
+	font-size: 11pt;
+	line-height: 15pt;
+}
+
+p { margin: 0 0 15pt; clear:both;}
+
+.summary ul,
+.summary ol,
+.entry-content ul,
+.entry-content ol,
+.bio ul,
+.bio ol,
+.copy ul,
+.copy ol { margin: 0 0 15pt; }
+.summary ul,
+.entry-content ul,
+.bio ul,
+.copy ul { padding-left: 15pt; }
+	.summary ul li,
+	.entry-content ul li,
+	.bio ul li,
+	.copy ul li { list-style: disc; }
+.summary ol,
+.entry-content ol,
+.bio ol,
+.copy ol { padding-left: 20pt; }
+	.summary ol li,
+	.entry-content ol li,
+	.bio ol li,
+	.copy ol li { list-style: decimal; }
+.entry-content .author ul { padding-left: 0; }
+	.entry-content .author li { list-style: none; }
+		.entry-content .author span,
+		.entry-content .author a { display: block; }
+
+.nav,
+#breadcrumb .section-parents,
+#pagination,
+#utility,
+#contentinfo ul,
+#breadcrumb p,
+.toggle,
+.tool-links,
+.instructions { display: none; }
+span.underline {display: inline-block; width: 150pt; border-bottom: 1px solid #B5B5B6; }
+
+a[href]:after { content: " (" attr(href) ") "; font-size: 9pt; color: #333; }
+a[href^="/"]:after,
+a[href^="."]:after { content: " (http://www.star.com/" attr(href) ") ";}
+h1 a[href]:after,
+.entry-title a[href]:after { content: ""; }
+
+#popup h2,
+#aside {display: none; }
+#popup * {background: none;}
+#popup p {line-height: 200%; }
+#popup a.close-link[href]:after,
+#popup a.close-link[href]:after{content: " " !important; }
+#popup a.close-link { position: absolute; top:5pt; right: 5pt;}
+#popup .bank-information { margin-bottom: 50pt; }
+#popup .bank-information th,
+#popup .employee-information th { text-align: left; width: 180pt; line-height: 200%; }
+#direct-deposit-page .printable-request-form p span, .employee-information span {display: inline-block; width: 220pt; border-bottom: 1px solid #B5B5B6; }
+
+h3 {
+	font-size:1.6em;
+	font-weight:normal;
+	clear:both;
+	margin-bottom:30px;
+}
+h4 {
+	padding:0;
+	margin:0;
+}
+h5 {
+	padding:30px 0 0;
+	margin:0;
+	font-weight:normal;
+	font-size:1em;
+	clear:both;
+}
+table.print-borders_ {
+	font-size:.9em;
+	border-bottom:1px solid #999;
+	margin-top:10px;
+}
+.print-borders_ thead th {
+	padding:0 5px;
+}
+.print-borders_ tbody th {
+	font-weight:normal;
+	padding:3px 0 2px 10px;
+	margin-right:0;
+	border-width: 1px 0 0 1px;
+	border-color:#999;
+	border-style:solid;
+}
+.print-borders_ th.first_ {
+	text-align:left;
+	padding-left:10px;
+}
+.print-borders_ td {
+	padding:3px 5px 2px;
+	border-width: 1px 1px 0 0;
+	border-color:#999;
+	border-style:solid;
+}
+.print-borders_ td.num {
+	text-align:right;
+}
+table.print-borders_  caption {
+	display:none;
+}
+ul.styled {
+	margin:8px 0 26px;
+}
+ul.styled li {
+	line-height:2.2em;
+}
+
+dl {
+	line-height:2.2em;
+}
+dt {
+	display:block;
+	width:200px;
+	float:left;
+	clear:both;
+}
+dd {
+	float:left;
+	width:400px;
+	text-align:left;
+}
+dl.statement {
+	line-height:1.7em;
+}
+dl.statement dt {
+	width:100px;
+}
+p#copyright {
+	padding-top:20px;
+}

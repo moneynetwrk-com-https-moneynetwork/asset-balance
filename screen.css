@@ -1,0 +1,6346 @@
+/*@import url(lib/baseline.css);
+@import url(lib/shell.css);
+@import url(lib/nav.css);
+@import url(lib/content.css);
+@import url(lib/forms.css);
+@import url(lib/modules.css);
+@import url(lib/tables.css);
+@import url(lib/secondary-card-invite.css);*/
+
+
+
+
+/*PR16006863 User Card Controls - Start */
+.emptyBox{
+	    height: 450px;
+    float: right;
+    
+}
+.leanMoretext{
+	float: right;
+    font-size: 12px;
+    margin-right: 76px;
+    margin-top: 42px;
+    height: 23px;
+    padding: 8px;
+}
+.lockContent{
+    display: inline-block;
+    position: relative;
+    height: 373px;
+    width: 450px;
+    margin-left: 20px;
+}
+
+.lockText{
+    margin-top: 29px;
+
+}
+#popupLockButton{
+margin-top:20px;
+ margin-left:40px;
+ border-radius:4px;
+ height:25px;
+ width:86px;
+ display:inline;
+}
+#popupCancelButton{
+margin-top:20px;
+ margin-left:20px;
+ border-radius:4px;
+ height:25px;
+ width:80px;
+ display:inline;
+}
+.popupText{
+ padding-left:40px;
+ padding-right:40px;
+ padding-bottom:9px; 
+}
+.popupHeader{
+  border-bottom: 1px solid #000;
+	padding-bottom: 3px;
+	margin-right:40px;
+	margin-left:40px;
+}
+
+.invisibleInstruction{
+display:none;
+}
+.unlockInstructionUp{
+  position: absolute;
+    display: block;
+    margin-top: 20px;
+}
+.unlockInstructionDown{
+       display: block;
+    position: absolute;
+    margin-top: 110px;
+}
+.lockInstructionUp{
+	    display: block;
+    /* position: absolute; */
+    margin-top: 20px;
+}
+.lockInstructionDown{
+             display: block;
+    position: absolute;
+    margin-top: 35px;
+}
+.horizontalSeperatorUp{
+    border: 1px solid;
+    position: relative;
+    margin-top: 16px;
+}
+
+.horizontalSeperatorDown{
+        border: 1px solid;
+    position: relative;
+    margin-top: 90px;
+}
+
+
+ .switchButton{
+    margin-left: 22px;
+    background-color: #e6e6e6;
+    width: 80px;
+    height: 28px;
+    border: 1px solid #b3b3b3;
+    position: relative;
+    display: inline-block;
+    border-radius: 3px;
+    cursor:pointer;
+ }
+ .switchButton input{
+	display:none;
+ } 
+
+ .switchText{
+	text-align: center;
+    display: inline-block;
+    width: 46%;
+    height:81%;
+    padding-top: 5px;
+    font-family: Arial Black, Gadget, sans-serif;	
+ }
+ 
+ .switch{   
+    position: absolute;
+    width: 50%;
+    top: 0;
+    height: 99%;
+    left: 0px;
+    -webkit-transition: .4s;
+    transition: .4s;
+    margin-top: 0px;
+    margin-left: 0px;
+    border-radius: 3px;
+    background: linear-gradient(#f2f2f2, #d9d9d9, #b3b3b3);
+ }
+
+ input:checked + .on{
+ -webkit-transform: translateX(40px);
+ -ms-transform: translateX(40px);
+  transform: translateX(40px);
+ }
+
+/* PR16006863 User Card Controls - End */
+
+
+
+
+/* START : baseline.css */
+
+html,body{height:100%;}
+html,body,div,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,address,code,img,kbd,s,samp,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,abbr,b,cite,del,dfn,em,i,ins,q,span,strong,sub,sup{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
+html,body,div,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,address,code,img,kbd,s,samp,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{font-style:normal;font-weight:normal;}
+body{font-size:100%;line-height:1;background:#fff;color:#000;}
+a{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;background:transparent;}
+a,ins{text-decoration:none;}
+
+abbr{cursor:help;}
+del{text-decoration:line-through;}
+/*label,*/a abbr{cursor:pointer;}
+ol,ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:"";content:none;}
+sub,sup{line-height:0;font-size:70%;}
+sub{vertical-align:sub;}
+sup{vertical-align:super;}
+table{/*border-collapse:collapse;*/border-spacing:0;}
+
+
+* html sup {
+	position: relative;
+	
+	top: -0.5em;
+}
+*+html sup {
+	position: relative;
+	top: -0.5em;
+}
+
+h2,h3,h4 { color:#222; }
+
+
+/* END : baseline.css */
+
+
+/* START : shell.css */
+
+/* Base font styles and major content groupings.
+ * For navigation, see nav.css.
+ * For detailed content sections, see content.css.
+ * For form-related styles, see forms.css.
+ */
+
+
+body {
+	background-color: #FFF;
+	color:#222;
+	font-family: "Franklin Gothic Book", verdana, arial, sans-serif, "Franklin Gothic Medium";
+	font-size: 0.75em;
+	/*base size = 12px*/  line-height: 1.5em;
+	/* base leading = 18px */
+	background-image: url(../images/skin/bg-body-gradient.png);
+	background-repeat: repeat-x;
+	background-position: 0 0;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+a.current_ { cursor: default; }
+
+a.current_:hover {
+	outline: 0;
+	text-decoration: none;
+}
+
+
+/* Wrappers */
+#body { /* This keeps the #header box-shadow from */
+	min-height: 100%;
+	min-width: 970px;
+	
+	width: 100%;
+}
+
+#wrapper { width:970px; margin:0 auto; }
+
+/* drop shadows on container elements */
+#header {
+	-moz-box-shadow: 0 4px 4px rgba(0,0,0,0.6);
+	-moz-border-bottomright-radius: 2px; 
+	-moz-border-bottomleft-radius: 2px;
+	/* Firefox 3.5+ */
+	-webkit-box-shadow: 0 4px 4px rgba(0,0,0,0.6);
+	-webkit-border-bottom-right-radius: 2px;
+	-webkit-border-bottom-left-radius: 2px;		
+	/* Safari 3+, Chrome */
+	box-shadow: 0 4px 4px rgba(0,0,0,0.6);
+	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;	
+	/* Opera 10.50, IE 9 */
+
+}
+
+/* Header */
+#header {
+	color: #222;
+	position: relative;
+	padding: 30px 0 30px 36px;
+	background-color: #FFF;
+	z-index: 999;
+	/*background-image: url(../images/skin/bg-header-texture.png);*/
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+	#header a { color:#222; text-decoration:none; }
+	#header a:hover { text-decoration:underline; }
+	
+	
+	
+	#header h1, 
+	#user-settings {
+		position: relative;
+		margin: 0;
+		/*background-image: url(../images/skin/bg-rule-vrt-79px.gif);*/
+		background-repeat: no-repeat;
+		background-position: 0 0px;
+		float:left;
+		height:79px;
+		width: 248px;
+	}
+
+		#header h1  {  padding:0px 0 0 0px;/*paddingleft was 17px. margin-right:405px;*/}
+		
+		#header h1 img { padding-top:5px; display:block; border:none; }
+	
+		#user-settings { padding:15px 0 0 17px; line-height:1.583em; float:right; width:246px; }
+		#user-settings.signed-in { padding:0px 0 0 17px; }
+		#user-settings.signed-in .site-tools { margin-top:0; }
+		#header h4 { color:#222; }
+
+/* Content */
+#content {  }
+
+
+
+ #content, #DOMWindow {
+	-moz-box-shadow: 0 4px 4px rgba(0,0,0,0.6);
+	-moz-border-bottomright-radius: 2px; 
+	-moz-border-bottomleft-radius: 2px;
+	/* Firefox 3.5+ */
+	-webkit-box-shadow: 0 4px 4px rgba(0,0,0,0.6);
+	-webkit-border-bottom-right-radius: 2px;
+	-webkit-border-bottom-left-radius: 2px;		
+	/* Safari 3+, Chrome */
+	box-shadow: 0 4px 4px rgba(0,0,0,0.6);
+	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;	
+	/* Opera 10.50, IE 9 */
+
+}
+
+#DOMWindow {
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+#content { 
+	background-color:#fff; 
+	width:950px; 
+	margin-left:11px; 
+	margin-bottom:15px;
+	padding-bottom:60px;
+}
+
+#home-page #content { 
+
+	padding-bottom:0px;
+}
+
+	#home-page .wrap-row-one_ {
+		background-image: url(../images/skin/bg-hp-faux-col-white-blue.gif);
+		background-repeat: repeat-y;
+		width: 100%;
+		background-position: 0 0;
+	}
+						
+		#main-content,
+		#aside { float:left; }
+		
+		#home-page	#main-content {
+			width:671px;
+			height:286px; 
+			padding:0 0 0 24px;  
+			border-right:1px solid #fff;
+		}
+		
+		#home-page	#aside { 
+			width:254px; 
+			color:#fff;
+		}
+		#home-page #downloadContainer {
+	    	background-image: url('../images/skin/brand/default/Download_App@2x.png');
+    		height: 340px;
+    		width: 318px;
+    		background-repeat: no-repeat;
+    		background-size: contain;
+    		top: -50px;
+    		position: relative;
+		}
+
+
+
+#schedule-automatic-transfers #content,
+#secondary-card-manage #content,
+.article-page #content,
+#account-data #content { padding-top:49px; /*padding-bottom:25px;*/}
+	
+	.article-page #main-content { 
+			margin-right:114px; 
+			width:573px; 
+			padding:0 0 0 25px;
+			
+	}
+	
+	.article-page #aside { 
+		width:225px; padding:6px 0 0 0;
+	}
+
+
+.article-page#dashboard-page #content { padding-top:47px; }
+
+/* STYLES TO REPLACE AN EMPTY TABBED NAVIGATION BLOCK */
+	.article-page#dashboard-page #content {
+		
+}
+
+
+#dashboard-page #main-content { /*padding-bottom:357px !important;*/ }
+.article-page#dashboard-page #content { padding-top:46px !important; }
+.article-page#dashboard-page #aside { padding-top:11px !important; }
+
+
+#account-data {  }
+
+	#schedule-automatic-transfers #main-content,
+	#secondary-card-manage #main-content,
+	#account-data #main-content,
+	#account-data #aside { float:none; padding:0 25px 0 25px;}
+	
+	#schedule-automatic-transfers #main-content,
+	#secondary-card-manage #main-content,
+	#account-data #main-content { margin-bottom:35px; }
+	
+	#account-data #aside { }
+	
+	
+	
+	
+#secondary-card-manage {  }
+
+/* Footer */
+#footer { width: 98%; }
+	#footer .first-data-logo,
+	#footer .copyright,
+	#footer .nav,
+	#footer li  { float:left; }
+	
+	#footer p, 
+	#footer a { 
+		font-size:0.917em; 
+	}
+	
+	#home-page div#footer.clear_{
+		margin-top: -90px;
+	}
+	
+	#footer p { color:#222; }
+	
+	#footer p.first-data-logo { padding-left:36px; margin-right:9px; }
+	
+	#footer .copyright,
+	#footer .nav { padding-top:8px; }
+	
+	#footer ul.nav { 
+	margin-left:20px;
+	}
+		#footer li { margin-right:23px; }
+		
+		#footer li.last_ { margin-right:12px; }
+		
+			#footer a { color:#222; }
+
+/* Cufon-only styles */
+.cufon-ready .cufonblock_ { display: block; }
+
+
+/* Basic layout classes (presentational) */
+.col_ {  }
+	
+	.clear_:after,
+	#schedule-automatic-transfers #aside .recent-activity li:after,
+	#secondary-card-manage #aside .recent-activity li:after {
+		content: ".";
+		display:block;
+		height:0;
+		font-size:0;
+		clear:both;
+		visibility:hidden;	
+	}
+	
+	.clear_,
+	#schedule-automatic-transfers #aside .recent-activity li,
+	#secondary-card-manage #aside .recent-activity li { min-height:1px; }
+	
+	* html .clear_,
+	* html #schedule-automatic-transfers #aside .recent-activity li,
+	* html #secondary-card-manage #aside .recent-activity li { height:1px; }
+	
+	
+	.left_ { float: left; }
+	.right_ { float: right; }
+	.center_ { margin: 0 auto; }
+	.clearboth_ { clear: both; }
+	.clearleft_ { clear: left; }
+	.clearright_ { clear: right; }
+
+/* z-index */
+
+#header { z-index:999; }
+
+#site-navigation { z-index:11;  }
+	ul#bread-crumb-nav li#dashboard { position:relative; z-index:11; }
+	
+	span.d-b-top_ { 
+		background-image: url(../images/skin/spr-nav-dashboard-arrow.png); 
+		background-repeat: no-repeat;
+		background-position: right 43px; 
+		display:block;
+		position:relative; z-index:13; 
+		padding: 31px 45px 1px 25px;
+		/*background-color:#ADAAAD;   Changed for CON-021385 */  
+		background-color:#4A494A;
+	}
+	
+	
+	#global-nav { position:absolute; z-index:12; }
+
+	.alert-box { z-index:999; position:relative; }
+
+#content{ z-index:10; position:relative;}
+
+
+/* END : shell.css */
+
+
+/* START : nav.css */
+
+.nav { overflow: hidden; }
+	.nav li { float: left; }
+		.nav a.current_ { cursor: default; }
+		body.hfeed .nav a.current_ { cursor: pointer; }
+
+/* HEADER NAVIGATION */
+#header { }
+
+	#user-settings {  }
+	
+		#user-settings .site-tools { position: absolute; bottom: -5px; left: 17px; }
+			
+				#user-settings ul { list-style:none; padding:0; margin:0; }
+				
+						#language-selector { margin-bottom:5px; cursor:pointer; }
+							
+							#language-selector h4.language { float:left; margin-right:4px;}
+							
+							.active-language {
+								color:#2a6ebb;
+								background-image: url(../images/skin/btn-language-selector.gif);
+								background-position: right 4px;
+								background-repeat: no-repeat;
+								padding-right:.85em;
+							}
+							
+							.active-language.down_ { background-position: right -39px; }
+							
+							#language-choices { position:relative; float:left; }
+						
+							#language-choices ul {
+								position:absolute;
+								/*left:41px;  */
+								left:-9999px;
+								background-color: #242424;
+								border: solid 1px #343333;
+								border-top: 0;
+								-moz-border-radius: 3px;
+								-webkit-border-radius: 3px;
+								border-radius: 3px;
+								background-image: url(../images/skin/bg-language-selector-top.gif);
+								background-repeat: no-repeat;
+								background-position: -1px 0;
+								width:111px;
+								padding-top:7px !important;
+								padding-bottom:8px !important;
+							}
+						
+							#language-choices ul.choices { left:-9px; }
+							
+							#language-choices ul.choices a { color:#fff; }
+
+								#language-choices li { padding:0 8px 0 8px; }
+
+						.locate-atms {
+							/*background-color:#b2b2b2 !important; */
+							background-color:#e31932 !important; 
+							padding:2px 10px 2px 9px;
+							margin-bottom:3px !important;
+							-moz-border-radius: 2px; 
+							-webkit-border-radius: 2px;
+							border-radius: 2px;
+						}
+
+							#header .locate-atms a { color:#fff; }
+
+						.sign-out-link a,
+						.help-link a {
+							background-image: url(../images/icons/icon-black-arrow-transparent.gif);
+							background-repeat: no-repeat;
+							background-position: 0 50%;
+							padding-left:9px;
+						}
+
+/* SITE NAVIGATION */
+
+#site-navigation { width:950px; margin-left:11px; }
+	
+	div#bread-crumb {
+		width:950px; 
+		/*background-color:#737173;    Changed for CON-021385 */
+		background-color:#4A494A;
+		-moz-border-radius-bottomright:2px;
+		-moz-border-radius-bottomleft:2px;
+		-webkit-border-bottom-right-radius:2px;
+		-webkit-border-bottom-left-radius:2px;
+		border-bottom-right-radius:2px;
+		border-bottom-left-radius:2px;
+	
+		
+		}
+	
+		ul#bread-crumb-nav { width:496px; float:left;  min-height:70px;}
+			
+			ul#bread-crumb-nav li#dashboard,
+			ul#bread-crumb-nav li.category { float:left; color:#fff; padding-top:12px; }
+			
+			ul#bread-crumb-nav li#dashboard, 
+			li.category li { 
+				font:normal 1.75em/1.333em "Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium"; color:#fff;
+			}
+			
+			ul#bread-crumb-nav li.category.bc-nav-cardholder-fees,
+			ul#bread-crumb-nav li.category.bc-nav-contact-us,
+			ul#bread-crumb-nav li.category.bc-nav-lost-stolen,
+			ul#bread-crumb-nav li.category.bc-nav-terms-and-conditions,
+			ul#bread-crumb-nav li.category.bc-nav-privacy-policy,
+			ul#bread-crumb-nav li.category.bc-nav-help
+			{ padding-top:28px !important; }
+			
+			
+			ul#bread-crumb-nav li#dashboard {
+				padding: 0px 0 0px 0px;
+				/*cursor:pointer;*/
+				
+			}
+			ul#bread-crumb-nav li#dashboard span.d-b-top_ a{
+			color:white;
+			}
+			
+			ul#bread-crumb-nav li#dashboard.no-js_ #global-nav a{			
+			color:#fff;
+			}
+			ul#bread-crumb-nav li#dashboard.no-js_:hover span.d-b-top_, 
+			ul#bread-crumb-nav li#dashboard.no-js_:focus span.d-b-top_ 
+			{ background-position: top -56px;
+			
+			}
+			
+	/*		ul#bread-crumb-nav li#dashboard.no-js_:hover span.d-b-top_ { background-position: right -56px;}
+			ul#bread-crumb-nav li#dashboard.no-js_:hover #global-nav { visibility:visible; margin-left:0; }
+		*/
+			ul#bread-crumb-nav li.category { 
+				font:normal 1em/1.333em "Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium";
+				padding:12px 40px 11px 12px;
+				color:#fff;
+				background-color:#a3a3a3;
+				-webkit-box-shadow: rgba(5,5,5,0.1)  3px 0px 5px 0px /* spread */ inset;
+				-moz-box-shadow: rgba(5,5,5,0.1)  3px 0px 5px 0px /* spread */ inset;
+				box-shadow: rgba(5,5,5,0.1)  3px 0px 5px 0px /* spread */ inset;
+			}
+			
+			
+			ul#bread-crumb-nav li.category.bc-nav-tools,
+			ul#bread-crumb-nav li.category.bc-nav-help{ 
+				padding:12px 111px 11px 12px;
+			
+			}
+			
+			
+			
+				ul#bread-crumb-nav li.category ul { margin:3px 0 0 0; }
+
+
+
+
+
+
+/*.inactive,.active li { display:none; }
+.active,.active li.active { display:block; }*/
+/*.bc-nav-history,
+.bc-nav-money-in,
+.bc-nav-plan,
+.bc-nav-products,
+.bc-nav-services,
+.bc-nav-tools*/
+
+/* ACTIVE STATES FOR BREADCRUMB NAVIGATION */
+
+li.category, li.category li { display:none; }
+#help-page .category.bc-nav-help,
+	#help-page .category.bc-nav-help li,
+#privacy-policy .category.bc-nav-privacy-policy,
+	#privacy-policy .category.bc-nav-privacy-policy li,
+#terms-and-conditions .category.bc-nav-terms-and-conditions,
+	#terms-and-conditions .category.bc-nav-terms-and-conditions li,
+#activate-card-static .category.bc-nav-lost-stolen,
+	#activate-card-static .category.bc-nav-lost-stolen li,
+#lost-or-stolen .category.bc-nav-lost-stolen,
+	#lost-or-stolen .category.bc-nav-lost-stolen li,
+#contact-us .category.bc-nav-contact-us,
+	#contact-us .category.bc-nav-contact-us li,
+.cardholder-fees .category.bc-nav-cardholder-fees,
+	.cardholder-fees .category.bc-nav-cardholder-fees li,
+.history .category.bc-nav-history,
+	.statements-page .bc-nav-statements,
+	.pay-stubs-page .bc-nav-pay-stubs,
+	.spending-reports-page .bc-nav-spending-reports,
+.money-in .category.bc-nav-money-in,
+	#reload-page .bc-nav-reload,
+	#direct-deposit-page .bc-nav-direct-deposit,
+	#change-access-code .bc-nav-cash-loads,
+	#secondary-card-request .bc-nav-direct-deposit,
+.money-out .category.bc-nav-money-out,
+	.transfer-funds-page .bc-nav-transfer-funds,
+	.transfer-funds-page-international .bc-nav-transfer-funds-international,
+	#mn-checks-page .bc-nav-checks,
+	#cash-loads-page .bc-nav-cash-loads,
+	.secondary-cards-page .bc-nav-secondary-cards,
+	#top-up-mobile-prepaid-complete .bc-nav-cell-phone-top-up,
+	#top-up-mobile-prepaid-request .bc-nav-cell-phone-top-up,
+	#top-up-mobile-prepaid-review .bc-nav-cell-phone-top-up,
+	#online-billpay-page .bc-nav-bill-payment,
+	#online-billpay-page-old .bc-nav-bill-payment-old,
+	#mn-transfers .bc-nav-mn-transfers,
+	#p2p-transfers .bc-nav-p2p-transfers,
+	#my-transfers .bc-nav-my-transfers,
+	
+.plan .category.bc-nav-plan,
+	.budgeting-page .bc-nav-budgeting,
+	.financial-planning-page .bc-nav-financial-planning,
+.products .category.bc-nav-products,
+	.gift-cards-page .bc-nav-gift-cards,
+	.reloadable-cards-page .bc-nav-reloadable-cards,
+	.contactless-page .bc-nav-contactless,
+	.customized-cards-page .bc-nav-customized-cards,
+.services .category.bc-nav-services,
+	.iloan-page .bc-nav-iloan,
+	#refer-friend .bc-nav-refer-friend,
+	#secondary-card-manage .bc-nav-invitation-history,
+	#request-upgrade-page .bc-nav-upgrade,
+	#reward-program .bc-nav-rewards-program,
+	#reward-program-complete .bc-nav-rewards-program,
+.tools .category.bc-nav-tools,
+	.budget-and-spending-page .bc-nav-budget-and-spending,
+	.profile-page .bc-nav-profile,
+	.customer-service-page .bc-nav-customer-service,
+	.card-details .bc-nav-card-details,
+.activate .bc-nav-money-activate,
+	.activate .bc-nav-money-activate .bc-nav-activate { display:block; }
+
+
+
+dl#account-balance { 
+	float:right; 
+	font-family:"Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium";
+	padding-top:14px;
+	padding-right:18px;
+	width:219px;
+}
+	
+	#account-balance dt { }
+		#account-balance dt a {
+			display: block;
+			color: #fff;
+			padding-left: 11px;
+			/*background-image: url(../images/icons/icon-white-arrow-transparent.gif);*/
+			background-repeat: no-repeat;
+			background-position: 0 50%;
+			margin-bottom: 5px;
+		}
+	#account-balance dd { 
+		color:#fff; 
+		font-size:1.75em; line-height:1.333em;
+		padding-left:11px;
+	}
+
+
+li#dashboard.no-js_ #global-nav { visibility:hidden; }
+
+#global-nav {
+	margin-left:-9999px;
+	position: absolute;
+	width: 496px;
+	/*background-color: #ADAAAD;      Changed for CON-021385 */
+	background-color:#4A494A;
+	padding-top: 8px;
+	-moz-box-shadow: 2px 3px 10px rgba(0,0,0,0.5);
+	-moz-border-bottomright-radius: 2px;
+	-moz-border-bottomleft-radius: 2px;
+	-webkit-box-shadow: 2px 3px 10px rgba(0,0,0,0.5);
+	-webkit-border-bottom-right-radius: 2px;
+	-webkit-border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
+	box-shadow: 2px 3px 10px rgba(0,0,0,0.5);
+	display:none;
+}
+
+
+/*site nav alert box */
+#persistent-nav { }
+
+#global-nav .alert-box {
+	width: 478px;
+	margin: -5px 0 0 9px !important;
+	padding:6px 0 2px 0 !important;
+	background-image: url(../images/icons/icon-alert-red-18px.gif) !important;
+	background-color: #A6A6A6;
+	background-position: 23px 50%;
+	background-repeat: no-repeat;
+	-web-kit-border-radius:0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	display:none;
+	
+}
+
+#global-nav .alert-box p { 
+	font-size:12px !important; 
+	line-height:14px !important; 
+	padding:0px 0 0px 49px !important;
+	margin:0 0 0 0px !important;
+}
+	
+	#persistent-nav,
+	#section-nav { 
+		margin-left:9px;
+		background-color:#e5e5e5; width:478px;
+		-moz-border-radius: 2px; 
+		-webkit-border-radius: 2px;
+		border-radius: 2px;			
+	}	
+	
+	#persistent-nav dl { padding-left:22px; }
+	
+		#global-nav dt { color:#222; }
+		#global-nav a {
+			color: #222222;   /*  Changed for CON-021385 */
+			background-image: url(../images/icons/icon-arrow-blue.gif);
+			background-repeat: no-repeat;
+			background-position: 0 .50em;
+			padding-left:11px;
+		}
+		
+		#persistent-nav,
+		#section-nav a,
+		#global-nav .supplemental-nav p { font:normal 0.571em/1em "Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium"; line-height:14px;}
+			
+		#persistent-nav dl dt,
+		#persistent-nav dl dd { float:left; margin-right:16px; }
+	
+	#persistent-nav { 
+		margin-bottom:4px;
+		padding:7px 0 6px 0;
+	}
+	
+	#section-nav { padding-bottom:27px; margin-top:-3px;}
+			
+			#section-nav div { margin:0 0 11px 22px; width:430px; padding-top:20px;}
+				#section-nav p {  line-height:0em; }
+			#section-nav div.row-wrap_ {
+				background-image: url(../images/skin/bg-horizon-dot.gif);
+				background-repeat: repeat-x;
+				background-position: 0 0;
+				padding-top:17px;
+				margin-bottom:18px;
+				position:relative;
+			}
+			
+			
+			#dashboard-navigation div.row-wrap_.last_,
+			#section-nav div.row-wrap_.last_ { margin-bottom:0; }
+			
+				
+				#section-nav dl { 
+					float:left; 
+					width:120px; 
+					padding-right:35px; 
+				}
+				
+				#section-nav dl.last_ { padding-right:0; }
+				
+					#section-nav dt { font:normal 0.714em/1em "Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium"; margin-bottom:8px; font-weight:normal !important;}
+					
+					#section-nav dd { font-size:12px; line-height:14px; margin-bottom:3px; }
+					#section-nav dd a { font-size:12px;line-height:14px;  zoom:1; position:relative; display:block;}
+								
+		#global-nav .supplemental-nav { margin-top:9px;margin-left:11px; padding-bottom:11px; }
+				#global-nav .supplemental-nav p a { color:#fff; background-image:none; display:inline; font-style:italic; padding:0; }	
+	
+	
+/******************
+*TABBED NAVIGATION
+*******************/
+div.tabbed-navigation { }
+
+	div.tabbed-navigation,
+	div.tabbed-navigation ul,
+	div.tabbed-navigation li,
+	div.tabbed-navigation li a { 
+	-moz-border-radius-topright:2px;
+	-moz-border-radius-topleft:2px;
+	-webkit-border-top-right-radius:2px;
+	-webkit-border-top-left-radius:2px;
+	border-top-right-radius:2px;
+	border-top-left-radius:2px;
+	}
+	
+	
+div.tabbed-navigation { 
+	width:950px; 
+	margin:10px 0 0px 11px;
+
+	background-color:#737373;
+	-webkit-box-shadow: 0 4px 4px rgba(0,0,0,0.6);
+	-moz-box-shadow: 0 4px 4px rgba(0,0,0,0.6);
+	box-shadow: 0 4px 4px rgba(0,0,0,0.6);
+	-moz-border-radius-topright:2px;
+	-moz-border-radius-topleft:2px;
+	-webkit-border-top-right-radius:2px;
+	-webkit-border-top-left-radius:2px;
+	border-top-right-radius:2px;
+	border-top-left-radius:2px;
+
+}
+
+	
+div.tabbed-navigation ul { background-color:#fff; overflow:hidden; float:left; }
+
+
+
+		div.tabbed-navigation li { 
+			float:left; margin-right:1px;
+			font-size:1em; line-height: 1.25em;
+			color:#222;
+		}	
+		
+			div.tabbed-navigation li a { 
+				display:block !important;
+				color:#fff;
+				padding:7px 29px 8px 25px ;
+				background-color:#737373;
+				text-decoration:none;
+			}	
+		
+		
+		
+		div.tabbed-navigation li.active a,
+		div.tabbed-navigation li a:hover {
+			background-color:#fff;
+			color:#222;
+		
+		}
+		
+		
+		div.tabbed-navigation li.last-tab_{ margin-right:1px;  }
+		
+		div.tabbed-navigation li.last-tab_ a {
+			padding-right:32px;
+		}
+		
+		div.tabbed-navigation li.last-tab_ a:hover,
+		div.tabbed-navigation li.last-tab_.active a	{
+			background-position:right -170px;
+		}		
+		
+	
+		div.tabbed-navigation li.last-tab_,
+		div.tabbed-navigation li.last-tab_ a {
+		-moz-border-radius-topright:0px;
+		-webkit-border-top-right-radius:0px;
+		border-top-right-radius:0;
+
+
+		}
+
+	
+	
+/* TABBED NAVIGATION DASHBOARD PAGE */	
+
+#dashboard-page .tabbed-navigation { padding: 3px 0 2px 0; }
+
+	#dashboard-page .tabbed-navigation dt, #dashboard-page .tabbed-navigation dd { 
+		float:left;
+		font-size:1.167em; line-height: 1.923em;
+		color:#fff;
+		font-weight:normal;
+		margin-right:14px;
+	}
+		
+	#dashboard-page .tabbed-navigation dt { padding-left:26px; }
+	
+	#dashboard-page .tabbed-navigation dd a {
+		color:#fff;
+	 	font-weight:normal;
+		background-image: url(../images/icons/icon-arrow-white.gif);
+		background-repeat: no-repeat;
+		background-position: 0 50%;
+		padding-left:11px;
+	}
+
+/* STYLES TO REPLACE AN EMPTY TABBED NAVIGATION BLOCK */
+	.article-page#dashboard-page #content,
+	.auxillary-page #content,
+	.cardholder-fees #content,
+	.money-out#mn-transfers #content,
+	.money-out#p2p-transfers #content {
+	-moz-border-radius-topleft:2px;
+	-moz-border-radius-topright:2px;
+	margin-top:10px;
+	padding-top:77px;
+	width:950px;
+	background-image:url(../images/skin/bg-dashboard-top.jpg);
+	background-position:0 0;
+	background-repeat:repeat-x;
+}
+
+.cardholder-fees #content,
+.auxillary-page #content { padding-top:79px !important; }
+
+
+
+	.js-enabled #site-meta .search-form {
+		display: inline;
+		visibility: visible;
+	}
+
+
+/* SECTION NAVIGATION (in #content) */
+#content  .nav { }
+
+
+/* FOOTER NAVIGATION */
+#footer {  }
+
+
+/* END : nav.css */
+
+
+/* START : content.css */
+
+
+
+/***************
+* COMMON STYLES 
+****************/
+
+/* anchor */
+a { color:#2a6ebb; }
+a.arrow-red_ {
+	padding-left:11px;
+	background-image: url(../images/icons/icon-arrow-red.gif);
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+}
+a {
+    color: #2A6EBB;
+}
+
+a.arrow-blue_ {
+	padding-left:11px;
+	background-image: url(../images/icons/icon-arrow-blue.gif);
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+}
+
+
+
+#account-data #export-statements a.arrow-blue_,
+#account-data #send-statement-to-email a.arrow-blue_,
+#account-data #balance-alert-prefs a.arrow-blue_,
+#account-data #paper-statement-prefs a.arrow-blue_ { font-size:12px; }
+
+/* tool-links buttons */
+
+a.print-button,
+a.export-button,
+a.send-button,
+a.alerts-button,
+a.paper-statement-button {	
+	padding-top:1px;
+	padding-right:8px;
+	padding-left:27px;
+	padding-bottom:2px;
+	background-repeat: no-repeat;
+	background-position: 6px 0px;
+	position:relative;
+	z-index:2;
+	
+}
+a.print-button:focus,
+a.export-button:focus,
+a.send-button:focus,
+a.alerts-button:focus,
+a.paper-statement-button:focus {	
+	padding-top:1px;
+	padding-right:8px;
+	padding-left:27px;
+	padding-bottom:2px;
+	background-repeat: no-repeat;
+	background-position: 6px 0px;
+	position:relative;
+	z-index:2;
+	
+}
+a.print-button { padding-bottom:10px; cursor: pointer; }
+a.print-button:hover,
+a.export-button:hover,
+a.send-button:hover,
+/*a.alerts-button:hover,*/
+/*a.paper-statement-button:hover { background-position: 6px -104px; color:#666; }*/
+a.alerts-button:hover,
+a.paper-statement-button:hover { background-position: 6px -104px; color:#222; }
+
+a.print-button   {
+	background-image: url(../images/icons/icon-btn-print.gif);
+}
+
+a.export-button {
+	background-image: url(../images/icons/icon-btn-statement-export.gif);
+}
+
+a.send-button {
+	background-image: url(../images/icons/icon-btn-send.gif);
+}
+
+a.alerts-button {
+	background-image: url(../images/icons/icon-btn-alerts.gif); 
+}
+
+a.paper-statement-button { 
+	background-image: url(../images/icons/icon-btn-paper-statement.gif);
+}
+
+/* list */
+
+
+ul.list {  }
+
+
+/*Alert Box*/
+
+
+
+
+
+
+.global-nav-position { margin-left:0px !important;}
+
+/* Style declarations for the main content area */
+
+
+
+
+#content { }
+
+h2 { font:normal 2.167em/1.077em "Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium"; margin-bottom:8px; }
+
+#dashboard-page h2 { 
+	font:normal 2.083em/1.12em "Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium";
+	color:#222; 
+	padding-bottom:2px !important;
+}
+
+
+h3 { font:normal 1.417em/1.059em "Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium"; margin-bottom:6px; }
+
+
+#tertiary h2 { color:#fff; }
+
+
+
+
+/******************
+
+* AUXILLARY PAGES 
+
+*******************/
+.auxillary-page #content h2 { 
+margin-bottom:13px !important;
+
+}
+
+.auxillary-page #content h3 { 
+font-weight:bold;
+margin-bottom:0;
+margin-top:16px;
+
+}
+.auxillary-page #content h3,
+.auxillary-page #content p
+ { 
+	font-size:1.167em;
+	line-height: 1.5em;
+	color:#222;
+}
+.auxillary-page #content li
+{
+	font-size:1.167em;
+	line-height: 1.5em;
+	}
+.auxillary-page #content h1 {
+    border-bottom: 1px dashed #E2E2E2;
+    color: #737373;
+    font-family: arial,sans-serif;
+    font-size: 14pt;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    width: 650px;
+}
+
+
+
+.auxillary-page #content ul.list  { 
+	margin-top:7px;
+
+}
+	.auxillary-page #content .list li { 
+		background-position:0 .65em;
+	
+	}
+
+/* Contact Us */
+
+ 
+	
+
+
+#contact-us #content,
+    #lost-or-stolen #content { padding-bottom:300px; }
+    #activate-card-static #content { padding-bottom:500px; }
+
+	dl.vcard,
+        #lost-or-stolen p, #activate-card-static p, #contact-us p {
+        /*font-size:1.167em;*/
+		line-height: 1.5em;
+		color:#222;
+		padding-top:3px;
+	}
+        dt.org { font-size:1.167em; }
+        dt.org span { display:block; }
+			dt.org span.organization-name { font-weight:bold; }
+			dt.org span.organization-unit {  }
+        dd.adr { margin-bottom:21px; font-size:1.167em;}
+			dd.adr p span.street-address {  }
+			dd.adr p span.locality {  } 
+			dd.adr p span.region {  }
+			dd.adr p span.postal-code {  }
+		
+        dd.tel { font-size:1.167em; }
+			dd.tel span.value {  }
+
+#lost-or-stolen { }
+#activate-card-static { }
+	
+
+
+/***********
+
+* HOME PAGE
+
+************/
+
+body#home-page {  }
+
+	#home-page #welcome {
+		padding:58px 0 45px 0;
+		background-image: url(../images/content/bg-home-page-welcome.jpg);
+		background-repeat: no-repeat;
+		background-position: right 0;
+		overflow:hidden;
+	}
+		#welcome h2 { 
+			width:300px; 
+			font-size:2.083em; 
+			line-height: 1.12em; 
+			color:#222; 
+			margin-bottom:7px; 
+		}
+		
+		#welcome p.introduction { 
+			width:321px; 
+			font-size:1.167em;
+			line-height: 1.429em;
+			color:#222;
+			margin:0;
+			padding:0;
+		}
+
+	#card-holder-login a { color:#fff; }
+	
+	.locate-bank-link a { 
+		color:#fff;
+	}	
+	
+	
+	.locate-bank-link a {
+		padding: 0 0 0 23px;
+		background-image: url(../images/icons/icon-locator-square-white.gif);
+		background-position: 0 50%;
+		background-repeat: no-repeat;
+	}
+	
+	
+	li a.white-transparent-arrow_  {
+		padding: 0 0 0 11px !important; 
+		background-image: url(../images/icons/icon-white-arrow-transparent.gif) !important;
+		background-position: 0 50%;
+		background-repeat: no-repeat;
+		width:auto;
+	}
+
+
+
+
+#aside form,
+#aside p.locate-bank-link { padding:0 0 0 17px; margin-bottom:16px; color:#fff;}
+
+/*#aside p.locate-bank-link { padding:15px 0 12px 17px;  background-color:#555454; line-height:1.5em;  }*/
+#aside p.locate-bank-link { padding:15px 0 12px 17px;  background-color:rgb(173,172,173); line-height:1.5em;  }
+
+#aside form {  }
+	#card-holder-login .first_,
+	#card-holder-login .second_ { float:left; margin-bottom:17px; }
+	
+	#card-holder-login li.first_ { margin-right:17px; }
+	
+	#card-holder-login li.first_,
+	#card-holder-login .first_ input { width:150px; height:16px; }
+	#card-holder-login .second_ { width:45px; }
+	#card-holder-login .second_ input { width:40px; clear:right; height:16px;} 
+	#card-holder-login .third_ { margin-bottom:31px; }
+	#card-holder-login .fourth_ { margin-bottom:11px; }
+
+
+
+@-moz-document url-prefix() {
+
+	#card-holder-login .first_ input, #card-holder-login .second_ input { height:auto; }
+	#aside p.locate-bank-link { padding:14px 0 13px 18px; margin-bottom:15px;  background-color:#626164; line-height:1.5em;  }
+
+}
+
+#tertiary {
+	border-top: 1px solid #fff;
+	width:950px;
+}
+
+#tertiary p { line-height: 1.417em; }
+
+#tertiary div.col_ { float:left; }
+
+#teaser-content {
+	float: left;
+	width: 696px !important;
+	/*background-image: url(../images/skin/bg-hp-tertiary-gradient.png);*/
+	/*background-image: url(../images/skin/bg-body-gradient.jpg);*/
+	/*background-repeat: no-repeat;*/
+	background-position: 0 0;
+    background-color:#f6f6f7;
+}
+
+	.teaser-slide-show {
+		position:relative;
+		/*width:322px;*/
+        width:310px;
+        margin-right:3px;
+		overflow:hidden;
+		padding-left:25px;
+    }
+	
+	.tss-ss-left { padding-left:23px; width:318px;}
+	
+	
+	
+	li.slide {width:322px; background-color:transparent !important;}
+	
+	.teaser-slide-show.last_ { margin-right:0 !important; }
+	
+		.teaser-slide-show ul.slide-show { padding:0 0px 0px 0; overflow:hidden;  }
+		
+		
+		.teaser-slide-show h2,
+		.teaser-slide-show h3 { padding-right:30px;  }
+		
+		.teaser-slide-show h2 { 
+			font-size:1.833em;
+			line-height: 1.273em;
+			padding-top:18px;
+			padding-bottom:0;
+			margin-bottom:7px;
+			
+		}
+		
+			/*.teaser-slide-show h2 a { color:#fff; text-decoration:none; }*/
+			.teaser-slide-show h2 a { color:#e31932; text-decoration:none; }
+
+		.teaser-slide-show h3 { 
+			font-size:1.5em;
+			line-height: 1.111em;
+			margin-bottom:5px;
+			color:#444 !important;
+		}
+		.teaser-slide-show p { 
+			font-size:1em;
+			line-height: 1.5em !important;
+			padding-right:35px;
+			color:#222;
+		}
+	
+	
+	#home-page #tertiary .aside {
+		position:relative;
+		z-index:1;
+		width: 254px;
+		background-color:#fff;
+		background-image: url(../images/skin/bg-hp-related-links-gradient.png);
+		background-repeat: repeat-x;
+		padding-bottom: 0px;
+	}
+		#home-page #tertiary .aside ul { padding:22px 10px 15px 17px; }
+	
+		#home-page #tertiary .aside li {
+			position:relative;
+			padding-left:11px;
+			margin-bottom:7px;
+			background-image: url(../images/icons/icon-arrow-blue.gif);
+			background-repeat: no-repeat;
+			background-position: 0px 4px;
+			
+		}
+		
+			#home-page #tertiary .aside a { display:block; margin-bottom:3px; color:#2a6ebb; }
+	
+	/* HOME PAGE SLIDE SHOWS */	
+
+#teaser-navigation { width:696px;clear:both; }
+
+#teaser-navigation ul {  }
+
+#home-page .slide-show li { 
+
+	background-color:transparent; 
+	padding-bottom:18px;
+}
+
+/* #ss-nav-one, */
+#ss-nav-two { 
+	float:right;
+	position:relative;
+	padding-left:14px;
+	padding-top:14px;
+	padding-bottom:11px;
+	/*background-color:rgb(173,172,173);*/
+	background-color:#f0f0f0;
+	background:rgba(173,172,173,0.62);
+	border-right:1px solid tranparent;
+}
+
+/* #ss-nav-one { width:335px; } */
+
+#ss-nav-two { width:330px;margin-right:2px; display: inline; }
+
+	
+	#previous-next-ss2 {
+		width:50px;
+		position:absolute;
+		top:0; left:0;
+		margin-top:15px;
+	}
+
+/* 	#previous-next-ss1 { width:350px; } */
+	
+	#previous-next-ss2 { 
+		width:200px; 
+		left:1px;
+		margin-top:-10px; 
+		z-index:10000;
+	}
+
+
+	#previous-next-ss2 .prev,
+/* 	#previous-next-ss1 .next, */
+	#previous-next-ss2 .next { position:absolute; top:11px;  }
+
+
+/* 	#previous-next-ss1 .previous { left:12px; width:10px; } */
+	
+	
+	#previous-next-ss2 .prev { right:20px; width:10px; }
+	
+/* 	#previous-next-ss1 .next { right:8px; width:10px; } */
+	
+	#previous-next-ss2 .next { right:5px; width:10px; }
+
+
+
+ul.slide-show-nav {
+	color:#222;
+	line-height:1em;
+	padding-right:5px;
+	padding-left:5px;
+	
+}
+
+
+#ss-nav-two ul.slide-show-nav {
+	padding-right:16px;
+	padding-left:4px;
+	
+}
+
+	.slide-show-nav li {
+		float: left;
+		padding:0 10px 0 10px;
+		font-size:0.917em;
+		line-height: 1.182em;
+		text-align:center;
+		background-image: url(../images/skin/bg-slide-show-nav-dot-rule.gif);
+		background-position: right 0;
+		background-repeat: repeat-y;
+    }
+
+	
+	.slide-show-nav li.last_ { 
+		margin-right:0; 
+		background-image:none;
+	}
+	
+	
+			.slide-show-nav li a {
+				display:block;
+				color:#222;
+				position:relative;
+				font-family: "Franklin Gothic Book", verdana, arial, sans-serif, "Franklin Gothic Medium";
+			}
+			
+			
+			.slide-show-nav li.activeSlide a, 
+			.slide-show-nav li.activeSlide a:hover { color:#2a6ebb !important; }
+
+@-moz-document url-prefix() {
+
+	.slide-show-nav li {
+		padding:0 7px 0 7px;
+	}
+	.slide-show-nav li.first_  {
+		padding-left:6px;
+	}
+}
+
+
+/* HOMEPAGE FORGOT PIN FLYOUT */
+#aside { position:relative; z-index:9000; }
+
+.forgot-pin { position:relative; z-index:30; }
+
+
+	#forgot-pin-instructions,
+	#activate-card-instructions,
+	.instruction-box, 
+	.terms-box {
+		
+		position:relative;
+		color:#222;
+	
+		
+	}
+	
+		.fpi-wrap_,
+		.instructions-wrap_,
+		.terms-wrap_
+		{ 
+			position:absolute;
+			padding-top:24px;
+			left:-9999px;
+			width: 418px;
+			background-image: url(../images/skin/bg-hp-pin-retrieve-top.png);
+			background-repeat:no-repeat;
+			color:#222;
+		}
+		.terms-wrap_ {
+			background-image: url(../images/skin/bg-hp-pin-retrieve-top-no-arrow.png);
+		}
+		
+		
+			.move-instructions_ { left:-67px; }
+
+			.terms-box .move-instructions_ { bottom:20px; left:-75px; padding-top:16px; }
+
+		
+			.background-l-r_ {
+				width:418px;
+				background-image: url(../images/skin/bg-hp-pin-retrieve-sides.png);
+				background-repeat: repeat-y;
+				background-position: 0 0;
+				position:relative;
+				z-index:9999;
+				
+			}
+			
+			
+				#forgot-pin-instructions h3,
+				#activate-card-instructions h3,
+				.instruction-box h3,
+				.instruction-box p,
+				#forgot-pin-instructions p,
+				#activate-card-instructions p,
+				.terms-box h3,
+				.terms-box p { padding:0 15px 0 18px; margin:0 0 10px 0; color:#222; }
+				
+				
+				
+				#main-content #forgot-pin-instructions h3,
+				#main-content #activate-card-instructions h3,
+				#main-content .instruction-box h3,
+				#main-content .terms-box h3,
+				#transfer-funds-us #main-content .pop-up-instructions h3
+				{ 
+					padding-top:9px;
+					font-size:1.167em;
+					line-height: 1.214em; 
+					font-weight:bold;
+					margin-bottom:4px;
+					background:none;
+				}
+				#forgot-pin-instructions p,
+				#activate-card-instructions p,
+				.instruction-box p,
+				.terms-box p { 
+					font-size:1em;
+					line-height: 1.417em;
+				}
+				
+				p.close-button { position:absolute; top:-8px; right:-5px;  zoom:1; }
+				
+				p.hide-instructions {
+					background-image: url(../images/skin/bg-horizon-dot.gif);
+					background-repeat: repeat-x;
+					background-position:0 0;
+					padding:12px 0 5px 0 !important;
+					margin:27px 15px 0 18px !important;
+					zoom:1;
+				}
+				
+				p.hide-instructions a { color:#2a6ebb !important; display:block; /*background-image: url(../images/icons/icon-arrow-blue.gif) !important;*/ }
+				
+				
+				
+			.background-btm_ {
+				width: 418px;
+				background-image: url(../images/skin/bg-hp-pin-retrieve-btm.png);
+				background-repeat: no-repeat;
+			}
+
+			.terms-wrap_ .background-btm_ {
+				background-image: url(../images/skin/bg-hp-pin-retrieve-btm-arrow.png);
+				height:22px;
+			}
+
+
+
+/*****************************
+	*ACCOUNT CARD INFORMATION
+******************************/
+
+.article-page {  }
+	
+	.article-page #content #aside  h2,
+	.aside-related-information h3 { 
+		font:normal 1.5em/1.333em "Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium";
+		margin-bottom:36px;
+	}
+	
+	ul.tool-links { }
+/* z-index fix for tool links added 11-15-2010 */
+	ul.tool-links li { z-index:9999;}
+	
+	ul.tool-links.btm-brdr_, .related-feature-item.btm-brdr_ {
+		padding-bottom:9px;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 bottom;
+	}
+	
+		li.nav-instructions,
+		li#print-tool,
+		li#export-statements,
+		li#send-statement-to-email,
+		li#balance-alert-prefs,
+		li#paper-statement-prefs { 
+			float:left; 
+			position:relative;
+			/*-webkit-box-shadow: 0px 0px 2px rgba(0,0,0,0.5);*/
+			border: 1px solid transparent;
+			margin-right:3px;
+			padding-top:9px;
+			padding-bottom:2px;
+			border-bottom:none;
+			-webkit-border-radius:2px;
+			-moz-border-radius:2px;
+			border-radius:2px;
+		}
+		li#print-tool,
+		li.nav-instructions { border-color:transparent;padding-bottom:10px; }
+		
+		li.nav-instructions { margin-right:0; }
+		
+		.tool-links li.last_ { float:right; margin-right:0; }
+		
+		ul.tool-links.btm-brdr_ { padding-bottom:0px; }
+		
+		ul.tool-links form { 
+			z-index:0;
+			margin-top:6px; padding-bottom:20px;
+			position:absolute;
+			margin-left:-1px;
+			border: 1px solid #bfbebe; 
+			background-color:#eae9e6;
+			width:392px;
+			opacity:0;
+			-webkit-border-radius:2px;
+			-moz-border-radius:2px;
+			border-radius:2px;
+			box-shadow:0 3px 4px #bbbab9;
+			-moz-box-shadow:0 3px 4px #bbbab9;
+		}
+
+		.tool-links form h3 { 
+			position:relative;
+			font:bold 1.167em//*1.214em*/ 1.30em arial,sans-serif; 
+			text-indent:-16px; padding:0 120px 0 16px;
+			margin:0 0 8px 0;
+			color:#222;
+		}
+		
+		.tool-links ol { margin:0 0 0 12px; }
+				
+			.tool-links ol ul { margin:0 0 0 16px; }
+			
+			.tool-links ol ol { margin-left:9px; }
+			
+			.tool-links ol ol li input, 
+			.tool-links ol ol li label,
+			.tool-links ol ol li select,
+			#balance-alerts p { float:left; width:auto; font-size:1.167em; line-height: 1.634em; }
+			#balance-alerts p { padding-top:1px; }
+			#balance-alerts p, 
+			#balance-alerts-method-phone-number, 
+			#balance-alerts-email { 
+				width:242px;
+				color:#222;  
+				font-size:1em; 
+				line-height: 1.417em;
+                padding-left:20px;
+			}
+
+            #balance-alerts-mobile-phone {
+                padding-left:16px;
+            }
+            #balance-alerts-mobile-phone-note {
+                padding-left:26px;
+            }
+            #balance-alerts-carrier-name {
+                padding-left:26px;
+            }
+            #balance-alerts-daily {
+                /*padding-left:16px;*/
+            }
+            #balance-alerts-daily-time-of-day {
+                /*padding-left:16px;*/
+            }
+            #balance-alerts-schedule {
+                padding-left:16px;
+            }
+
+			#main-content .tool-links form input.text {
+				padding:2px;
+				color:#999;
+			}
+		
+			#main-content .tool-links .alert-box {
+				background-color:#a6a6a6;
+				margin:0 10px 15px 10px;
+				display:none;
+			}
+			#main-content .tool-links .alert-box p {
+				font-size:1em;
+				margin:0;
+				padding:0;
+				color:#fff;
+			}
+		
+			#balance-alerts select { font-size:1em; width:115px; }
+
+			#balance-alerts div.daily { padding-top:3px; }
+
+			#balance-alerts-method-phone-number, #balance-alerts-email {  }
+
+			label.l-h-em { margin-bottom:0 !important; }
+				
+			.input-wrap_ { padding-left:21px; margin-bottom:7px; /*width:345px;*/ padding-top:2px; }
+
+			#balance-alerts-method-phone-number { width:109px; }
+
+			#main-content #balance-alerts-method-phone-number-1, #main-content #balance-alerts-method-phone-number-2 { width:26px; margin-right:4px; font-size:.917em; }
+
+			#main-content #balance-alerts-method-phone-number-3 { width:32px; margin-right:2px; font-size:.917em;}
+			
+			#balance-alerts-email { width:216px; }
+			
+			
+			
+			
+			
+				.tool-links ol ol li input { margin-right:8px; }
+				
+		li#send-statement-to-email form,
+		li#balance-alert-prefs form { display:block; }
+
+			li.ordered-item { margin-bottom:19px;}
+			
+			.tool-links ol ul#echo-account-address { padding-top:2px; }
+			.tool-links ol ul#echo-account-address li { font-size:1.167em; line-height: 1.286em; }
+				.tool-links ol ul#echo-account-address li a.arrow-red_ { font-size:0.857em; line-height: 1.5em; }
+			.tool-links ol ul#echo-account-address li.last_ { padding-top:4px; float:none; }
+				
+				
+			.ordered-item.top-brdr_ {
+				width:368px;
+				background-image: url(../images/skin/bg-horizon-dot.gif);
+				background-repeat: repeat-x;
+				background-position: 0 top;
+				margin-bottom:0;
+				padding-top:21px;	
+			}
+			
+			 ul.submit-update li { float:left !important; margin-right:28px; }
+			
+			 ul.submit-update li.last_ { margin-right:0; padding-top:2px; font-size:1.167em; line-height: 1.286em; }
+			 
+#balance-alerts li.ordered-item.first_ { margin-bottom:29px;}
+
+#balance-alerts div.input-wrap_.last_ { margin-top:0px !important; }
+
+
+#balance-alerts div.input-wrap_.last_ label { margin-right:7px; line-height:1em !important; }
+
+#balance-alerts #send-msg-time-of-day { margin-top:0px; }
+
+div.daily label.l-h-em { /*line-height:1em !important;*/ padding-top:4px;}
+
+
+
+
+/*Alert Boxes*/
+.alert-box.information-message  {
+	background-image: url(../images/icons/icon-alert-information-non-transparent.gif);
+}
+
+.alert-box.information-message-iat  {
+	background-image: url(../images/icons/icon-alert-information-non-transparent.gif);
+}
+
+.alert-box.warning-message  { 
+	background-image: url(../images/icons/icon-alert-message-non-transparent.gif); 
+}
+
+.alert-box.information-message, .alert-box.warning-message {
+	background-position: 0 0;
+	background-repeat:no-repeat;
+	padding:4px 0 0 29px;
+	margin-bottom:6px;
+	height:18px;
+	background-color:#e1e1e0;
+	color:#222;
+}
+
+.alert-box.information-message-iat, .alert-box.warning-message {
+	background-position: 0 0;
+	background-repeat:no-repeat;
+	padding:4px 0 0 29px;
+	margin-bottom:6px;
+	height:36px;
+	background-color:#e1e1e0;
+	color:#222;
+}
+
+.alert-box.information-message.last_, .alert-box.warning-message.last_ {
+	margin-bottom:35px;
+}
+
+.alert-box, .alert-box p {
+	-moz-border-radius-topright:2px;
+	-moz-border-radius-bottomright:2px;
+	-webkit-border-top-right-radius:2px;
+	-webkit-border-bottom-right-radius:2px;
+	border-top-right-radius:2px;
+	border-bottom-right-radius:2px;
+}
+
+.alert-box.information-message p,
+.alert-box.warning-message p { background-image:none; }
+/*End Alert Boxes*/
+
+/*Styling for the drop downs on the Statements page*/
+.statements-page .tool-links {
+	font-family: "Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium";
+}
+.statements-page .tool-links legend {
+	font: normal 1.166em/1.125em "Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium";
+}
+.statements-page .tool-links h3 {
+	font-family: "Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium";
+}
+.statements-page .tool-links form h3 {
+	padding-left:20px;
+	text-indent:-20px;
+}
+.statements-page .tool-links a.arrow-red_ {
+	font-size:0.857em;
+	line-height:1.5em;
+}
+.statements-page .tool-links a.p-u-i-toggle_, .statements-page .tool-links .hide-instructions a.arrow-red_ {
+	font-size:1em;
+}
+.tool-links ol ul.submit-update {
+	margin-left:0;
+}
+.statements-page ul.submit-update li {
+	margin-right:20px;
+}
+.statements-page .tool-links ol ol {
+	margin:0;
+}
+.statements-page .tool-links ol input.radio {
+	margin:4px 8px 0 0;
+}
+
+@-moz-document url-prefix() {
+.statements-page .tool-links ol input.radio {
+	margin:7px 8px 0 0;
+}
+
+}
+
+
+#main-content .tool-links label {
+	padding:0;
+	margin-bottom:0;
+	clear:none;
+}
+
+ul.tool-links form#export-statement {padding-top:30px;}
+
+form#export-statement p {
+	font:1.166em/1.214em "Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium";
+	padding:0 0 10px 0;
+	margin:0 10px;
+}
+form#export-statement .alert-box {
+	background-color:#a6a6a6;
+	margin:0 10px 15px 10px;
+	display:none;
+}
+form#export-statement .alert-box p {
+	font-size:1em;
+	margin:0;
+	padding:0;
+	color:#fff;
+}
+
+#export-statement ul.download-statement {
+	clear:both;
+	margin:10px 10px 0 10px;
+	background-image: url(../images/skin/bg-horizon-dot.gif);
+	background-repeat: repeat-x;
+	background-position: 0 0;
+	padding-top:21px;
+}
+#export-statement .download-statement li {
+	float:left;
+	margin-right:18px;
+}
+#export-statement .download-statement li.last_ {
+	padding-top:1px;
+	font-size:1.167em;
+	line-height:1.286em;
+}
+
+form#send-statement { padding-top:53px; }
+	form#send-statement legend { margin:-40px 0 0 12px;}
+
+	
+	p#echo-account-name,
+	#send-statement h3,
+	#send-statement label { 
+		float:none; 
+		font-size:1.167em; 
+		line-height: 1em; 
+		font-weight:normal; 
+		margin-bottom:0;
+	}
+	
+	p#echo-account-name,
+	#send-statement h3 { margin-left:11px; margin-bottom:3px;}
+	
+	p#echo-account-name { font-weight:bold; margin-bottom:20px;  }
+
+form#send-statement ol li { margin-bottom:22px; }
+
+#main-content form#send-statement label { margin-bottom:6px; }
+
+form#send-statement input,
+form#send-statement textarea { color:#222; margin-left:0; float:none; width:350px; padding:2px 8px;}
+
+#main-content form#send-statement input.text {
+	padding: 2px 8px;
+}
+
+form#send-statement textarea { 
+	height:80px; 	
+	border-top:1px solid #acadb2;
+	border-right:1px solid #dcdfe6;
+	border-bottom:1px solid #e2e9ef;
+	border-left:1px solid #e2e3e8;
+	background:#fff;
+	color:#999;
+	-moz-border-radius:2px;
+	font:normal 1em/1.333em "Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium"; }
+
+form#send-statement li.last_ {
+	float: none;
+	padding:21px 0 0 0;
+	margin-bottom: 0;
+	background-image: url(../images/skin/bg-horizon-dot.gif);
+	background-repeat: repeat-x;
+	background-position: 0 0;
+	width:368px;
+	
+}
+
+form#send-statement li.last_ ul { margin-left:0; }
+
+form#send-statement li.last_ ul li { margin-bottom:0; }
+
+form#send-statement li.last_ ul li.last_ { margin:0; padding: 2px 0 0 0; width:100px; background-image:none; }
+
+form#send-statement li.last_ ul li.last_ a { }
+
+
+form#send-statement ul li { margin-bottom:0; }
+
+form#send-statement ul input { width:auto; }
+
+
+.click-to-close-tab {
+	position: absolute;
+	top:7px;
+	right:7px;
+	background-image: url(../images/skin/btn-close-tab.gif);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	width:11px; height:11px;
+	cursor:pointer;
+	z-index:999;
+}
+
+.no-color_ { background-color:transparent !important;}
+
+#main-content #receive-paper-statement .alert-box {
+	margin-bottom:20px;
+}
+#print-version-content {
+	display:none;
+}
+#summary-fees-print{
+	display:none;
+}
+
+/*dashboard*/	
+
+
+#dashboard-page h2#page-title {
+	font-size:2.167em !important;
+	line-height: 1.077em !important;
+	margin-bottom:8px !important;
+	color:#222 !important;
+}
+
+
+p.introduction { font-size:1.167em !important; line-height: 1.5em !important; padding-right:50px; margin-bottom:29px; }
+
+#dashboard-page #main-content p.introduction { 
+	font-size:1.167em !important;
+	line-height: 1.429em !important; 
+	color:#222;
+	 padding-right:10px;
+}
+
+#dashboard-page #main-content .alert-box.information-message  {
+	background-image: url(../images/icons/icon-alert-information-non-transparent.gif);
+}
+
+#dashboard-page #main-content .alert-box.warning-message  { 
+	background-image: url(../images/icons/icon-alert-message-non-transparent.gif); 
+}
+
+#dashboard-page #main-content .alert-box.information-message,
+#dashboard-page #main-content .alert-box.warning-message {
+	background-position: 0 0;
+	background-repeat:no-repeat;
+	padding:5px 0 5px 29px;
+	margin-bottom:6px;
+}
+
+#dashboard-page #main-content .alert-box.information-message.last_,
+#dashboard-page #main-content .alert-box.warning-message.last_ {
+
+	margin-bottom:35px;
+}
+
+#dashboard-page #main-content .alert-box,
+#dashboard-page #main-content .alert-box p {
+	-moz-border-radius-topright:2px;
+	-moz-border-radius-bottomright:2px;
+	-webkit-border-top-right-radius:2px;
+	-webkit-border-bottom-right-radius:2px;
+	border-top-right-radius:2px;
+	border-bottom-right-radius:2px;
+}
+
+#dashboard-page ul.tool-links.btm-brdr_ { padding-bottom:9px;}
+
+#dashboard-page ul.tool-links.btm-brdr_ li { float:right;}
+	#dashboard-page ul.tool-links.btm-brdr_ li * { text-align:left; }
+
+	#dashboard-page #main-content .alert-box.information-message p,
+	#dashboard-page #main-content .alert-box.warning-message p { background-image:none; }
+
+
+
+#dashboard-navigation { width:100%; margin-top:22px; }
+
+#dashboard-navigation .row-wrap_ { margin-bottom:22px;  }
+
+#dashboard-navigation .row-wrap_.faux-col-3_ {
+	background-image: url(../images/skin/bg-faux-3-col-dashboard-navigation.png);
+	background-repeat: no-repeat;
+	background-position: 0px 48px;
+	padding-bottom:0 !important;
+
+}
+
+
+
+#dashboard-navigation .bottom-border-3col_, 
+#dashboard-navigation .bottom-border-2col_,
+#dashboard-navigation .bottom-border-1col_{
+	background-image: url(../images/skin/bg-faux-3-col-dashboard-btm.png);
+	background-position: 0 bottom;
+	background-repeat:no-repeat;
+	float:none !important;  width:573px !important;
+	padding:0 !important;
+	margin:0 !important;
+	border:0 !important;
+	
+}
+
+#dashboard-navigation .bottom-border-1col_ {
+	background-image: url(../images/skin/bg-faux-1-col-dashboard-btm.png);
+	
+}
+
+#dashboard-navigation .bottom-border-2col_ {
+	background-image: url(../images/skin/bg-faux-2-col-dashboard-btm.png);
+	
+}
+
+#dashboard-navigation .row-wrap_.faux-col-1_ {
+	background-image: url(../images/skin/bg-faux-1-col-dashboard-navigation.png);
+	background-repeat: no-repeat;
+	background-position: 0px 48px;
+	padding-bottom:0 !important;
+}
+
+
+#dashboard-navigation .row-wrap_.faux-col-2_ {
+	background-image: url(../images/skin/bg-faux-2-col-dashboard-navigation.png);
+	background-repeat: no-repeat;
+	background-position: 0px 48px;
+	padding-bottom:0 !important;
+}
+		
+		#dashboard-navigation .row-wrap_ div {
+			background-color:#fff;
+			float: left;
+			width: 177px;
+			padding-bottom:0 !important;
+			margin-right: 20px;
+			background-color:transparent;
+			position:relative;
+		}
+		
+		#dashboard-navigation .row-wrap_ div.db-last_ { margin-right:0px; }
+
+			#dashboard-navigation .row-wrap_ div dl {
+				background-color:none;
+				padding:0 0 8px 0;
+				min-height:163px;
+				
+			}
+
+				#dashboard-navigation dt { 
+					font:normal 1.75em/1.333em "Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium";
+					color:#fff; 
+					margin-bottom:13px;
+/*					background-position:0 1px;
+					background-repeat:no-repeat;
+					padding:14px 0 5px 10px;*/
+					
+				}
+
+				/* background-images for dt */ 
+			/*	#db-nav-history dt { background-image: url(../images/skin/bg-nav-dashboard-history.png); }
+				#db-nav-money-in dt { background-image: url(../images/skin/bg-nav-dashboard-money-in.png); }
+				#db-nav-money-out dt { background-image: url(../images/skin/bg-nav-dashboard-money-out.png); }
+				#db-nav-tools dt { background-image: url(../images/skin/bg-nav-dashboard-tools.png); }
+				#db-nav-plan dt { background-image: url(../images/skin/bg-nav-dashboard-plan.png); }
+				#db-nav-products dt { background-image: url(../images/skin/bg-nav-dashboard-products.png); }
+				#db-nav-services dt { background-image: url(../images/skin/bg-nav-dashboard-services.png); }				*/
+				
+				#dashboard-navigation dd { 
+					padding-left:10px;
+					padding-right:10px;
+					margin-bottom:8px;
+					font-size:1.167em;
+					line-height: 1.12em;
+					
+				}
+				
+				
+				#dashboard-navigation a {
+					color:#222;
+					padding-left:11px;
+					background-image: url(../images/icons/icon-arrow-222.gif);
+					background-repeat: no-repeat;
+                    background-position: 0 0.5em;
+                    display: inline-block;
+				}
+
+/*
+
+* ACCOUNT DATA PAGES
+
+*/
+
+
+
+
+#account-data {  }
+#schedule-automatic-transfers #main-content h2,
+#secondary-card-manage #main-content h2,
+.article-page #main-content h2,
+#account-data #main-content h2 { 
+	font-size:1.667em;
+	line-height: 1.2em; margin-bottom:39px; }
+
+		#account-data .tool-links,
+		#secondary-card-manage .tool-links,
+		#schedule-automatic-transfers .tool-links { margin-bottom:18px; }
+		
+		.report-controls {
+			margin-bottom: 22px;
+			width:100%;
+			padding-top:1px;
+			padding-bottom:5px;
+		}
+		
+			.report-controls form {  padding-top:2px; }
+			
+			.report-controls li,
+			.report-controls p,
+			.report-controls input, 
+			.report-controls select { float:left; }
+				
+				.report-controls label,
+				.report-controls input {  }
+
+						.report-controls li.first_ { margin-right:14px;}
+						
+						.report-controls li.second_ { }
+					
+				.report-controls p { }
+					
+					.report-controls select { margin-right:8px;  }
+			
+			
+		
+/* Table styles found in lib/tables.css */
+
+.report-graph { margin-bottom:60px; }
+
+#account-data #aside .row-wrap_ {  
+		padding-top:1px;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: left top;
+}	
+
+
+#account-data ul.related-features,.related-features li { float:left; }
+
+	.related-features li { margin-right:47px; width:145px; }
+	.related-features li.last_ { margin-right:0; }
+	
+		.related-features li dl { padding-top:17px; }
+
+		.related-features li dt { font:normal 1.5em/1.278em "Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium"; color:#222; margin-bottom:6px; }
+
+		.related-features li dd a { font-size:1.083em; line-height: 1.308em; color:#2a6ebb;}
+		
+
+		
+
+#account-data .aside-related-information { float:right; }
+
+
+
+/***********************
+*Direct Deposit page
+************************/
+
+#direct-deposit-page .instructions { margin-top:33px; margin-bottom:62px;}
+
+	#direct-deposit-page .instructions h3 { 
+	font-size:1.167em;
+	line-height: 2em;
+		font-weight:normal; 
+	}
+
+	#direct-deposit-page .instructions ol { 
+		position:relative;
+		list-style-type: decimal; 
+		font-size:1.167em;
+		line-height: 1.45em;
+		margin:-2px 0 22px 0;
+		padding:1px 0 0 0;
+		list-style-position:inside;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 top;
+		color:#222;
+	}
+	#direct-deposit-page .instructions ul { 
+		position:relative;
+		font-size:1.167em;
+		line-height: 1.45em;
+		margin:-2px 0 22px 0;
+		padding:1px 0 0 0;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 top;
+		color:#222;
+	}
+
+		#direct-deposit-page .instructions li {
+			background-image: url(../images/skin/bg-horizon-dot.gif);
+			background-repeat: repeat-x;
+			background-position: 0 bottom;
+			padding:13px 150px 11px 2.12em; 
+			text-indent:-2.12em;
+			/*margin-right: -150px;*/
+		}
+
+
+	.instructions p.note { font-size:1em; line-height:1.45em; text-indent:-3.35em; padding:0 40px 0 3.45em; font-style:italic; }
+	
+	.instructions p.note strong {  }
+	
+			#direct-deposit-page .instructions li span { padding-left:10px; }
+
+
+
+#direct-deposit-page .printable-request-form {  }
+
+
+	#direct-deposit-page .printable-request-form h3, 
+	#direct-deposit-page .printable-request-form p,
+	#direct-deposit-page .printable-request-form table { 
+		font-size:1.167em; line-height: 1.643em;
+		font-weight:normal;
+		color:#222;
+	}
+
+
+	#direct-deposit-page .printable-request-form h3 { margin:0 0 6px 0; }
+
+	#direct-deposit-page .printable-request-form p { margin:0 0 25px 0; padding:0 15px 0 0;}
+	
+		#direct-deposit-page .printable-request-form p span,
+		.employee-information span {  border-bottom: solid #b5b5b6 1px; padding-right:254px; vertical-align:18%; }
+
+
+	#direct-deposit-page .printable-request-form table { width:572px; }
+	
+	
+	#direct-deposit-page .printable-request-form table col.one_ { width:200px; }
+	#direct-deposit-page .printable-request-form table col.two_ { width:372px; }
+	
+		#direct-deposit-page .printable-request-form table th,
+		#direct-deposit-page .printable-request-form table td { text-align:left; padding-bottom:5px; }
+		
+		#direct-deposit-page .printable-request-form table td { padding-left:10px; }
+		
+		.employee-information tr.first_ th,
+		.employee-information tr.first_ td { padding-top:20px; }
+		
+			.employee-information span { padding-right:311px; }
+
+/***********************
+*Request Upgrade page
+************************/
+
+#request-upgrade-page .instructions { margin-top:33px; margin-bottom:62px;}
+
+	#request-upgrade-page .instructions h3 { 
+	font-size:1.167em;
+	line-height: 2em;
+		font-weight:normal; 
+	}
+
+	#request-upgrade-page .instructions ol { 
+		position:relative;
+		list-style-type: decimal; 
+		font-size:1.167em;
+		line-height: 1.45em;
+		margin:-2px 0 22px 0;
+		padding:1px 0 0 0;
+		list-style-position:inside;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 top;
+		color:#222;
+	}
+	#request-upgrade-page .instructions ul { 
+		position:relative;
+		font-size:1.167em;
+		line-height: 1.45em;
+		margin:-2px 0 22px 0;
+		padding:1px 0 0 0;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 top;
+		color:#222;
+	}
+
+		#request-upgrade-page .instructions li {
+			background-image: url(../images/skin/bg-horizon-dot.gif);
+			background-repeat: repeat-x;
+			background-position: 0 bottom;
+			padding:13px 0 11px 0; 
+		}
+
+    #request-upgrade-page #main-content h2 {
+        padding-bottom:0;
+        margin-bottom:2px;
+    }
+
+    .instructions p.note { font-size:1em; line-height:1.45em; text-indent:-3.35em; padding:0 40px 0 3.45em; font-style:italic; }
+	
+	.instructions p.note strong {  }
+	
+			#request-upgrade-page .instructions li span { padding-left:10px; }
+	
+	
+	/***********************
+*Online Bill Pay page
+************************/
+
+#online-billpay-page .instructions { margin-top:33px; margin-bottom:62px;}
+
+	#online-billpay-page .instructions h3 { 
+	font-size:1.167em;
+	line-height: 2em;
+		font-weight:normal; 
+	}
+
+	#online-billpay-page .instructions ol { 
+		position:relative;
+		list-style-type: decimal; 
+		font-size:1.167em;
+		line-height: 1.45em;
+		margin:-2px 0 22px 0;
+		padding:1px 0 0 0;
+		list-style-position:inside;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 top;
+		color:#222;
+	}
+	#online-billpay-page .instructions ul { 
+		position:relative;
+		font-size:1.167em;
+		line-height: 1.45em;
+		margin:-2px 0 22px 0;
+		padding:1px 0 0 0;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 top;
+		color:#222;
+	}
+
+    #online-billpay-page .instructions li {
+        background-image: url(../images/skin/bg-horizon-dot.gif);
+        background-repeat: repeat-x;
+        background-position: 0 bottom;
+        padding:13px 0 11px 0;
+    }
+
+    #online-billpay-page #main-content h2 {
+        padding-bottom:0;
+        margin-bottom:2px;
+    }
+
+	.instructions p.note { font-size:1em; line-height:1.45em; text-indent:-3.35em; padding:0 40px 0 3.45em; font-style:italic; }
+	
+	.instructions p.note strong {  }
+	
+			#online-billpay-page .instructions li span { padding-left:10px; }
+	
+/***********************	
+	*Online Bill Pay page
+************************/
+
+
+
+
+	/***********************
+*Budgeting and Spending
+************************/
+
+#budget-and-spending-page .instructions { margin-top:33px; margin-bottom:62px;}
+
+	#online-billpay-page .instructions h3 { 
+	font-size:1.167em;
+	line-height: 2em;
+		font-weight:normal; 
+	}
+
+	#budget-and-spending-page .instructions ol { 
+		position:relative;
+		list-style-type: decimal; 
+		font-size:1.167em;
+		line-height: 1.45em;
+		margin:-2px 0 22px 0;
+		padding:1px 0 0 0;
+		list-style-position:inside;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 top;
+		color:#222;
+	}
+	#budget-and-spending-page .instructions ul { 
+		position:relative;
+		font-size:1.167em;
+		line-height: 1.45em;
+		margin:-2px 0 22px 0;
+		padding:1px 0 0 0;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 top;
+		color:#222;
+	}
+
+    #budget-and-spending-page .instructions li {
+        background-image: url(../images/skin/bg-horizon-dot.gif);
+        background-repeat: repeat-x;
+        background-position: 0 bottom;
+        padding:13px 0 11px 0;
+    }
+
+    #budget-and-spending-page #main-content h2 {
+        padding-bottom:0;
+        margin-bottom:2px;
+    }
+
+	.instructions p.note { font-size:1em; line-height:1.45em; text-indent:-3.35em; padding:0 40px 0 3.45em; font-style:italic; }
+	
+	.instructions p.note strong {  }
+	
+			#budget-and-spending-page .instructions li span { padding-left:10px; }
+	
+/***********************	
+	*Online Bill Pay page
+************************/
+
+
+#mn-checks-page .instructions 
+{ margin-top:33px; margin-bottom:62px;}
+
+	#mn-checks-page .instructions h3 {
+	font-size:1.167em;
+	line-height: 2em;
+		font-weight:normal; 
+	}
+
+	#mn-checks-page .instructions ol {
+		position:relative;
+		list-style-type: decimal; 
+		font-size:1.167em;
+		line-height: 1.45em;
+		margin:-2px 0 22px 0;
+		padding:1px 0 0 0;
+		list-style-position:inside;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 top;
+		color:#222;
+	}
+	#mn-checks-page .instructions ul {
+		position:relative;
+		font-size:1.167em;
+		line-height: 1.45em;
+		margin:-2px 0 0 0;
+		padding:1px 0 0 0;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 top;
+		color:#222;
+	}
+
+	#mn-checks-page .instructions li {
+			background-image: url(../images/skin/bg-horizon-dot.gif);
+			background-repeat: repeat-x;
+			background-position: 0 bottom;
+			padding:13px 150px 11px 2.12em; 
+			text-indent:-2.12em;
+			margin-right: -150px;
+		}
+		
+    #mn-checks-page .information ul {
+		position:relative;
+		font-size:1.167em;
+		line-height: 1.45em;
+		margin:-2px 0 22px 0;
+		margin-top:-20px;
+		padding:1px 0 0 0;
+		color:#222;
+		
+	}
+
+    #mn-checks-page .information li {
+        background-image: url(../images/skin/bg-horizon-dot.gif);
+        background-repeat: repeat-x;
+        background-position: 0 bottom;
+        padding:13px 0 11px 0;
+    }
+
+    #mn-checks-page #main-content h2 {
+        padding-bottom:0;
+        margin-bottom:2px;
+    }
+
+
+#cash-loads-page .instructions
+{ margin-top:33px; margin-bottom:62px;}
+
+	#cash-loads-page .instructions h3 {
+	font-size:1.167em;
+	line-height: 2em;
+		font-weight:normal;
+	}
+
+	#cash-loads-page .instructions ol {
+		position:relative;
+		list-style-type: decimal;
+		font-size:1.167em;
+		line-height: 1.45em;
+		margin:-2px 0 22px 0;
+		padding:1px 0 0 0;
+		list-style-position:inside;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 top;
+		color:#222;
+	}
+	#cash-loads-page .instructions ul {
+		position:relative;
+		font-size:1.167em;
+		line-height: 1.45em;
+		margin:-2px 0 0 0;
+		padding:1px 0 0 0;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 top;
+		color:#222;
+	}
+
+	#cash-loads-page .instructions li {
+			background-image: url(../images/skin/bg-horizon-dot.gif);
+			background-repeat: repeat-x;
+			background-position: 0 bottom;
+			padding:13px 150px 11px 2.12em;
+			text-indent:-2.12em;
+			margin-right: -150px;
+		}
+
+		#cash-loads-page .information ul {
+		position:relative;
+		font-size:1.167em;
+		line-height: 1.45em;
+		margin:-2px 0 22px 0;
+		margin-top:-20px;
+		padding:1px 0 0 0;
+		color:#222;
+
+	}
+		#cash-loads-page .information li {
+			background-image: url(../images/skin/bg-horizon-dot.gif);
+			background-repeat: repeat-x;
+			background-position: 0 bottom;
+			padding:13px 0 11px 0;
+		}
+
+    #cash-loads-page ul.tool-links.btm-brdr_ {
+        padding-bottom:29px;
+        background-image: url(../images/skin/bg-horizon-dot.gif);
+        background-repeat: repeat-x;
+        background-position: 0 bottom;
+    }
+    #cash-loads-page #main-content {
+       height:500px;
+    }
+    #cash-loads-page #main-content h2 {
+        padding-bottom:0;
+        margin-bottom:2px;
+    }
+
+    .instructions p.note { font-size:1em; line-height:1.45em; text-indent:-3.35em; padding:0 40px 0 3.45em; font-style:italic; }
+	
+	.instructions p.note strong {  }
+	
+			#mn-checks-page .instructions li span { padding-left:10px; }		
+/***********************
+*EFT Reload page
+************************/
+
+#reload-page .instructions { margin-top:33px; margin-bottom:62px;}
+
+	#reload-page .instructions h3 { 
+	font-size:1.167em;
+	line-height: 2em;
+		font-weight:normal; 
+	}
+
+	#reload-page .instructions ol { 
+		position:relative;
+		list-style-type: decimal; 
+		font-size:1.167em;
+		line-height: 1.45em;
+		margin:-2px 0 22px 0;
+		padding:1px 0 0 0;
+		list-style-position:inside;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 top;
+		color:#222;
+	}
+	#reload-page .instructions ul { 
+		position:relative;
+		font-size:1.167em;
+		line-height: 1.45em;
+		margin:-2px 0 22px 0;
+		padding:1px 0 0 0;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 top;
+		color:#222;
+	}
+
+		#reload-page .instructions li {
+			background-image: url(../images/skin/bg-horizon-dot.gif);
+			background-repeat: repeat-x;
+			background-position: 0 bottom;
+			padding:13px 0 11px 0; 
+		}
+
+    #reload-page #main-content h2 {
+        padding-bottom:0;
+        margin-bottom:12px;
+    }
+
+	.instructions p.note { font-size:1em; line-height:1.45em; text-indent:-3.35em; padding:0 40px 0 3.45em; font-style:italic; }
+	
+	.instructions p.note strong {  }
+	
+			#reload-page .instructions li span { padding-left:10px; }
+			
+
+/*Transformation pages */
+
+#transfer-funds-non-us {  }
+
+	#transfer-funds-non-us #main-content h2 { margin-bottom:34px; padding-right:100px; }
+	
+	#transfer-funds-non-us div.instructions,
+	#transfer-funds-non-us div.instructions h3,
+	#transfer-funds-non-us div.instructions ol.list li{
+		color:#222;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 0;
+		padding:34px 0 0 0; 
+	}
+	
+	#transfer-funds-non-us div.instructions p.introduction,
+	#transfer-funds-non-us div.instructions ul.list li,
+	#transfer-funds-non-us div.instructions h3, 
+	#transfer-funds-non-us div.instructions ol.list li { 
+		font-size:1.167em;
+		line-height: 1.429em;
+	}
+	
+	#transfer-funds-non-us div.instructions p.introduction { margin:0 0 8px 0; }
+	
+	#transfer-funds-non-us div.instructions h3 {
+		margin: 29px 0 12px 0;
+		padding: 0 0 10px 0;
+		background-position: 0 bottom;
+	}
+	
+	#transfer-funds-non-us div.instructions ol.list {
+		margin-bottom:22px;
+
+		
+	}
+		#transfer-funds-non-us div.instructions ol.list li { 
+			margin:0;
+			padding:13px 0 12px 30px; 
+			text-indent:-30px;
+			background-position: 0 bottom;
+		}
+		
+		#transfer-funds-non-us div.instructions ol.list li.first_ { padding-top:0px; }
+		
+			#transfer-funds-non-us div.instructions ol.list li span { 
+				padding-left:10px;
+			}
+
+    #transfer-funds-non-us #main-content h2 {
+        padding-bottom:0;
+        margin-bottom:2px;
+    }
+
+	
+	
+/* SECONDARY CARD MANAGEMENT PAGE */
+
+#secondary-card-manage #main-content h2,
+#schedule-automatic-transfers #main-content h2 { margin-bottom:14px; }
+
+#secondary-card-manage .tool-links, 
+#schedule-automatic-transfers .tool-links { padding-bottom:9px; margin-bottom:23px; }
+
+#schedule-automatic-transfers .tool-links .pop-up-instructions,
+#secondary-card-manage .tool-links .pop-up-instructions, 
+#profile-account-alerts .tool-links .pop-up-instructions { float:right; }
+
+#schedule-automatic-transfers #aside,
+#secondary-card-manage #aside {
+	width: 100%;
+	float: none;
+	background-image: url(../images/skin/bg-rule-vrt.gif);
+	background-repeat: repeat-y;
+	background-position: 462px 0;
+}
+	#schedule-automatic-transfers #aside .row-wrap_,
+	#secondary-card-manage #aside .row-wrap_ {
+		width: 900px;
+		padding: 0px 0px 0 0px;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 2px 0;
+		margin-left:25px;
+	}
+
+
+	#schedule-automatic-transfers #aside .recent-activity,
+	#schedule-automatic-transfers .related-features,
+	#schedule-automatic-transfers .aside-related-information,
+	#secondary-card-manage #aside .recent-activity,
+	#secondary-card-manage .related-features,
+	#secondary-card-manage .aside-related-information { float:left; }
+
+
+	#schedule-automatic-transfers #aside .recent-activity,
+	#schedule-automatic-transfers .related-features,
+	#secondary-card-manage #aside .recent-activity,
+	#secondary-card-manage .related-features { padding:17px 0 0 0; }
+
+		#secondary-card-manage #aside h3,
+		#schedule-automatic-transfers h3 { line-height:1.4em; padding-top:0; }
+
+	#secondary-card-manage #aside .recent-activity,
+	#schedule-automatic-transfers #aside .recent-activity { width:50%; margin-right:9px; }
+	
+		
+		#schedule-automatic-transfers #aside .recent-activity h4,
+		#secondary-card-manage #aside .recent-activity h4 { width:38%; font-weight:bold; float:left; line-height: 1.333em; margin-right:3%;}
+		
+		#secondary-card-manage #aside .recent-activity ol,
+		#schedule-automatic-transfers #aside .recent-activity ol{ 
+			color:#222;
+		}
+		
+		#schedule-automatic-transfers #aside .recent-activity dl,
+		#secondary-card-manage #aside .recent-activity dl { 
+			float:left; 
+			width:50%;
+			padding:0 0 20px 0;
+			margin:0 0 0 0; 
+			font-size:1em;
+			line-height: 1.333em;
+			padding-top:0;
+		}
+		
+		
+		#schedule-automatic-transfers #aside .recent-activity dt,
+		#secondary-card-manage #aside .recent-activity dt { clear:left; float:left; font-weight:normal; margin-right:.35em; width:auto;}
+		
+		#schedule-automatic-transfers #aside .recent-activity dd,
+		#secondary-card-manage #aside .recent-activity dd {  float:none; width:auto; }
+
+	#schedule-automatic-transfers .related-features,
+	#secondary-card-manage .related-features {  width:207px; margin-right:23px; padding-right:0px;}
+
+		#schedule-automatic-transfers .related-features li,
+		#secondary-card-manage .related-features li {
+			float: none;
+			margin: 0 0 16px 0 !important;
+			width: auto;
+			padding-bottom:36px;
+			background-image: url(../images/skin/bg-horizon-dot.gif);
+			background-position: 0 bottom;
+			background-repeat: repeat-x;
+		}
+	
+	
+		#schedule-automatic-transfers .related-features li.last_,
+		#secondary-card-manage .related-features li.last_ { background-image:none; }
+	
+	
+			#schedule-automatic-transfers .related-features dl,
+			#secondary-card-manage .related-features dl { padding:0 0 0 0 !important; }
+
+				#schedule-automatic-transfers .related-features dt,
+				#secondary-card-manage .related-features dt { padding:0 0 0 0; margin-bottom:3px;}
+				
+								#schedule-automatic-transfers .related-features dd,
+								#secondary-card-manage .related-features dd { padding:0 0 0 0; }
+								
+		#schedule-automatic-transfers .aside-related-information,
+		#secondary-card-manage .aside-related-information { margin-top:1px; }
+		
+			#schedule-automatic-transfers .aside-related-information .wrap_,
+			#secondary-card-manage .aside-related-information .wrap_ {
+				background-image: url(../images/icons/icon-market-message-wide-arrow.png);
+				background-position: 14px 15px;
+				background-repeat:no-repeat;
+				padding-top:110px;
+			}
+/*Transfer Funds page*/
+#transfer-funds-us #main-content h2 {
+	
+}
+#transfer-funds-us #main-content h3 {
+	background-image:url("../images/skin/bg-horizon-dot.gif");
+	background-position:0 top;
+	background-repeat:repeat-x;
+	font-size:1.167em;
+	line-height:1.286em;
+	padding:14px 0 10px;
+	clear:both;
+}
+#transfer-funds-us #main-content .terms-box h3, 
+#transfer-funds-us #main-content .pop-up-instructions h3 {
+	background:none;
+	line-height:1.214em;
+	padding:9px 15px 0 18px;
+}
+#transfer-funds-us #main-content .half-element label, #transfer-funds-automatic #main-content .half-element label {
+	padding-top:0;
+	/*color:#2A6EBB;*/
+}
+#transfer-funds-us #main-content .half-element, #transfer-funds-automatic #main-content .half-element {
+	width:198px;
+}
+#transfer-funds-us #main-content .half-element.final_, #transfer-funds-automatic #main-content .half-element.final_ {
+	width:174px;
+}
+#transfer-funds-us #main-content .half-element.middle-name-element label.error-anchor_, #transfer-funds-us #main-content .half-element.first-name-element label.error-anchor_, #transfer-funds-automatic #main-content .half-element.middle-name-element label.error-anchor_, #transfer-funds-automatic #main-content .half-element.first-name-element label.error-anchor_ {
+	color:#222;
+}
+#transfer-funds-us #main-content .half-element.first-name-element {
+
+}
+#transfer-funds-us #main-content .half-element.middle-name-element {
+	width:270px;
+}
+#transfer-funds-us #main-content .half-element.middle-name-element input.text, #transfer-funds-automatic #main-content .half-element.middle-name-element input.text {
+	width:247px;
+}
+#transfer-funds-us #main-content #city-field {
+	margin-bottom:0;
+}
+#profile-edit-personal-info #main-content h2 {
+	margin-bottom:8px;
+}
+#profile-edit-personal-info #main-content dl { line-height:1.333em; padding-bottom:20px; }
+
+#profile-edit-personal-info #main-content dd { font-weight:bold; padding-bottom:16px;}
+
+#card-details #main-content h2,
+#profile-personal-info #main-content h2 {
+	margin-bottom:2px;
+	width:380px;
+}
+#profile-personal-info #main-content dl {
+			background-image: url(../images/skin/bg-horizon-dot.gif);
+			background-position: 0 bottom;
+			background-repeat: repeat-x;
+			margin-bottom:13px;
+			padding:34px 0 21px;
+}
+#profile-personal-info #main-content #change-info {
+	line-height:1.2em;
+}
+#profile-personal-info ul.tool-links.btm-brdr_ {
+    padding-bottom:29px;
+    background-image: url(../images/skin/bg-horizon-dot.gif);
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
+}
+
+#profile-account-alerts #main-content h3 {
+	font-size:1.166em;
+	color:#222;
+	padding-bottom:7px;
+}
+#profile-account-alerts #main-content h2 {
+	padding-bottom:0;
+	margin-bottom:2px;
+}
+#profile-account-alerts input.radio {
+	float:left;
+	margin:7px 10px 0px 0;
+	clear:both;
+}
+#profile-account-alerts .alert-selection {
+	color:#222;
+	background-image: url(../images/skin/bg-horizon-dot.gif);
+	background-position: 0 bottom;
+	background-repeat: repeat-x;	
+	padding-bottom:25px;
+	margin-bottom:12px;
+}
+#profile-account-alerts .alert-selection label {
+	clear:none;
+	font-size:1.166em;
+	padding-top:5px;
+	margin-right:10px;
+	margin-left: 25px;
+}
+#profile-account-alerts .alert-selection input.text {
+	float:none;
+	clear:both;
+	margin-left:22px;
+	display:block;
+	width:210px;
+}
+#profile-account-alerts .alert-selection select {
+	display:block;
+	width:120px;
+}
+#profile-account-alerts .alert-selection select#weekly-day {
+	float:none;
+	clear:both;
+	margin-left:22px;
+	margin-bottom:10px;
+}
+#profile-account-alerts .alert-selection select#daily-time {
+	float:left;
+}
+#profile-account-alerts .alert-selection #time-of-day {
+	clear:both;
+	padding-left:22px;
+	height:36px;
+}
+#profile-account-alerts .alert-selection #time-of-day label {
+	font-size:1em;
+	float:left;
+}
+#profile-account-alerts .alert-selection #time-of-day select {
+	margin-top:2px;
+}
+#profile-account-alerts #required-star {
+	clear:both;
+}
+
+#change-access-code #content {
+    padding-top:45px;
+}
+#change-access-code #main-content h2 {
+	margin-bottom:2px;
+	width:380px;
+}
+#change-access-code #main-content dl {
+			background-image: url(../images/skin/bg-horizon-dot.gif);
+			background-position: 0 bottom;
+			background-repeat: repeat-x;
+			margin-bottom:13px;
+			padding:34px 0 21px;
+}
+#change-access-code #main-content #change-info {
+	line-height:1.2em;
+}
+#change-access-code p { 
+    /*font-size:1.167em;*/
+    line-height: 1.5em;
+    color:#222;
+    padding-top:3px;
+}
+#change-access-code ul.tool-links.btm-brdr_ {
+    /*padding-bottom:29px;*/
+    background-image: url(../images/skin/bg-horizon-dot.gif);
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
+}
+
+#profile-preferences #main-content div#agreement {
+	left:50px;
+	display:block;
+	width:500px;
+	height:100px;
+	background-color:#efefef;
+	overflow:auto;
+}
+#profile-preferences #main-content label#agree{
+	clear: none;
+	float: left;
+	padding: 4px 0 0 5px;
+}
+#profile-preferences #main-content input.checkbox {
+	float: left;
+}
+/*
+#profile-preferences #main-content textarea#agreement{
+	width: 450px;
+	height: 100px;
+	background-color:#dfdfdf;
+	color:#000;
+	font:normal 1em/1.333em "Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium"; 
+}*/
+
+/******MERGE FURTHER UP WITH THE OTHER STYLES FOR THIS PAGE*********/
+#transfer-funds-us input#amount-to-fund {
+	margin-bottom:38px;
+}
+#transfer-funds-us select {
+	display:block;
+	margin-bottom:15px;
+}
+#transfer-funds-us img {
+	margin-bottom:32px;
+}
+#transfer-funds-us #main-content input.tri-digits {
+	margin-bottom:38px;
+}
+#transfer-funds-us table#review-funding-costs {
+	margin-top:0;
+}
+
+#transfer-funds-us 	#main-content .information-message {
+	margin-bottom:23px;
+}
+
+#transfer-funds-us 	#main-content #terms-agreement {
+	height:49px;
+	padding-top:8px;
+}
+#transfer-funds-review {
+	
+}
+#transfer-funds-review #main-content h2, 
+#transfer-funds-confirmation #main-content h2,
+.auxillary-page h2,
+.cardholder-fees #main-content h2
+{
+	background-image: url(../images/skin/bg-horizon-dot.gif);
+	background-position: 0 bottom;
+	background-repeat: repeat-x;
+	padding-bottom:25px;
+	margin-bottom:38px;
+}
+.cardholder-fees #main-content h2 { margin-bottom:17px !important; }
+
+#transfer-funds-review #main-content .information-message {
+	margin-bottom:33px;
+}
+#transfer-funds-confirmation #main-content .warning-message {
+	margin-bottom:33px;
+}
+.transfer-funds-page #review-funding-costs {
+	margin-bottom:24px;
+}
+.transfer-funds-page #main-content #transfer-to-info {
+	margin-top:10px;
+	padding-bottom:33px;
+}
+.transfer-funds-page #main-content #transfer-to-info dd {
+	padding-bottom:0;
+}
+.transfer-funds-page #main-content #transfer-to-info dt {
+	padding-bottom:3px;
+}
+.transfer-funds-page #main-content #transfer-to-info dl dt {
+	padding-bottom:0;
+}
+.transfer-funds-page dl#transfer-to-info dl {
+	padding-bottom:20px;
+}
+.transfer-funds-page dl dl dt {
+	font-size:.735em;
+	line-height:1.5em;
+	clear:both;
+	float:left;
+	width:165px;
+}
+.transfer-funds-page #main-content dl dl dd {
+	font-size:.735em;
+	line-height:1.5em;
+	float:left;
+	width:355px;
+	padding-bottom:0;
+	font-weight:normal;
+}
+
+.transfer-funds-page-international #review-funding-costs {
+	margin-bottom:24px;
+}
+.transfer-funds-page-international #main-content #transfer-to-info {
+	margin-top:10px;
+	padding-bottom:33px;
+}
+.transfer-funds-page-international #main-content #transfer-to-info dd {
+	padding-bottom:0;
+}
+.transfer-funds-page-international #main-content #transfer-to-info dt {
+	padding-bottom:3px;
+}
+.transfer-funds-page-international #main-content #transfer-to-info dl dt {
+	padding-bottom:0;
+}
+.transfer-funds-page-international dl#transfer-to-info dl {
+	padding-bottom:20px;
+}
+.transfer-funds-page-international dl dl dt {
+	font-size:.735em;
+	line-height:1.5em;
+	clear:both;
+	float:left;
+	width:165px;
+}
+.transfer-funds-page-international #main-content dl dl dd {
+	font-size:.735em;
+	line-height:1.5em;
+	float:left;
+	width:355px;
+	padding-bottom:0;
+	font-weight:normal;
+}
+
+
+#transfer-funds-review #main-content dl#transfer-to-info {
+	margin-top:20px;
+}
+#transfer-funds-review #main-content #edit-amount-or-info {
+	width:300px;
+	display:block;
+	float:none;
+	clear:both;
+}
+#transfer-funds-review #main-content h3 {
+	margin:37px 0 35px;
+}
+#transfer-funds-confirmation #main-content #transfer-to-info  {
+	margin-top:0;
+}
+#transfer-funds-confirmation #main-content dd {
+	padding-bottom:5px;
+}
+#transfer-funds-confirmation #main-content #transfer-to-info {
+	padding-bottom:45px;
+	margin-bottom:13px;
+	background-image: url(../images/skin/bg-horizon-dot.gif);
+	background-position: 0 bottom;
+	background-repeat: repeat-x;
+}
+#transfer-funds-confirmation #main-content a.arrow-red_ {
+	display:block;
+	margin-bottom:5px;
+	clear:both;
+}
+.modal-window {
+	display:block;
+	width:530px;
+	padding-left:18px;
+}
+.modal-window h2 {
+	font-size:1.666em;
+	background-image: url(../images/skin/bg-horizon-dot.gif);
+	background-position:0 bottom;
+	background-repeat:repeat-x;
+	padding:12px 0 34px;
+	line-height:1.2em;
+}
+.modal-window #required-star {
+	padding:0 0 18px;
+}
+#update-billing-address #communications-address-alert {
+	margin-bottom:28px;
+}
+.modal-window hr {
+	background:url(../images/skin/bg-horizon-dot.gif) repeat-x 0 0;
+	border:0;
+	clear:both;
+	display:block;
+	height:1px;
+	margin:0 0 15px;
+	outline:0;
+}
+.modal-window #form-buttons {
+	clear:both;
+	background:url(../images/skin/bg-horizon-dot.gif) repeat-x 0 0;
+	padding-top:17px;
+}
+
+
+
+.modal-window input#update-button {
+	float:left;
+	margin-right:20px;
+}
+.modal-window .close-button {
+	top:7px;
+	right:7px;
+}
+#transfer-funds-automatic #main-content #required-star {
+	background:none;
+	padding-top:0;
+}
+#transfer-funds-automatic #main-content #end-funding-date {
+	float:left;
+}
+#transfer-funds-automatic select {
+	margin-bottom:15px;
+}
+#transfer-funds-automatic #main-content span#ndate {
+	display:block;
+	float:left;
+	width:40px;
+	padding-top:2px;
+	text-align:center;
+	clear:none;
+	font-size:1.166em;
+}
+#transfer-funds-automatic #main-content label#no-end-date {
+	clear:none;
+	float:left;
+	padding:4px 0 0 5px;
+}
+#transfer-funds-automatic #main-content input.checkbox {
+	float:left;
+}
+#transfer-funds-automatic #main-content h3 {
+	clear:both;
+}
+#transfer-funds-automatic #main-content h3.account-info {
+	padding-top:37px;
+	background-position:0 25px;
+}
+
+#transfer-funds-automatic #main-content #transfer-to-info dd, #transfer-funds-automatic #main-content #transfer-to-info dt {
+	font-size:.857em;
+	line-height:1.5em;
+}
+#transfer-funds-automatic #main-content #transfer-to-info {
+	padding:6px 0 25px;
+}
+#transfer-funds-automatic #main-content input.full { 
+	width:445px;
+}
+#transfer-funds-automatic #main-content #transfer-name {
+	width:350px;
+}
+#transfer-funds-automatic #main-content h3#enter-transfer-name {
+	padding:12px 0;
+}
+#transfer-funds-automatic #main-content h3#review-costs {
+	margin-top:38px;
+}
+#transfer-funds-automatic #main-content h3#review-schedule-details {
+	margin:35px 0 37px;
+}
+
+#transfer-funds-us #main-content h3#review-before-transfering-funds { margin-bottom:27px; }
+
+
+#transfer-funds-automatic #main-content #every-deposit {
+	margin-bottom:10px;
+	display:none;
+}
+#transfer-funds-automatic #main-content #every-deposit p {
+	font-weight:bold;
+	padding:5px 0 10px;
+}
+
+#transfer-funds-automatic #main-content #every-deposit p.note,
+#secondary-card-fund #main-content p.setup-weekend-holiday-note {
+	font-weight:normal;
+	font-style:italic;
+	text-indent:-3.35em;
+	padding-left:3.35em;
+	padding-bottom:10px;
+	line-height:1.25em;
+}
+
+#transfer-funds-automatic #main-content p.setup-weekend-holiday-note{
+	font-weight:normal;
+	text-indent:-3.35em;
+	padding-left:3.35em;
+	padding-bottom:10px;
+	line-height:1.25em;
+}
+
+#transfer-funds-automatic #main-content p.setup-weekend-holiday-note,
+#secondary-card-fund #main-content p.setup-weekend-holiday-note { clear:both; width:355px; padding-top:6px; padding-bottom:10px;line-height:1.45em; }
+
+#secondary-card-fund #main-content p.setup-weekend-holiday-note { margin-top:-24px; margin-bottom:25px; }
+
+
+
+#transfer-funds-automatic #main-content #every-deposit div {
+	height:23px;
+}
+#transfer-funds-automatic #main-content #every-deposit input.radio {
+	float:left;
+	margin:0 8px 0 0;
+	clear:both;
+}
+#transfer-funds-automatic #main-content #every-deposit label {
+	clear:none;
+	float:left;
+	width:450px;
+}
+#transfer-funds-automatic #main-content a#change-account-info {
+	margin-bottom:38px;
+	display:block;
+	width:100px;
+}
+#transfer-funds-automatic #main-content #new-account-info .information-message {
+	margin:17px 0 22px;
+}
+#transfer-funds-automatic #main-content #new-account-info input.tri-digits {
+	width:24px;
+	margin-bottom:38px;
+}
+#transfer-funds-automatic #main-content #new-account-info input.quad-digits {
+	width:31px;
+}
+#transfer-funds-automatic #new-account-info img {
+	margin-bottom:33px
+}
+#transfer-funds-automatic #new-account-info #city-field {
+	margin-bottom:0;
+}
+#transfer-funds-us .modal-window .half-element.middle-name-element input.text {
+	width:247px;
+}
+
+
+#transfer-funds-automatic .modal-window {
+	width:573px;
+}
+#transfer-funds-automatic .modal-window h4 {
+	font-weight:normal;
+	color:#e31931;
+	background:url(../images/icons/icon-alert-standalone.gif) 0 0 no-repeat;
+	margin-top: 31px;
+	padding:4px 30px 21px;
+	line-height:1.5em;
+}
+#transfer-funds-automatic .modal-window h4 strong {
+	text-transform:uppercase;
+}
+#transfer-funds-automatic .required-star {
+	padding:8px 0 15px;
+	text-align:right;
+	background:url(../images/skin/bg-horizon-dot.gif) repeat-x 0 top;
+}
+#transfer-funds-automatic .modal-window img {
+	margin-bottom:32px;
+}
+.modal-window .half-element {
+	float:left;
+	width:198px;	
+}
+#transfer-funds-automatic .modal-window .half-element {
+	width:198px;
+}
+#transfer-funds-automatic .modal-window .half-element.final_ {
+	width:174px;
+}
+#transfer-funds-automatic .modal-window .half-element label {
+	color:#E31931;
+	padding-top:0;
+}
+#transfer-funds-automatic .modal-window .half-element.first-name-element label.error-anchor_  {
+	color:#222;
+}
+#transfer-funds-automatic .modal-window .half-element.middle-name-element label.error-anchor_ {
+	color:#222;
+}
+#transfer-funds-automatic .modal-window .half-element.middle-name-element {
+	width:270px;
+}
+#transfer-funds-automatic .modal-window .half-element.middle-name-element input.text {
+	width:247px;
+}
+#transfer-funds-automatic .modal-window #form-buttons {
+	margin-top:38px;
+}
+
+#transfer-scheduled-review #main-content h2 {
+	background-image: url(../images/skin/bg-horizon-dot.gif);
+	background-position:0 bottom;
+	background-repeat:repeat-x;
+	padding-bottom:24px;
+	margin-bottom:38px;
+}
+#transfer-scheduled-review #main-content .information-message {
+	margin-bottom:33px;
+}
+#transfer-scheduled-review #main-content #transfer-costs {
+	margin-top:37px;
+}
+#transfer-scheduled-review #main-content #transfer-costs dt {
+	padding:12px 0 0;
+	background-image: url(../images/skin/bg-horizon-dot.gif);
+	background-position:0 top;
+	background-repeat:repeat-x;	
+}
+#transfer-scheduled-review #main-content #transfer-costs dd {
+	padding-bottom:0;
+}
+#transfer-scheduled-review #main-content #edit-funding-or-schedule {
+	margin-top:12px;
+}
+#transfer-scheduled-review #main-content #funding-schedule-info {
+	padding-bottom:20px;
+}
+
+#transfer-scheduled-review #main-content h3#charge-timing-alert {
+	margin:36px 0 35px;
+	padding:11px 50px 0 0;
+	line-height:1.428em;
+}
+#scheduled-transfer-confirmation #main-content h2 {
+	background-image:url("../images/skin/bg-horizon-dot.gif");
+	background-position:0 bottom;
+	background-repeat:repeat-x;
+	margin-bottom:38px;
+	padding-bottom:25px;
+}
+#scheduled-transfer-confirmation #main-content h2#thanks {
+	font-size:2.083em;
+	line-height:1.12em;
+	margin:34px 0 4px 0;
+	background:none;
+}
+#scheduled-transfer-confirmation #main-content dl#funding-schedule-info {
+	padding-bottom:16px;
+}
+
+#scheduled-transfer-confirmation #main-content #review-funding-costs  {
+	margin-bottom:4px;
+}
+#scheduled-transfer-confirmation #main-content dl#transfer-to-info {
+	background-image:url("../images/skin/bg-horizon-dot.gif");
+	background-position:0 bottom;
+	background-repeat:repeat-x;
+}
+#scheduled-transfer-confirmation #main-content ul#next-steps {
+	padding-top:8px;
+}
+#scheduled-transfer-confirmation #main-content #next-steps li {
+	padding:6px 0 0;
+}
+
+
+#perform-edits li { padding-bottom:.9em; }
+
+
+/*
+Additional styles added for the Activation page set
+*/
+.activation-form-intro { width: 95%; }
+.activation-subhead,
+.aside-summary-body,
+.aside-summary-body,
+p.security-code-label,
+p.home-phone-label { color:#222; }
+.activation-summary,
+.activation-form-intro,
+p.security-code-label,
+p.home-phone-label,
+.activation-subtype { font-size: 1.2em; }
+.required-caption,
+p.homephone-note,
+p.security-code-label,
+p.home-phone-label { border-top: 1px dotted #908c8c;  }
+.confirmation-header,
+p.homephone-note,
+p.cardnumber-note { border-bottom: 1px dotted #908c8c; }
+
+.required-caption {  margin-top: 35px !important; }
+.confirmation-header { padding-bottom: 35px !important; margin-bottom:35px !important; }
+.activation-summary { padding-bottom: 5px; font-weight: bold; font-size: 1.2em !important; }
+.activation-subhead { font-size:2.2em;padding: 25px 0 15px; }
+.activation-subtype,
+.activation-form-intro { line-height: 1.4em; padding-bottom: 20px; }
+.activation-subtype { line-height: 1.6em; } 
+	.prepaid-label { width: 11.5em; display: inline-block; }
+	.aside-summary-body { font-size:1.1em; line-height: 1.3em;  }
+
+.activation-form-intro p { margin-bottom: 15px; }
+.final-segment { margin-bottom: 30px; }
+p.card-number-label { margin-bottom: 0px; }
+
+#card-enroll-submit input.text { width: 175px; margin-bottom: 10px; }
+#card-number-submit input.text { width: 340px !important; }
+
+p.security-code-label { padding: 15px 0; }
+p.home-phone-label { padding-top: 15px; padding-bottom: 15px; margin-top: 40px; }
+p.homephone-note { font-style: italic; padding-bottom: 35px; margin-bottom: 20px; line-height: 1.4em; padding-left: 40px; text-indent: -40px; display: block; }
+p.cardnumber-note { font-style: italic; padding-bottom: 40px; margin-bottom: 15px; }
+
+table.btm-brdr_{
+	padding-bottom:9px;
+	background-image: url(../images/skin/bg-horizon-dot.gif);
+	background-repeat: repeat-x;
+	background-position: 0 bottom;
+}
+
+div.btm-brdr_{
+		padding-bottom:9px;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 bottom;
+	}
+
+/* END : content.css */
+
+
+/* START : forms.css */
+
+fieldset { position:relative; border: solid 0 transparent; }
+
+	legend { position: absolute; font: normal 1.5em/1.125em "Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium"; top:5px; left:0; }
+	
+	form ol.group-one { padding-top: 42px; margin:0; }
+		
+		input,label { display: block; }
+		
+		label { margin-bottom: 6px; }
+
+@-moz-document url-prefix() {
+
+form ol.group-one { padding-top: 43px; margin:0; }
+
+}
+/* TOOL LINK EXTENDEND FORMS  */
+
+
+.tool-links {  }
+
+.tool-links form { padding-top:69px; }
+
+.tool-links legend {
+	font: normal 1.167em/1.214em arial,sans-serif;
+	width:368px;
+	margin:-56px 0 0 12px;
+	padding-bottom: 10px;
+	color:#222;
+	background-image: url(../images/skin/bg-horizon-dot.gif);
+	background-repeat: repeat-x;
+	background-position: 0 bottom;
+}
+
+.tool-link fieldset { font-family:arial,sans-serif; }
+
+/* 
+	Styling for error handling
+*/
+#form-error-message {
+	display:none;
+}
+#form-error-message1 {
+	display:none;
+}
+label.error {
+	color:#ff3600;
+	padding-bottom:8px;
+}
+
+/* 
+	Form on the Secondary Card Invite Landing page (secondary-card-invite-landying.php) 
+	//Currently applying styles to *all* forms in the #main-content div
+*/
+#main-content label, .modal-window label {
+	/*padding-top:14px;*/
+	clear:both;
+}
+#main-content input.text, .modal-window input.text {
+	border:none;
+	border-top:1px solid #acadb2;
+	border-right:1px solid #dcdfe6;
+	border-bottom:1px solid #e2e9ef;
+	border-left:1px solid #e2e3e8;
+	background:#fff;
+	-moz-border-radius:2px;
+	padding:2px 5px;
+	color:#222;
+	font:normal 1em/1.333em "Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium";
+	margin-bottom:14px;
+}
+#main-content input.full, .modal-window  input.full {
+	width:155px;
+}
+#main-content input#year {
+	width:115px;
+}
+#main-content input.tri-digits, #main-content input.quad-digits {
+	float:left;
+	margin-right:4px;
+}
+#main-content input.tri-digits {
+	width:37px;
+}
+#main-content input.quad-digits {
+	width:40px;
+}
+#main-content .date-element {
+	width:165px;
+	float:left;
+}
+#main-content .date-element label {
+	padding-top:5px;
+}
+#main-content .half-element {
+	width:200px;
+	float:left;
+}
+#main-content .half-element label {
+	padding-top:5px;
+}
+#main-content .half-element input.text {
+	width:160px;
+}
+
+#main-content #ssn1 {
+	margin-bottom:33px;
+}
+#main-content #city-field, .modal-window #city-field {
+	float:left;
+	width:208px;
+	margin-bottom:24px;
+}
+#main-content #city-field input, .modal-window #city-field input {
+	width:170px;	
+}
+#main-content #state-field, .modal-window #state-field {
+	float:left;
+	width:160px;
+}
+#main-content #zip-field, .modal-window #zip-field {
+	float:left;
+	width:113px;
+}
+#main-content #zip-field input, .modal-window #zip-field input {
+	width:77px;	
+}
+#main-content h3#review-details {
+	background-image: url(../images/skin/bg-horizon-dot.gif);
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	margin-top: 57px;
+	padding: 10px 0 30px;
+}
+#main-content input#continue-button {
+	float:left;
+	margin-right:20px;
+}
+
+a#cancel-link cancel-link1{
+	float:left;
+	margin-top:5px;
+}
+/* /End Secondary Card Invite Landing Page Form */
+
+/* END : forms.css */
+
+
+/* START : modules.css */
+
+.aside-related-information { color:#222; }
+
+
+.aside-related-information {
+	width: 211px;
+	background-image: url(../images/skin/bg-aside-related-information.jpg);
+	background-repeat: repeat-x;
+	background-position: 0 0;
+	margin-bottom:24px;
+}
+
+	.aside-related-information .wrap_ { 
+	 
+	 	padding:22px 10px 10px 13px;
+	
+	}
+	
+	
+	.aside-related-information.market-message .wrap_ {
+		padding-top: 109px;
+		background-image: url(../images/icons/icon-market-message-arrow.png);
+		background-position: 13px 15px;
+		background-repeat:no-repeat;
+	}	
+
+
+.aside-related-information.recent-activity {  }
+
+.aside-related-information.recent-activity { background-image:none; padding-top:0px !important; margin-top:-5px; margin-bottom:15px; }
+	
+	.recent-activity dl { line-height:1.333em; margin-top:7px; }
+		.recent-activity dt { font-weight:bold; margin-bottom:0px; }
+		.recent-activity dd { }
+		.recent-activity ul { padding-bottom:10px; }
+		.recent-activity li { }
+		
+		.aside-related-information .related-feature-item.btm-brdr_ { padding-bottom:14px; margin-bottom:15px;  }
+			
+			.related-feature-item p {}
+			
+			.aside-related-information h2,
+			.aside-related-information h3 { 
+				font-size:1.5em !important;
+				line-height: 1.18em !important;
+				margin:0 0 5px 0 !important;
+				font-family:"Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium" !important;
+				color:#222;
+			}	
+	
+			.aside-related-information h2.aside-title,
+			#dashboard-page .aside-related-information h2.aside-title { 
+				line-height:1.333em !important;
+				margin:0 0 0px 0 !important;
+				padding:0 !important;
+			}
+				.related-feature-item p,
+				.aside-related-information h3.upgrade-information,
+				#dashboard-page .aside-related-information h3.upgrade-information {
+					font-size:1.083em !important;
+					line-height: 1.3em !important;
+					margin-bottom:6px !important;
+				}
+				
+				
+				.related-feature-item p a,
+				.aside-related-information h3.upgrade-information,
+				#dashboard-page .aside-related-information h3.upgrade-information,
+				.aside-related-information h3.upgrade-information a,
+				#dashboard-page .aside-related-information h3.upgrade-information a { color:#2a6ebb; }
+				
+				ul.list li,
+				.aside-related-information ul.list li {
+					line-height:1.5em;
+					background-image: url(../images/skin/bg-list-bullet.gif);
+					background-repeat: no-repeat;
+					background-position: 0 .50em;
+					padding-left:10px;
+					position:relative;
+				}
+				
+
+
+#account-data .aside-related-information.market-message-wide {
+	width: 325px;
+	background-image: url(../images/skin/bg-aside-related-information-wide.jpg);
+	background-position: 0 0;
+	background-repeat:repeat-x;
+}
+
+	#account-data .aside-related-information.market-message-wide .wrap_ {
+		padding: 17px 10px 30px 128px;
+		background-image: url(../images/icons/icon-market-message-wide-arrow.png);
+		background-repeat: no-repeat;
+		background-position: 26px 19px;
+	}
+	
+		#account-data .aside-related-information.market-message-wide h2 { font-size:1.5em; line-height: 1.556em; margin-bottom:6px !important; }
+
+
+
+/* Pop Up Instructions */
+
+.article-page li.pop-up-instructions { position:relative; z-index:9999; }
+
+
+.tool-links { }
+
+
+/* Remove Sceduled Funding scheduled-transfer-us-accounts.html */
+
+
+#remove-msg {   }
+	form#remove-transfer { padding:10px 0 6px 3px; width:367px; }
+		p.close-button {  } 
+		p#close-modal-window {  }
+		
+	
+		h3.remove-transfer {
+			font-size: 1.167em;
+			line-height: 1.214em;
+			padding-bottom: 8px;
+			margin-bottom:19px;
+			background-image: url(../images/skin/bg-horizon-dot.gif);
+			background-repeat: repeat-x;
+			background-position: 0 bottom;
+		}
+
+		p#alert-warning-remove-permanent {
+			background-image: url(../images/icons/icon-alert-standalone.gif);
+			background-repeat: no-repeat;
+			padding: 4px 0 0 29px;
+			margin-bottom:15px;
+			background-position: 0 0em;
+			line-height:1.333em;
+			color:#e31931;
+		}
+		
+			p#alert-warning-remove-permanent strong { }
+
+		#remove-transfer.modal-window #form-buttons {
+		
+			padding-top:21px;
+		}
+		
+		#remove-transfer.modal-window  #form-buttons {  }
+			
+		#remove-transfer.modal-window  #form-buttons input, 
+			#remove-transfer.modal-window a#cancel-link { float:left; }
+			
+			#remove-transfer.modal-window input {
+				width:75px; height:22px; margin-right:18px !important;
+			}
+			
+			#remove-transfer.modal-window a#cancel-link { margin-top:4px !important; }
+
+
+			#cancel-link { cursor:pointer; }
+
+#incorrect-pin-overlay { display:none; }
+#DOMWindow #incorrect-pin-overlay-wrap { 
+
+	padding:6px 6px 0 16px;
+
+}
+	#DOMWindow #incorrect-pin-overlay-wrap .close-window-button { line-height:1em; padding:0; }
+	
+		#DOMWindow #incorrect-pin-overlay-wrap .close-window-button img { cursor:pointer; float:right !important; display:block; line-height:1; }
+	
+	#DOMWindow #incorrect-pin-overlay-wrap	h3 {
+			font-size:1.167em !important;
+			line-height: 1.214em !important;
+			font-weight:bold !important;
+			color:#e31931 !important;
+			background-image: url(../images/icons/icon-alert-standalone.gif) !important;
+			padding:3px 0 3px 28px !important;
+			background-repeat: no-repeat !important;
+			background-position: 0 0 !important;
+		}
+	
+	#DOMWindow #incorrect-pin-overlay-wrap p.message {
+			font-size: 1em !important;
+			line-height: 1.417em  !important;
+			padding: 0 50px 44px 0 !important;
+			background-image: url(../images/skin/bg-horizon-dot.gif) !important;
+			background-repeat: repeat-x !important;
+			background-position: 0 bottom !important;
+			margin-bottom:13px !important;
+		}
+
+    #DOMWindow #incorrect-pin-overlay-wrap p.message1 {
+            font-size: 1em !important;
+            line-height: 1.217em  !important;
+            padding: 0 25px 22px 0 !important;
+            background-image: url(../images/skin/bg-horizon-dot.gif) !important;
+            background-repeat: repeat-x !important;
+            background-position: 0 bottom !important;
+            margin-bottom:2px !important;
+		}
+     
+  
+     
+  #valModal { display:none; } 
+  #passChangeModal { display:none; } 
+  #DOMWindow #valModal-wrap { 
+
+	padding:6px 6px 0 16px;
+
+}
+	#DOMWindow #valModal-wrap .close-window-button { line-height:1em; padding:0; }
+	
+	#DOMWindow #valModal-wrap .close-window-button img { cursor:pointer; float:right !important; display:block; line-height:1; }
+	
+	#DOMWindow #valModal-wrap	h3 {
+			font-size:1.167em !important;
+			line-height: 1.214em !important;
+			font-weight:bold !important;
+			color:#e31931 !important;
+			background-image: url(../images/icons/icon-alert-standalone.gif) !important;
+			padding:3px 0 3px 28px !important;
+			background-repeat: no-repeat !important;
+			background-position: 0 0 !important;
+		}
+	
+	#DOMWindow #valModal-wrap p.message {
+			font-size: 1em !important;
+			line-height: 1.417em  !important;
+			padding: 0 50px 44px 0 !important;
+			background-image: url(../images/skin/bg-horizon-dot.gif) !important;
+			background-repeat: repeat-x !important;
+			background-position: 0 bottom !important;
+			margin-bottom:13px !important;
+		}
+
+    #DOMWindow #valModal-wrap p.message1 {
+            font-size: 1em !important;
+            line-height: 1.217em  !important;
+            padding: 0 25px 22px 0 !important;
+            background-image: url(../images/skin/bg-horizon-dot.gif) !important;
+            background-repeat: repeat-x !important;
+            background-position: 0 bottom !important;
+            margin-bottom:2px !important;
+		}
+
+     
+
+/* END : modules.css */
+
+
+/* START 
+
+/* END : modules.css */
+
+
+
+/* START : tables.css */
+
+table.account-data {   }	
+
+
+table.account-data { width:100%; }
+
+	
+	
+		table.account-data thead th,
+		table.account-data tbody td { text-align:right; }
+		
+		table.account-data thead th.first_,
+		table.account-data tbody th, 
+		table.account-data tbody td.col-details,
+		table.account-data thead th.col-details,
+		table.account-data tbody td.col-category,
+		table.account-data thead th.col-category { text-align:left; }
+		
+		
+		#funding-schedule-table th,
+		#funding-schedule-table td,
+		table.account-data th,
+		table.account-data td { padding:9px 15px; }
+	
+	
+	thead {}
+	
+		#funding-schedule-table thead th,
+		table.account-data thead th {
+			color:#fff;
+			border-bottom:solid 1px #fff;
+			background-color:#13539b; 
+		}
+	
+	tbody {}
+	
+		table.account-data tbody tr td, 
+		table.account-data tbody tr th  { 
+			border-top:solid 1px #fff; 
+			background-color:#e4e2df; 
+		}
+
+		table.account-data  tbody tr:hover td, 
+		table.account-data tbody tr:hover th  { 
+			border-top:solid 1px #fff; 
+			background-color:#cacac9; 
+		}
+		/*Styles for Zebra Striping / Hover States*/
+		table.account-data tbody tr.odd th, table.account-data tbody tr.odd td {
+			background-color:#F6F5F2;
+		}
+		table.account-data tbody tr.odd th.cellhovered, table.account-data tbody tr.odd td.cellhovered {
+			background-color:#cacac9;
+		}
+
+
+			table.account-data tbody th:first-child,
+			table.account-data thead th:first-child { 
+				-webkit-border-top-left-radius: 2px;
+				-webkit-border-bottom-left-radius: 2px;
+				-moz-border-radius-topleft: 2px;
+				-moz-border-radius-bottomleft: 2px;
+				border-bottom-left-radius: 2px;
+				
+			}
+			
+			table.account-data tbody td:last-child,
+			table.account-data thead th:last-child {
+				-webkit-border-top-right-radius: 2px;
+				-webkit-border-bottom-right-radius: 2px;
+				-moz-border-radius-topright: 2px;
+				-moz-border-radius-bottomright:  2px;
+				border-bottom-right-radius: 2px
+			
+			}
+			
+			table.account-data tbody td:last-child { -webkit-border-top-right-radius: 3px; -moz-border-radius-topright: 3px; border-top-right-radius: 3px; }
+			
+			table.account-data tbody th:first-child {  -webkit-border-top-left-radius: 3px; -moz-border-radius-topleft: 3px; border-top-left-radius: 3px; }
+
+
+
+/*funding-schedule-table*/
+
+
+#schedule-automatic-transfers #funding-schedule-table, 
+#secondary-card-manage #funding-schedule-table { text-align:left; width:100%; }
+
+	col.cardholder-name { width:202px;  }
+	col.card-number { width:144px; }
+	col.previous-date { width:98px; }
+	col.next-date { width:111px; }
+	col.ends-on- { width:95px; }
+	col.frequency { width:100px; }
+	col.cost { width:150px; text-align:right; }
+
+	#funding-schedule-table .cost-details { text-align:right;  }
+
+/*Nested Table*/
+	#funding-schedule-table td.cost-details table { width:100%;}
+	
+	#funding-schedule-table td.cost-details table td,
+	#funding-schedule-table td.cost-details table th { padding: 0 0 4px 0px !important; }
+	
+	#funding-schedule-table td.cost-details table td { padding-left:19px !important;}
+	
+	#funding-schedule-table td.cost-details table tr.cost-total td,
+	#funding-schedule-table td.cost-details table tr.cost-total th {
+		padding-top:5px !important;
+	}
+	
+	#funding-schedule-table td, 
+	#funding-schedule-table th { vertical-align:top; }
+	#funding-schedule-table table th,
+	#funding-schedule-table tbody th { color:#222; }
+	
+	#funding-schedule-table tbody th,
+	#funding-schedule-table table td {  }
+	
+	#funding-schedule-table table td,
+	#funding-schedule-table table th {  
+		text-align:right !important; 
+		padding-right:0 !important; 
+		padding-top:0px; 
+	}
+
+	#funding-schedule-table td.cost-details { text-align:right; }
+	
+	
+	#funding-schedule-table tfoot p.note { font-style:italic; width:335px; text-indent:-3.25em; padding-left:3.25em; line-height:1.417em;}
+
+
+tbody.even td, tbody.even th { background-color:#e1e1e1; }
+
+tbody.odd td, tbody.odd th { background-color:#ececeb; }
+
+/* Additional rules for funding-schedule-table found on scheduled-transfer-us-accounts.html  */
+
+
+	col.transfer-name { width:346px; }
+	
+
+
+
+/*Funding actions nav in table*/
+
+	
+		 
+	tr.funding-actions { 
+		text-align:right; 
+		border-bottom:1px solid #fff;
+	}
+	
+		tbody tr.funding-actions  td { 
+			padding-top:2px !important; 
+		}
+	
+	tr.funding-actions div {
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 0;
+		padding-top:10px;
+		padding-bottom:5px;
+	}	
+
+		tr.funding-actions ul.funding-action-tools { width:100%; font-size:1em; line-height:1.50em; }
+
+		  	tr.funding-actions li.schedule-alert {
+		  		float: left;
+		  		text-align: left;
+		  		width: 510px;
+		  		background-image: url(../images/icons/icon-red-alert-right-flat.gif);
+		  		background-repeat: no-repeat;
+		  		background-position: 0 0px;
+		  		color:#fff;
+		  		background-color:#b5b4b2;
+		  		padding:3px 0 1px 30px;
+		  		margin-right:0;
+		  		-webkit-border-top-right-radius: 2px;
+				-webkit-border-bottom-right-radius: 2px;
+				-moz-border-radius-topright: 2px;
+				-moz-border-radius-bottomright: 2px;
+				border-top-right-radius: 2px;
+				border-bottom-right-radius: 2px;
+		  	}
+		  	
+			tr.funding-actions li.funding-actions-nav { float:right; }
+				
+				tr.funding-actions li.funding-actions-nav li { float:left; padding-top:3px; margin-right:30px;}
+		  		
+		  		#schedule-automatic-transfers li.funding-actions-nav li.edit-schedule-link { margin-right:29px; }
+		  		
+		  		#schedule-automatic-transfers li.funding-actions-nav li.remove-now-link { margin-right:36px; }
+		  	
+		  			tr.funding-actions li.funding-actions-nav li.fund-now-link,
+		  			tr.funding-actions li.funding-actions-nav li.remove-now-link { margin-right:24px; }
+		  	
+					tr.funding-actions li.funding-actions-nav li.start-stop-funding-link,
+					tr.funding-actions li.funding-actions-nav li.start-stop-transfers-link { margin-right:0; padding-top:0;padding-bottom:0px;}
+					tr.funding-actions li.funding-actions-nav li.start-stop-funding-link-en,
+					tr.funding-actions li.funding-actions-nav li.start-stop-transfers-link-en { margin-right:0; padding-top:0;padding-bottom:0px;}
+					tr.funding-actions li.funding-actions-nav li.start-stop-funding-link-es,
+					tr.funding-actions li.funding-actions-nav li.start-stop-transfers-link-es { margin-right:0; padding-top:0;padding-bottom:0px;}
+
+					a.start-stop-funding,
+					a.start-stop-transfers {display:block; width:98px; height:23px; position:relative;  }
+					a.start-stop-funding-en,
+					a.start-stop-transfers-en {display:block; width:98px; height:23px; position:relative;  }
+					a.start-stop-funding-es,
+					a.start-stop-transfers-es {display:block; width:78px; height:23px; position:relative;  }
+
+						.start-stop-funding span,
+						.start-stop-transfers span {
+							position:absolute;
+							background-image: url(../images/skin/btn-start-stop-funding.gif);
+							background-repeat: no-repeat;
+							width:100%; height:100%;
+							display:block;
+						}
+						.start-stop-funding-en span,
+						.start-stop-transfers-en span {
+							position:absolute;
+							background-image: url(../images/skin/en/btn-start-stop-funding.gif);
+							background-repeat: no-repeat;
+							width:100%; height:100%;
+							display:block;
+						}
+						.start-stop-funding-es span,
+						.start-stop-transfers-es span {
+							position:absolute;
+							background-image: url(../images/skin/es/btn-start-stop-funding.gif);
+							background-repeat: no-repeat;
+							width:100%; height:100%;
+							display:block;
+						}
+
+						a.start-stop-transfers span { background-image: url(../images/skin/btn-start-stop-transfers.gif); }
+						a.start-stop-transfers-en span { background-image: url(../images/skin/en/btn-start-stop-transfers.gif); }
+						a.start-stop-transfers-es span { background-image: url(../images/skin/es/btn-start-stop-transfers.gif); }
+
+						.add-funding a.start-stop-funding span, 
+						.start-transfers a.start-stop-transfers span { background-position: 0 0; }
+						.start-transfers a.start-stop-transfers-en span { background-position: 0 0; }
+						.start-transfers a.start-stop-transfers-es span { background-position: 0 0; }
+
+						/* .add-funding a.start-stop-funding:hover span { background-position: 0 -177px; } */
+						 
+						 .cancel-funding a.start-stop-funding span,
+						 .stop-transfers a.start-stop-transfers span { background-position: 0 -177px; }
+						 .stop-transfers a.start-stop-transfers-en span { background-position: 0 -177px; }
+						 .stop-transfers a.start-stop-transfers-es span { background-position: 0 -177px; }
+
+						/* .cancel-funding a.start-stop-funding:hover span { background-position: 0 0px; } */
+
+
+
+
+/* tables sorter */
+
+table.account-data thead tr .header span {
+	background-image: url(../images/icons/icon-initial-tablesort-arrow.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+	padding-right:15px;
+}
+
+table.account-data thead tr .headerSortUp span { background-image: url(../images/icons/icon-asc-arrow.gif); }
+
+table.account-data thead tr .headerSortDown span { background-image: url(../images/icons/icon-desc-arrow.gif); }
+
+
+/*table.tablesorter {
+	font-family:arial;
+	background-color: #CDCDCD;
+	margin:10px 0pt 15px;
+	font-size: 8pt;
+	width: 100%;
+	text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #e6EEEE;
+	border: 1px solid #FFF;
+	font-size: 8pt;
+	padding: 4px;
+}
+table.tablesorter thead tr .header {
+	background-image: url(bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+}
+table.tablesorter tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #8dbdd8;
+}*/
+
+
+
+/* Card holder fees cardholder-fees.html */
+
+
+
+
+
+#table-cardholder-fees { width:100%; text-align:left; color:#222; }
+
+	#table-cardholder-fees col { width:50%; }
+			
+			
+		
+		#table-cardholder-fees th,
+		#table-cardholder-fees tbody td,
+		#table-cardholder-fees tfoot td {
+				border-bottom:1px solid #a7a6a6;
+			}
+			
+			
+			#table-cardholder-fees tbody td,
+			#table-cardholder-fees tbody th,
+			#table-cardholder-fees thead th {
+				font-size:1.167em;
+				line-height: 1.429em;
+			}
+
+			#table-cardholder-fees tbody th,
+			#table-cardholder-fees tbody td { padding:13px 0 11px 0; }
+
+			#table-cardholder-fees thead th { padding:0 0 19px 0; }
+			
+			#table-cardholder-fees tbody th {
+				border-right:1px solid #a7a6a6;
+				padding-right:155px;
+			}
+			
+			#table-cardholder-fees tbody th p.note {
+				font-size:0.857em;
+				line-height: 1.35;
+				text-indent:-9px;
+				padding:7px 0 0 9px;
+			}
+
+			
+			#table-cardholder-fees tbody td { padding-left:55px; }
+			
+			
+			#table-cardholder-fees tbody tr.category-header  th,
+			#table-cardholder-fees tbody tr.category-header td,
+			#table-cardholder-fees tbody tr.sub-category th,
+			#table-cardholder-fees tbody tr.sub-category td { border-bottom:none !important; padding-bottom:0; }	
+			
+			#table-cardholder-fees tbody tr.sub-category th,
+			#table-cardholder-fees tbody tr.sub-category td,
+			#table-cardholder-fees tbody tr.sub-category-last th,
+			#table-cardholder-fees tbody tr.sub-category-last td { padding-top:0; }	
+			
+			
+			#table-cardholder-fees tfoot td { padding:16px 20px 12px 0; }
+			
+			#table-cardholder-fees tfoot tr.last_ td { padding:12px 0 0px 0; }
+			
+			#table-cardholder-fees tfoot td p { line-height:1.70; }
+			
+			
+			#table-cardholder-fees tfoot tr.last_ td { border-bottom:none; }
+			
+			
+/* Review Funding Costs table  */			
+
+
+dl table#review-funding-costs {
+	font-size:.857em;
+	margin:4px 0 2px;
+}
+
+
+
+
+
+
+
+			
+table#review-funding-costs {
+	width:400px; 
+	line-height:1.5em;
+	display:block;
+	margin:15px 0 34px;	
+	color:#222;
+}
+
+	#review-funding-costs col.description { width:165px;  }
+	
+	#review-funding-costs col.charge { width:90px;  }
+	
+	#review-funding-costs col.blank_ { width:145px; }
+	
+		#review-funding-costs tr.fee { color:#e31931; }
+	
+			#review-funding-costs th,
+			#review-funding-costs tfoot td { text-align:left; }
+			
+			#review-funding-costs th { padding-right:5px; }
+			
+			#review-funding-costs td { text-align:left;  }
+	
+			#review-funding-costs tfoot td { padding-top:15px; }	
+	
+			#review-funding-costs tr.total td, 
+			#review-funding-costs tr.total th {
+				background-image:url(../images/skin/bg-horizon-dot.gif);
+				background-position:0 2px;
+				background-repeat:repeat-x;
+				padding-top:5px;
+			}
+
+			#review-funding-costs tr.total td.no-brdr_ { background-image:none;}
+			
+			#review-funding-costs tfoot p {
+				text-indent:-3.25em;
+				padding-left:3.25em; 
+				line-height:1.45; 
+				width:325px; 
+				font-style:italic; 
+			}
+			
+			
+/* END : tables.css */
+
+
+/* START : secondary-card-invite.css) */
+
+/*Main content block for the Secondary Card invite pages*/
+.secondary-card-signup #content {
+	padding-top:0;
+	background-image: url(../images/skin/bg-secondary-invite-gradient.jpg);
+	background-repeat: repeat-x;
+	background-position: 0 250px;
+}
+/*The top Welcome section of the Secondary Card invite pages*/
+.secondary-card-signup #welcome {
+	padding:58px 0 45px 25px;
+	background-image: url(../images/content/bg-secondary-invite-landing.jpg);
+	background-repeat: no-repeat;
+	background-position: right 0;
+	overflow:hidden;
+	height:149px;
+}
+.secondary-card-signup #welcome h2 {
+	width:360px;
+	color:#2A6EBB;
+}
+.secondary-card-signup #welcome p {
+	width:340px;
+}
+/*Left column on the first Secondary Card page*/
+#secondary-invite-welcome #main-content {
+	padding-top:36px;	
+}
+#secondary-invite-welcome #main-content h2 {
+	font-size:2.084em;
+	color:#222;
+	margin-bottom:8px;
+}
+/*Confirmation data displays in the left column of Secondary Card pages*/
+#main-content dl.confirmation {
+	font-size:1.167em !important;
+	line-height:1.214em !important;
+	padding:0 0 13px;
+}
+#main-content dl.confirmation dd {
+	font-weight:bold;
+	color:#222;
+}
+#main-content dl#primary-cardholder-requesting {
+	padding:20px 0 32px;
+	background-image:url(../images/skin/bg-horizon-dot.gif);
+	background-position:0 bottom;
+	background-repeat:repeat-x;
+}
+/*Required* styling*/
+#required-star {
+	text-align:right;
+	padding:8px 0 15px;
+}
+#secondary-invite-welcome h3 {
+	font-size:1.167em !important;
+	line-height:1.5em !important;
+	color:#222;
+	padding-bottom:10px;
+}
+#secondary-invite-welcome h3#review-details, #secondary-card-request h3#review-details {
+	background-image:url(../images/skin/bg-horizon-dot.gif);
+	background-position:0 0;
+	background-repeat:repeat-x;
+}
+/*Right column of the Secondary Card pages*/
+.secondary-card-signup #aside {
+	padding-top:40px;
+}
+#secondary-invite-welcome #aside dt {
+	font-size:1.5em;
+	line-height:1.333em;
+	color:#222;
+	font-weight:normal;
+	padding:23px 0 6px;
+}
+#secondary-invite-review #main-content h2 {
+	color:#222;
+	padding:38px 0 22px;
+	margin-bottom:32px;
+	background-image:url(../images/skin/bg-horizon-dot.gif);
+	background-position:0 bottom;
+	background-repeat:repeat-x;
+}
+#secondary-invite-review dl#email-address {
+	padding-bottom:35px;
+}
+/*Page 2 of the Secondary Card pages*/
+#secondary-invite-review #main-content h3 {
+	margin-top:35px;
+	font-size:1.18em;
+	color:#222;
+	padding:15px 0 22px;
+	background-image:url(../images/skin/bg-horizon-dot.gif);
+	background-position:0 top;
+	background-repeat:repeat-x;
+}
+#secondary-invite-confirm #main-content h3 {
+	font-size:1.666em;
+	color:#222;
+	padding:40px 0 25px;
+}
+#secondary-invite-confirm #main-content h2 {
+	color:#222;
+	font-size:2.083em; 
+	line-height: 1.12em; 
+	margin:32px 0 2px;
+}
+#secondary-invite-confirm #print-option {
+	height:22px;
+	margin-bottom:38px;
+	background-image:url(../images/skin/bg-horizon-dot.gif);
+	background-position:0 bottom;
+	background-repeat:repeat-x;	
+}
+#secondary-invite-confirm #print-option a {
+	float:left;
+	background-position:0 0;
+	padding-left:21px;
+	padding-top:2px;
+}
+#secondary-invite-confirm #main-content #print-option p {
+	float:right;
+	text-align:right;
+	font-size:1em;
+}
+
+
+#secondary-invite-confirm #main-content .alert-box {
+	font-size:.9em;
+	background-color:#A6A6A6;
+	height:20px;
+	padding:2px 0 0 29px;
+}
+#secondary-invite-confirm #main-content .alert-box p {
+	color:#fff;
+	padding:0;
+}
+#secondary-invite-confirm #main-content h4, #secondary-invite-confirm #main-content p, #secondary-invite-confirm #main-content li {
+	font-size:1.167em;
+	line-height:1.428em;
+	color:#222;
+}
+#secondary-invite-confirm #main-content p {
+	padding-bottom:8px;
+}
+#secondary-invite-confirm #main-content h4 {
+	font-weight:bold;
+	padding-top:13px;
+}
+#secondary-invite-confirm #main-content p#print-page {
+	padding-bottom:10px;
+	font-size:1em;
+	line-height:1em;
+}
+#secondary-invite-confirm #main-content ul {
+	color:#222;
+}
+#secondary-invite-confirm #main-content li {
+	padding-left:10px;
+	background-image:url(../images/icons/bullet-square.gif);
+	background-position:0 10px;
+	background-repeat:no-repeat;
+}
+/*Right column of page 3 of the Secondary Card pages*/
+#secondary-invite-confirm #aside .aside-related-information {
+	background:none;
+}
+#secondary-invite-confirm #aside h4 {
+	font-size:1.5em;
+	color:#2A6EBB;
+	padding:33px 0 22px;
+}
+#secondary-invite-confirm #aside dl {
+	line-height:1.417em !important;	
+	color:#222;
+}
+#secondary-invite-confirm #aside dt {
+}
+#secondary-invite-confirm #aside dd {
+	font-weight:bold;
+	padding:0 0 13px;
+}
+#secondary-card-request #main-content h2 {
+	margin-bottom:0;
+}
+#requesting-cards-callout {
+	background-image:url(../images/skin/bg-horizon-dot.gif);
+	background-position:0 bottom;
+	background-repeat:repeat-x;
+	height:20px;
+	line-height:1.25em;
+}
+#requesting-cards-callout li {
+	float:right;
+}
+#secondary-card-request #main-content h3 {
+	font-size:1.167em !important;
+	line-height:1.214em !important;
+	color:#222;
+	margin-bottom:0;
+}
+#secondary-card-request #main-content h3#person-information {
+	width:360px;
+	padding:0 0 19px 19px;
+	text-indent:-19px;
+}
+.secondary-card-signup #main-content .alert-box p {
+
+}
+label.error {
+	margin-bottom:0;
+	font-style:italic;
+}
+#main-content input.text.error {
+	border-color:#ff2222;
+	border-width:2px;
+}
+#main-content select.error {
+	border-right: #ff2222 2px solid; 
+	border-top: #ff2222 2px solid; 
+	border-left: #ff2222 2px solid; 
+	border-bottom: #ff2222 2px solid; 
+	background-color: #fffffe; 
+}
+.secondary-fund #main-content h2 {
+	margin-bottom:25px;
+}
+.secondary-fund #main-content #required-star {
+	background-image:url(../images/skin/bg-horizon-dot.gif);
+	background-position:0 top;
+	background-repeat:repeat-x;	
+	margin-top:10px;
+}
+.secondary-fund #main-content dl {
+	font-size:1.167em;
+	line-height:1.357em;
+}
+#secondary-card-fund #main-content dl {
+	padding-bottom:33px;
+	margin-bottom:15px;
+	background-image:url(../images/skin/bg-horizon-dot.gif);
+	background-position:0 bottom;
+	background-repeat:repeat-x;
+}
+#secondary-card-fund #main-content dt {
+	padding-bottom:2px;
+}
+.secondary-fund #main-content input.text {
+	width:156px;
+	/*cursor:pointer;*/
+}
+.secondary-fund #main-content dd {
+	font-weight:bold;
+	padding-bottom:15px;
+}
+.secondary-fund #main-content dd span {
+	display:block;
+	font-weight:normal;
+}
+.secondary-fund h3 {
+	font-size:1.167em;
+	line-height:1.286em;
+	padding-top:14px;
+	background-image:url(../images/skin/bg-horizon-dot.gif);
+	background-position:0 top;
+	background-repeat:repeat-x;
+}
+.secondary-fund h3.review-funding-schedule-four_ {
+	margin-bottom:35px;
+}
+
+label#amount-to-fund {
+	font-size:1.167em;
+	padding:0 0 13px;
+}
+
+#main-content #terms-agreement {
+	height:58px;
+	padding-top:20px;
+	margin-bottom:16px;
+	background-image:url(../images/skin/bg-horizon-dot.gif);
+	background-position:0 bottom;
+	background-repeat:repeat-x;
+}
+#main-content #terms-agreement input, #main-content #terms-agreement label {
+	float:left;
+	margin:0;
+	clear:none;
+}
+#main-content #terms-agreement input {
+	clear:both;
+	margin-top:4px;
+}
+#main-content #terms-agreement label span {
+	display:block;
+	float:left;
+	padding-right:5px;
+	line-height:1.5em;
+}
+#main-content #terms-agreement a.p-u-i-toggle_ {
+	line-height:1.5em;
+	padding-top:1px;
+	position:relative;
+	display:block;
+}
+#main-content #terms-agreement div.terms-instructions {
+	position:relative;
+	float:left;
+}
+#secondary-card-fund h3#review-details {
+	padding:14px 0 0 19px;
+	text-indent:-19px;
+	margin:0 0 0 0;
+}
+
+#secondary-card-fund h3#review-details.extend-margin_ { margin-bottom:37px; }
+
+
+#main-content #terms-agreement label {
+	padding:1px 0 0 10px;
+}
+.secondary-fund a#edit-request-info {
+	float:none;
+	clear:both;
+}
+#secondary-card-fund-review #main-content h3 {
+	margin:40px 0 20px;
+}
+#secondary-card-fund-review #main-content dl,
+#secondary-card-review-request #main-content dl {
+	padding-top:35px;
+	background:url(../images/skin/bg-horizon-dot.gif) 0 0 repeat-x;
+	padding-bottom:24px;
+}
+
+#secondary-card-review-request #main-content dl {
+	
+	background-image:none;
+	
+}
+.secondary-fund #main-content input.date {
+	background-image:url(../images/icons/icon-calendar-field.gif);
+	background-position:147px 2px;
+	background-repeat:no-repeat;
+}
+.secondary-fund #main-content input#amount-to-fund {
+	margin-bottom:36px;
+}
+.secondary-fund #main-content h3#setup-schedule {
+	padding-bottom:12px;
+}
+#secondary-card-fund select {
+	margin-bottom:15px;
+}
+#secondary-card-fund input#end-funding-date {
+	margin-bottom:38px;
+}
+.secondary-cards-page hr {
+	border:0;
+	display:block;
+	outline: 0;
+	background:url(../images/skin/bg-horizon-dot.gif) 0 23px repeat-x;
+	height:25px;
+	clear:both;
+	margin:0 0 15px;
+}
+
+
+/* Secondary Card Review Request Page */
+
+#secondary-card-review-request { }
+
+
+	dl#primary-cardholder { 
+		padding-top:1px !important;
+		padding-bottom:13px !important;
+	}
+	
+	#secondary-card-review-request #verify-person-correct {
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 bottom;
+		padding-bottom: 14px;
+	}
+
+
+	#secondary-card-review-request #verify-person-correct input,
+	#secondary-card-review-request #verify-person-correct label { float:left; display:block; }
+	#secondary-card-review-request #verify-person-correct input { width:auto; margin-right:5px; }
+	#secondary-card-review-request #verify-person-correct label { clear:none; width:auto; padding:3px 0 0 0;}
+
+@-moz-document url-prefix() {
+
+	#secondary-card-review-request #verify-person-correct label {  padding:4px 0 0 0;}
+
+}
+
+
+	dl#secondary-cardholder-information { 
+		padding-top:14px !important;
+		padding-bottom:18px !important;
+	}
+
+	 h3.secondary-card-begin-notice { 
+			margin-top:37px !important;
+			margin-bottom:34px !important;
+			padding-top:13px !important;
+		}
+
+
+
+
+/* END : secondary-card-invite.css */
+
+/* Web Registration Look and feel */
+.closebuttonalign
+{
+margin-left: 380px;
+padding-left: 7px;
+border-right-width: 0px;
+margin-right: 30px;
+}
+
+.textalign
+{	
+margin-left:20px;margin-right:30px; margin-top:10px; width:370px;
+}
+
+.tipsheading
+{
+margin-left:20px;
+}
+
+.contentspace
+{
+width:418px;
+}
+
+.closeArrow
+{
+width:380px; font-family:Franklin Gothic Book;
+}
+
+.CVVLabelDimentions
+{
+top: -20px; width: 300px;
+}
+.CVVImageDimentions
+{
+float:right; margin-top:-110px; margin-right:0px;
+}
+.legendstyle
+{
+	top: -14px;
+}
+
+.auxillary-page #content p {
+   color: #737373;
+   font-family: arial,sans-serif;
+   font-size: 10pt;
+   margin-bottom: 15px;
+    width: 500px;
+}
+	
+.requiredmsg {
+float: right;
+}
+
+.padbotforccvtext
+{
+	margin-bottom:15px;
+}
+
+.divheight
+{
+	height:15px;
+}
+	
+.indexPageSignInPart
+{
+margin-right: 7px; padding-top:7px; margin-bottom: 5px;
+}
+	
+.indexPageFieldSet
+{
+	margin-right: 5px; padding-top: 5px;
+}
+.margin_right{
+	width: 300px;
+	float: left;
+}
+.textbox_margin{
+	margin-left:400px; padding-left:20px;
+	}
+	
+a.arrow-blue_ {
+	padding-left:11px;
+	background-image: url(../images/icons/brand/default/icon-arrow-blue.gif);
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+}
+select.state{
+	margin-top:-5px; 
+}
+.verifyinfo-td p{
+	margin:0;
+	padding:0;
+}
+/* Web Registration Look and feel ends*/
+/* Start:OFAC Changes*/
+.alert-box-ofac.information-message  {
+	background-image: url(../images/icons/icon-alert-information-non-transparent-red.gif);
+}
+
+
+.alert-box-ofac.information-message, .alert-box.warning-message {
+	background-position: 0 0;
+	background-repeat:no-repeat;
+	padding:4px 0 0 29px;
+	margin-bottom:6px;
+	height:18px;
+	background-color:#e1e1e0;
+	color:#222;
+}
+
+.alert-box-ofac.information-message-iat, .alert-box.warning-message {
+	background-position: 0 0;
+	background-repeat:no-repeat;
+	padding:4px 0 0 29px;
+	margin-bottom:6px;
+	height:36px;
+	background-color:#e1e1e0;
+	color:#222;
+}
+
+.alert-box-ofac.information-message.last_, .alert-box.warning-message.last_ {
+	margin-bottom:35px;
+}
+
+.alert-box-ofac, .alert-box-ofac p {
+	-moz-border-radius-topright:2px;
+	-moz-border-radius-bottomright:2px;
+	-webkit-border-top-right-radius:2px;
+	-webkit-border-bottom-right-radius:2px;
+	border-top-right-radius:2px;
+	border-bottom-right-radius:2px;
+}
+
+.alert-box-ofac.information-message p,
+.alert-box.warning-message p { background-image:none; }
+/* End:OFAC Changes*/
+
+
+/*IR8179125 changes start*/ 
+.addsup {  vertical-align: super; font-size:80%;}
+/*IR8179125  changes end*/
+
+.cashload{
+	margin-top:10px;
+	width:100%;		
+}
+.cashvend{
+	width:32%;
+	height:130px;
+	float:left;
+	text-align:center;
+	margin:5px 0 2px 5px;
+		
+}
+.cashvend img{
+	width:150px;
+	margin:15px 0 20px 0;
+}
+.cashvend a{
+	height:130px;
+	display:block;
+	
+}
+
+#cash-loads-page #content { 
+	background-color:#fff; 
+	width:950px; 
+	margin-left:11px; 
+	margin-bottom:0px;
+	padding-bottom:0px;
+}
+ 
+
+dl#account-piggy-balance { 
+	float:right; 
+	font-family:"Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium";
+	padding-top:14px;
+	padding-right:18px;
+	/* width:219px; */
+	height: 25px;
+}
+	
+#account-piggy-balance dt { }
+	#account-piggy-balance dt a {
+		display: block;
+		color: #fff;
+		padding-left: 11px;
+		/*background-image: url(../images/icons/icon-white-arrow-transparent.gif);*/
+		background-repeat: no-repeat;
+		background-position: 0 50%;
+		margin-bottom: 5px;
+}
+	
+td#account-piggy-balance { 
+	display: block;
+	color: #fff;
+	padding-left: 11px;
+	/*background-image: url(../../../images/icons/icon-white-arrow-transparent.gif);*/
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	margin-bottom: 5px;
+}
+td#account-piggy-balance-value { 
+		color:#fff; 
+		font-size:1.75em; line-height:1.333em;
+		padding-left:11px;
+}
+ a #skip-link {
+  padding: 6px;
+  position: absolute;
+  top: -30px;
+  left: 0px;
+  color: white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  border-bottom-right-radius: 8px;
+  background: transparent;
+  -webkit-transition: top 1s ease-out, background 1s linear;
+  transition: top 1s ease-out, background 1s linear;
+  z-index: 100;
+}
+a:focus{
+	padding:4px;
+}
+
+a#skip-link:focus{
+	padding:8px;
+	margin-left:120px;
+	border:1px #fff solid;	
+}
+
+a img:focus{
+	padding:0px;
+	border:1px #000 solid;
+}
+
+a img#head_logo:focus{
+	padding:0px;
+	border:1px #000 solid;
+}
+
+.locate-bank-link a:focus{
+		padding: 4px 4px 4px 27px;
+		border:1px #fff solid;
+}
+.bulkFormButton
+{
+    BACKGROUND: #727272;  
+    HEIGHT: 20px;
+    WIDTH: 140px;
+    TEXT-DECORATION: none;
+    FONT-FAMILY :arial;
+    FONT-SIZE: 8pt;
+    COLOR : #fff;
+    CURSOR: hand #000; 
+}
+input:focus {
+	padding:2px;
+	display:block;
+	border: 1px #000 solid;
+}
+a.white-transparent-arrow_:focus{
+	padding:0;
+	margin:0;
+	display:block;
+	border: 1px #000 solid;
+}
+.obscure { 
+position: absolute !important; 
+clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ 
+clip: rect(1px, 1px, 1px, 1px); 
+} 
+
+/***********************
+*P2P Transfers Starts
+************************/
+.money-out#my-transfers .instructions ul{ 
+		position:relative;
+		font-size:1.167em;
+		line-height: 1.45em;
+		margin:-2px 0 22px 0;
+		padding:1px 0 0 0;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 top;
+		color:#222;
+	}
+	
+.money-out#my-transfers #main-content h2,
+.money-out#mn-transfers #main-content h2,
+.money-out#p2p-transfers #main-content h2{
+        padding-bottom:0;
+        margin-bottom:2px;
+    }
+    
+.money-out#my-transfers #main-content ,
+.money-out#mn-transfers #main-content ,
+.money-out#p2p-transfers #main-content{
+        padding-bottom:0;
+        margin-bottom:2px;
+        font-weight:normal;
+        font-family:"Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium" !important;
+    }
+
+.money-out#my-transfers .instructions,
+.money-out#mn-transfers .instructions,
+.money-out#p2p-transfers .instructions
+ { margin-top:33px; margin-bottom:62px;}
+
+	.money-out#my-transfers .instructions h3,
+	.money-out#mn-transfers .instructions h3,
+.money-out#p2p-transfers .instructions h3{ 
+	font-size:1.167em;
+	line-height: 2em;
+		font-weight:normal; 
+	}
+	
+.money-out#mn-transfers .instructions ol,
+.money-out#p2p-transfers .instructions ol,
+.money-out#my-transfers .instructions ol{ 
+		position:relative;
+		list-style-type: decimal; 
+		font-size:1.167em;
+		line-height: 1.45em;
+		margin:-2px 0 22px 0;
+		padding:1px 0 0 0;
+		list-style-position:inside;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 top;
+		color:#222;
+	}
+	
+.money-out#mn-transfers .instructions ul,
+.money-out#p2p-transfers .instructions ul,	
+.money-out#my-transfers .instructions ul{ 
+		position:relative;
+		font-size:1.167em;
+		line-height: 1.45em;
+		margin:-2px 0 22px 0;
+		padding:1px 0 0 0;
+		background-image: url(../images/skin/bg-horizon-dot.gif);
+		background-repeat: repeat-x;
+		background-position: 0 top;
+		color:#222;
+	}
+	
+.money-out#mn-transfers #aside,
+.money-out#p2p-transfers #aside,	
+.money-out#my-transfers #aside{ 
+	padding-top:11px !important; float:left; 
+	}
+
+.money-out#mn-transfers .instructions li,
+.money-out#p2p-transfers .instructions li,
+  .money-out#my-transfers .instructions li{
+        background-image: url(../images/skin/bg-horizon-dot.gif);
+        background-repeat: repeat-x;
+        background-position: 0 bottom;
+        padding:13px 0 11px 0;
+    }
+
+	.instructions p.note { font-size:1em; line-height:1.45em; text-indent:-3.35em; padding:0 40px 0 3.45em; font-style:italic; }
+	
+	.instructions p.note strong {  }
+	
+.money-out#mn-transfers .instructions li span,
+.money-out#p2p-transfers .instructions li span,	
+			.money-out#my-transfers .instructions li span { padding-left:10px; }
+	
+/***********************	
+	*P2P Transfers Ends
+************************/
+/***********************	
+	*MN Consumer starts
+************************/
+.input-disabled{
+	border:none;
+	border-top:1px solid #acadb2;
+	border-right:1px solid #dcdfe6;
+	border-bottom:1px solid #e2e9ef;
+	border-left:1px solid #e2e3e8;
+	-moz-border-radius:2px;
+	padding:2px 5px;
+	font:normal 1em/1.333em "Franklin Gothic Book",verdana,arial,sans-serif,"Franklin Gothic Medium";
+	margin-bottom:14px;
+}
+/***********************	
+	*MN Consumer Ends
+************************/
+
+/***************************
+     ADA Classes
+**************************/
+
+a.current_:focus{
+	outline:3px solid #bbb;
+	z-index:10;
+}
+
+
+	span.close-message a:focus{		
+		outline:3px #bbb solid;		
+	}
+	
+	
+	div.tabbed-navigation li a.sideLink:focus,
+	div.tabbed-navigation li.active:focus{
+		outline:3px #bbb solid;		
+	}
+
+	a:hover,a:active{text-decoration:underline;}
+	
+	a:focus,img:focus,input:focus{
+		outline:3px #bbb solid;
+		 outline-offset:-3px;
+		}
+	.skip_,.move_{position:absolute; left:-9999px;}
+	.skip_:focus{left:auto;background:#fff;color:#000!important;z-index:10;padding:5px;} 
+	
+#global-nav	a:focus,
+#main-content a:focus,
+#main-content a img:focus,
+#main-content input:focus,
+#main-content select:focus,
+			#footer  a:focus{
+		 outline:3px #555 solid;
+		 outline-offset:-3px;
+		}  
+	
+	#session_reminder { 
+		display:none; 
+		}
+	#DOMWindow #session_reminder-wrap {
+		padding:6px 6px 0 16px;
+	    
+	    }
+	
+	#DOMWindow #session_reminder-wrap .close-window-button { line-height:1em; padding:0; }
+	
+		#DOMWindow #session_reminder-wrap .close-window-button img { 
+		cursor:pointer; 
+		float:right !important; 
+		display:block; 
+		line-height:1; 
+		}
+	
+	#DOMWindow #session_reminder-wrap	h3 {
+			font-size:1.167em !important;
+			line-height: 1.214em !important;
+			font-weight:bold !important;
+			color:#e31931 !important;
+			background-image: url(../images/icons/icon-alert-standalone.gif) !important;
+			padding:3px 0 3px 28px !important;
+			background-repeat: no-repeat !important;
+			background-position: 0 0 !important;
+		}
+	
+	#DOMWindow #session_reminder-wrap p.message {
+			font-size: 1em !important;
+			font-weight:bold;
+			line-height: 1.417em  !important;
+			background-repeat: repeat-x !important;
+			background-position: 0 bottom !important;
+			margin-bottom:13px !important;
+			margin-left:20px;
+		}
+
+    #DOMWindow #session_reminder-wrap #reminder_true, 
+	 #DOMWindow #session_reminder-wrap #reminder_modal_close{
+	       display:inline-block;
+	       padding:0;
+	       margin-left:20px;
+	       width:100px;
+	       background-color:#888;
+	       text-align:center;	 
+	       font-size: 1.1em;	      
+	       border-radius: 3px; 
+           -moz-border-radius: 3px; 
+           -webkit-border-radius: 3	px; 
+            border: 2px solid #888;
+	 }
+   
+   #DOMWindow #session_reminder-wrap #reminder_true a, 
+	 #DOMWindow #session_reminder-wrap #reminder_modal_close a{
+	         background-color:#888;
+	         color:#fff;
+	 
+	 }
+
+ .hidden{
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+ 
+div.tabbed-navigation li a:focus {
+	
+	outline:2px #bbb solid;				
+    z-index:1000;
+    outline-offset:-4px; 		    
+}
+
+/* #transfer-funds-automatic #main-content span#pos-datepick1{ */
+/* 	margin-left:168px; */
+/* 	margin-top:-36px; */
+/* } */
+#secondary-card-fund #fund-schedule span#pos-datepick1{
+	margin-left:168px;
+	margin-top:-36px;
+	float:left;
+}
+#online-billpay-page #main-content span#pos-datepick1,
+#online-billpay-page #main-content span#pos-datepick2{
+	margin-left:168px;
+	margin-top:-36px;
+	float:left;
+	
+}
+ #skip-link { position:absolute; top:0; left:-9999px; display:block; }
+	
+ #skip-link:focus { 
+	width:110px;
+	color:white;
+	z-index:1000;
+	top:10px;
+	left:auto;
+}
+.p2p_labels{
+	font-size:15px;
+	font-weight:bold;
+	float:left;
+	width:2em;
+	margin-left:10em;
+}
+
+ table.account-data thead th a,
+	    table.account-data thead th a:active,
+	    table.account-data thead th a:visited{
+	         color:#fff;
+	    }		
+ table#table-account-activity-1 thead th:focus,
+ table.dataTable th:focus{
+	          outline:2px #fff solid;
+	          outline-offset:-4px; 
+	    }	
+div.close-window-button img:focus{
+	outline:2px #bbb solid;	
+}
+
+/***************************
+     ADA Classes End
+**************************/	    
+	    
+	    
+	    		    
+/* PR15000791 : SAFC-Start */
+		
+#incorrect-pin-overlay1{ display:none; }
+#DOMWindow #incorrect-pin-overlay-wrap1 { 
+
+	padding:6px 6px 0 16px;
+
+}
+
+#incorrect-pin-overlay2 { display:none; }
+#DOMWindow #incorrect-pin-overlay-wrap2 { 
+
+	padding:6px 6px 0 16px;
+
+}
+
+#incorrect-pin-overlay3 { display:none; }
+#DOMWindow #incorrect-pin-overlay-wrap3 { 
+
+	padding:6px 6px 0 16px;
+
+}
+#DOMWindow #Exceded-retry-limit-phone1 .close-window-button img,#DOMWindow #Exceded-retry-limit-edit .close-window-button img ,#DOMWindow #Exceded-Resend-limit-phone .close-window-button img,#DOMWindow #Exceded-Resend-limit-edit .close-window-button img,
+#DOMWindow #edit_email_OTP_dom-wrap .close-window-button img,#DOMWindow #resend-limit-exceded-edit .close-window-button img,#DOMWindow #rety-limit-exceded-edit .close-window-button img,
+#DOMWindow #myprofile-lockout-wrap .close-window-button img,#DOMWindow #myprofile-lockout-phone-wrap .close-window-button img,#DOMWindow #myprofile-lockout-wrap-edit .close-window-button img,#DOMWindow #myprofile-lockout-phone-wrap-edit .close-window-button img,#DOMWindow #phone-lockout-wrap .close-window-button img,#DOMWindow #system-error-card-wrap .close-window-button img,#DOMWindow #system-error-wrap .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap1 .close-window-button img, #DOMWindow #incorrect-pin-overlay-wrap8 .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap9 .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap11 .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap4 .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap3 .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap2 .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap10 .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap2 .close-window-button img ,
+#DOMWindow #rety-limit-exceded .close-window-button img,#DOMWindow #resend-limit-exceded .close-window-button img,#DOMWindow #resend-limit-exceded-phone .close-window-button img,#DOMWindow #Exceded-retry-limit .close-window-button img,#DOMWindow #Exceded-retry-limit-phone .close-window-button img ,#DOMWindow #Exceded-Resend-limit .close-window-button img,
+#DOMWindow #Otp-lockout-limit .close-window-button img,#DOMWindow #Otp-lockout-limit-Edit .close-window-button img,#DOMWindow #verification-expire-limit .close-window-button img,#DOMWindow #Find-Security .close-window-button img ,#DOMWindow #validate-Security .close-window-button img,#DOMWindow #mobile_validation-wrap .close-window-button img,#DOMWindow #mobile_validation_textme-wrap .close-window-button img,#DOMWindow #mobile_validation_textme_verification_code-wrap .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap5 .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap6 .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap7 .close-window-button img{ 
+	cursor:pointer; float:right !important; display:block; line-height:1;
+	position: absolute;
+    left: 432px;
+    top: 15px;
+    width: 12px;
+    height: 16px;
+    white-space: nowrap;
+    color: #b70f0a;
+    font-weight: bold;
+    font-size: 12px;
+	 }
+.domWindowContentHeading{
+	position: absolute;
+    left: 67px;
+    top: 46px;
+    font-weight: bold;
+    width: 325px;
+    font-size: 14px;
+    font-family: Arial;
+    text-align: left;
+}
+.domWindowTextBox{
+    position: absolute;
+    left: 67px;
+    height: 30px;
+    top: 179px;
+    font-size: 14px;
+    width: 200px;
+    font-family: Arial;
+    text-align: left;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c0c0c0;
+}
+.domWindowTextBox3{
+    position: absolute;
+    left: 67px;
+    top: 181px;
+    
+    font-size: 14px;
+    width: 300px;
+    font-family: Arial;
+    text-align: left;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c0c0c0;
+     height: 26px;
+}
+.domWindowTextBox2{
+	
+	
+	position: absolute;
+    left: 67px;
+    top: 125px;
+   
+    font-size: 14px;
+    width: 300px;
+    font-family: Arial;
+    text-align: left;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c0c0c0;
+     height: 26px;
+	
+	
+}
+.domWindowButton{
+    position: absolute;
+    left: 286px;
+    top: 179px;
+    padding: 6px;  
+    font-size: 14px;
+    width: 94px;
+    font-family: Arial;
+    text-align: center;
+    height: 31px;
+    border: 1px solid rgb(192, 192, 192);
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+}
+.domWindowButton1{
+	position: absolute;
+    left: 320px;
+    top: 270px;
+    padding: 6px;
+    font-size: 14px;
+    width: 94px;
+    font-family: Arial;
+    text-align: center;
+    height: 30px;
+    border: 1px solid rgb(192, 192, 192);
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+}
+.domWindowResendInfo{
+	position: absolute;
+    left: 67px;
+    top: 219px;
+    color: #404040;
+    text-decoration: none;
+    width: 114px;
+    font-family:Arial;
+    font-size: 12px;
+    text-align: left;
+    height: 28px;
+}
+.domWindowResendLink{
+	display: inline-block;
+    color: #b70f0a;
+    font-size: 12px;
+	position: absolute;
+    left: 180px;
+    text-align: left;
+    top: 218px;
+    text-decoration: none;
+    width: 71px;
+    font-size: 12px;
+    height: 35px;
+}
+.domWindowResendLink1{
+	display: inline-block;
+    color: #b70f0a;
+    font-size: 14px;
+	position: absolute;
+    left: 270px;
+    top: 280px;
+    width: 71px;
+    
+    height: 28px;
+}
+.domWindowEmailMessage{
+	display: none;    
+    color: #b70f0a;
+    font-weight: bold;
+    font-size: 12px;
+    position: absolute;
+    left: 272px;
+    top: 220px;
+    white-space: nowrap;
+}
+
+#DOMWindow #incorrect-pin-overlay-wrap10 { 
+	padding:6px 6px 0 16px;
+}
+#DOMWindow #incorrect-pin-overlay-wrap10 .close-window-button { line-height:1em; padding:0; }
+.domWindowCancelLink{
+	display: inline-block;
+    color: #b70f0a;
+    font-size: 14px;
+	position: absolute;
+    left: 230px;
+    top: 210px;
+    width: 71px;
+    height: 28px;
+    text-decoration:none;
+}
+
+.domWindowNextButton{
+	position: absolute;
+    left: 320px;
+    top: 200px;
+    padding: 6px; 
+    font-size: 14px;
+    width: 94px;
+    font-family: Arial;
+    text-align: center;
+    height: 30px;
+    border: 1px solid rgb(192, 192, 192);
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+}
+
+.domWindowPhoneTextBox{
+    position: absolute;
+    left: 67px;
+    top: 150px;
+    
+    font-size: 14px;
+    width: 300px;
+    font-family: Arial;
+    text-align: left;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c0c0c0;
+     height: 26px;
+}
+.domWindowTextBox1{
+    position: absolute;
+    left: 67px;
+    top: 170px;
+    font-size: 14px;
+    width: 300px;
+    font-family: Arial;
+    text-align: left;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c0c0c0;
+     height: 26px;
+}
+.domWindowTextBox2{
+	
+	
+	position: absolute;
+    left: 67px;
+    top: 125px;
+   
+    font-size: 14px;
+    width: 300px;
+    font-family: Arial;
+    text-align: left;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c0c0c0;
+     height: 26px;
+	
+	
+}
+.domWindowCancelLink1{
+	display: inline-block;
+    color: #b70f0a;
+    font-size: 14px;
+	position: absolute;
+    left: 230px;
+    top: 220px;
+    width: 71px;
+    
+    height: 28px;
+}
+.domWindowCancelLink3{
+	display: inline-block;
+    color: #b70f0a;
+    font-size: 14px;
+	position: absolute;
+    left: 230px;
+    top: 230px;
+    width: 71px;
+    
+    height: 28px;
+}
+.domWindowNextButton1{
+	position: absolute;
+    left: 320px;
+    top: 215px;
+    padding: 6px;
+    font-size: 14px;
+    width: 94px;
+    font-family: Arial;
+    text-align: center;
+    height: 30px;
+    border: 1px solid rgb(192, 192, 192);
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+}
+#DOMWindow #Exceded-retry-limit-phone1 .close-window-button img,#DOMWindow #Exceded-retry-limit-edit .close-window-button img ,#DOMWindow #Exceded-Resend-limit-phone .close-window-button img,#DOMWindow #Exceded-Resend-limit-edit .close-window-button img,
+#DOMWindow #edit_email_OTP_dom-wrap .close-window-button img,#DOMWindow #resend-limit-exceded-edit .close-window-button img,#DOMWindow #rety-limit-exceded-edit .close-window-button img,
+#DOMWindow #myprofile-lockout-wrap .close-window-button img,#DOMWindow #myprofile-lockout-phone-wrap .close-window-button img,#DOMWindow #myprofile-lockout-wrap-edit .close-window-button img,#DOMWindow #myprofile-lockout-phone-wrap-edit .close-window-button img,#DOMWindow #phone-lockout-wrap .close-window-button img,#DOMWindow #system-error-card-wrap .close-window-button img,#DOMWindow #system-error-wrap .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap8 .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap9 .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap11 .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap4 .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap3 .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap2 .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap10 .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap2 .close-window-button img ,
+#DOMWindow #rety-limit-exceded .close-window-button img,#DOMWindow #resend-limit-exceded .close-window-button img,#DOMWindow #resend-limit-exceded-phone .close-window-button img,#DOMWindow #Exceded-retry-limit .close-window-button img,#DOMWindow #Exceded-retry-limit-phone .close-window-button img ,#DOMWindow #Exceded-Resend-limit .close-window-button img,#DOMWindow #security_Question2-wrap1 .close-window-button img,
+#DOMWindow #Otp-lockout-limit .close-window-button img,#DOMWindow #Otp-lockout-limit-Edit .close-window-button img,#DOMWindow #verification-expire-limit .close-window-button img,#DOMWindow #Find-Security .close-window-button img ,#DOMWindow #validate-Security .close-window-button img,#DOMWindow #mobile_validation-wrap .close-window-button img,#DOMWindow #mobile_validation_textme-wrap .close-window-button img,#DOMWindow #mobile_validation_textme_verification_code-wrap .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap5 .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap6 .close-window-button img,#DOMWindow #incorrect-pin-overlay-wrap7 .close-window-button img{ 
+	cursor:pointer; float:right !important; display:block; line-height:1;
+	position: absolute;
+    left: 432px;
+    top: 15px;
+    width: 12px;
+    height: 16px;
+    white-space: nowrap;
+    color: #b70f0a;
+    font-weight: bold;
+    font-size: 12px;
+	 }
+.domWindowContent {
+	 position:absolute;
+	 left:67px;
+	 top:75px; 
+	 font-weight:normal;
+	 text-decoration:none; 
+	 width:325px; 
+	 font-size:12px;
+	 font-family:Arial;
+	 line-height:1; 
+	 text-align:left; 
+	 height:80px;
+}
+.domWindowContent1 {
+	 position:absolute;
+	 left:67px;
+	 top:175px; 
+	 font-weight:normal;
+	 text-decoration:none; 
+	 width:325px; 
+	 font-size:12px;
+	 font-family:Arial;
+	 line-height:1; 
+	 text-align:left; 
+	 height:80px;
+}
+.domWindowTextBox1{
+    position: absolute;
+    left: 67px;
+    top: 164px;
+    font-size: 14px;
+    width: 300px;
+    font-family: Arial;
+    text-align: left;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c0c0c0;
+     height: 26px;
+}
+.domWindowCenterButton{
+	position: absolute;
+    left: 90px;
+    top: 130px;
+    padding: 6px;
+    font-size: 14px;
+    width: 200px;
+    font-family: Arial;
+    text-align: center;
+    height: 31px;
+    border: 1px solid rgb(192, 192, 192);
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+}
+.domWindowNextButton1{
+	position: absolute;
+    left: 320px;
+    top: 225px;
+    padding: 6px;
+    font-size: 14px;
+    width: 94px;
+    font-family: Arial;
+    text-align: center;
+    height: 30px;
+    border: 1px solid rgb(192, 192, 192);
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+}
+.domWindowResendLink2{
+	display: inline-block;
+    color: #b70f0a;
+    font-size: 14px;
+	position: absolute;
+    left: 270px;
+    top: 280px;
+    width: 71px;
+    height: 28px;
+}
+.domWindowCancelLink2{
+	display: inline-block;
+    color: #b70f0a;
+    font-size: 14px;
+	position: absolute;
+    left: 230px;
+    top: 227px;
+    width: 71px;
+    
+    height: 28px;
+}
+
+/* PR15000791 : SAFC-END */
+
+/* CBR start */
+
+.quoteElements
+{
+	color: white ; 
+	background-color: #737373 ; 
+	width:200px; height: 30% ; 
+	padding-left: 2% ; 
+	padding-top: 1% ;
+	padding-bottom:1% ;
+	border-bottom: solid #fff;
+	font-size: 120%;
+}
+input.quoteId, input.invQuoteId{
+	padding-left: 5px ;
+	padding-right: 5px ; 
+}
+.quoteData
+{
+	color: #737373 ;	
+	height: 30% ; 
+	padding-left: 2% ; 
+	padding-top: 1% ; 
+	font-size: 120%;
+}
+td.quoteData{
+	border:1px #999 solid;
+    border-collapse: collapse;
+}
+td.quoteDataRed{
+	border:1px #999 solid;
+    border-collapse: collapse;
+}
+td.quoteRadio{
+	
+	
+}
+.quoteRadio
+{
+	color: #737373 ; 
+	width:160px;	
+}
+.quoteRadioText
+{
+	color: #737373 ;	
+	margin-right:60px ; 
+	margin-top:-15px;
+	font-size: 120%;
+	float:right;	 
+}
+
+.separator
+{
+	 color: white ;
+	 background-color: white  ; 
+	
+	 height: 0.5% ;
+}
+
+
+.quoteEmptyHeader
+{
+	color: white ; 
+	background-color: white  ; 
+	
+	height: 30% ; 
+	padding-left: 2% ; 
+	padding-top: 1% ; 
+	font-size: 120%;
+}
+.quoteTable1{  
+    border:1px #999 solid;
+    border-collapse: collapse;
+}
+.quoteDataRed
+{
+	
+	color: red ; 
+	height: 30% ; 
+	padding-left: 2% ; 
+	padding-top: 1% ; 
+	font-size: 120%;
+
+}
+
+.viewHistory{
+background-color:#e1e1e1; 
+padding-left: 2%; 
+padding-top: 0.1%;
+height: 30% ; 
+}
+
+.irtCancelLink{
+	display: inline-block;
+    color: #b70f0a;
+    font-size: 14px;
+    width: 95px;
+    height: 28px;
+    text-decoration:underline;
+   
+}
+.irtContinueButton{
+	color: white ; 
+	background-color: #737373 ; 
+    text-align: center;
+	font-size: 100%;
+	touch-action: manipulation;
+	border: 1px solid rgb(192, 192, 192);
+    background-repeat: no-repeat;
+    display:block;
+    width:170px;
+    height:24px;
+}
+
+.irtAcceptQuoteButton
+{
+  color: white ; 
+  background-color :#737373 ; 
+  text-align :center ;
+  display:block; 
+}
+
+.irtPrintButton
+{
+	color: white ; 
+	background-color: #737373 ; 
+    text-align: center;
+	padding-left: 3.5% ; 
+	padding-right: 3.5% ; 
+	padding-top: 0.8% ;
+	padding-bottom:0.8% ;
+	font-size: 100%;
+	touch-action: manipulation;
+	border: 1px solid rgb(192, 192, 192);
+    background-repeat: no-repeat;
+}
+.irtHistoryCancelLink
+{
+	display: inline-block;
+    font-size: 12px;
+    text-decoration:underline;
+}
+#DOMWindow #cancelLink_history-wrap p.message {
+			font-size: 1em !important;
+			font-weight:bold;
+			line-height: 1.417em  !important;
+			background-repeat: repeat-x !important;
+			background-position: 0 bottom !important;
+			padding-left: 10% ; 
+	        padding-right: 10% ; 
+	        padding-top: 10% ;
+			margin-bottom:13px !important;
+			margin-left:20px;
+		}
+
+    #DOMWindow #cancelLink_history-wrap #reminder_true, 
+	 #DOMWindow #cancelLink_history-wrap #reminder_modal_close{
+	       display:inline-block;
+	       margin-left:10%;
+	       width:100px;
+	       background-color:#888;
+	       text-align:center;	 
+	       font-size: 1.1em;	      
+	       border-radius: 3px; 
+           -moz-border-radius: 3px; 
+           -webkit-border-radius: 3	px; 
+            border: 2px solid #888;
+            
+            
+	 }
+   
+   #DOMWindow #cancelLink_history-wrap #reminder_true a, 
+	 #DOMWindow #cancelLink_history-wrap #reminder_modal_close a{
+	         background-color:#888;
+	         color:#fff;
+	        
+	 
+	 }
+	 .greyBanner{
+	background-color:#e1e1e1; 
+	height: 44px;
+	padding-left:10px;
+	margin-bottom:7px; 
+}
+
+#continue-button-welcome:disabled  {
+    background-color: white; 
+    color: #d3d3d3 ; 
+}
+#main-content input#continue-button-welcome {
+	float:left;
+	margin-right:20px;
+}
+
+
+
+/* CBR END */
+
+/* PR15000791 : SAFC_2 Start */
+#DOMWindow #mobile_validation_textme_verification_code_MFA-wrap .close-window-button1 img ,#email-me-dom-overlay-wrap .close-window-button1 img{ 
+	cursor:pointer; float:right !important; display:block; line-height:1;
+	position: absolute;
+    left: 432px;
+    top: 15px;
+    width: 12px;
+    height: 16px;
+    white-space: nowrap;
+    color: #b70f0a;
+    font-weight: bold;
+    font-size: 12px; 
+}
+.revokeButton
+{   
+	color: white ; 
+	background-color: #737373 ; 
+    text-align: center;
+	padding-left: 3.5% ; 
+	padding-right: 3.5% ; 
+	padding-top: 0.8% ;
+	padding-bottom:0.8% ;
+	font-size: 100%;
+	touch-action: manipulation;
+	border: 1px solid rgb(192, 192, 192);
+    background-repeat: no-repeat;
+}
+
+/* IE10+ */
+::-ms-clear {
+  display: none;
+}
+
+/* PR15000791 : SAFC_2 END */ 
+
+/* PR15000791 : SAFC_2 Start__for mobile popup changes */
+#DOMWindow #Exceded-retry-limit-phone-textme .close-window-button img,
+#DOMWindow #resend-limit-exceded-phone-textme .close-window-button img,
+#DOMWindow #Exceded-retry-limit-phone-textme .close-window-button img,
+#DOMWindow #Exceded-Resend-limit-phone-textme .close-window-button img,
+#DOMWindow #mobile_validation_textme_verification_code-wrap-textme .close-window-button img,
+#DOMWindow #phone-lockout-wrap-textme .close-window-button img
+{ 
+	cursor:pointer; float:right !important; display:block; line-height:1;
+	position: absolute;
+    left: 432px;
+    top: 15px;
+    width: 12px;
+    height: 16px;
+    white-space: nowrap;
+    color: #b70f0a;
+    font-weight: bold;
+    font-size: 12px;
+	 }
+
+
+#DOMWindow #Exceded-retry-limit-phone-textme .close-window-button img,
+#DOMWindow #resend-limit-exceded-phone-textme .close-window-button img,
+#DOMWindow #Exceded-retry-limit-phone-textme .close-window-button img,
+#DOMWindow #Exceded-Resend-limit-phone-textme .close-window-button img,
+#DOMWindow #mobile_validation_textme_verification_code-wrap-textme .close-window-button img,
+#DOMWindow #phone-lockout-wrap-textme .close-window-button img
+{
+cursor:pointer; float:right !important; display:block; line-height:1;
+	position: absolute;
+    left: 432px;
+    top: 15px;
+    width: 12px;
+    height: 16px;
+    white-space: nowrap;
+    color: #b70f0a;
+    font-weight: bold;
+    font-size: 12px;
+	 }
+
+/* PR15000791 : SAFC_2 END */ 
+
+/* GPR PHASE2 */
+.inviteCodeButton
+{
+	color: white;
+	background-color: #004165;
+	text-align: center;
+    width: 106px;
+    height: 30px;
+    -web-kit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+	
+}
+#main-content .errorMessages:focus {
+	padding: 0px;
+	display: block;
+	border: 0px; 
+	outline: 0px;
+	outline-offset: 0px;
+}
+div#userauthentication_Information{
+	margin-top:30px;
+}
+#loader {
+  display: none; }
+/* Progress Loading */
+.progress-loading {
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999; }
+  .progress-loading .loading {
+    display: table;
+    height: 100%;
+    width: 100%; }
+    .progress-loading .loading .loading-img {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
+      height: 100%; }
+      .progress-loading .loading .loading-img img {
+        width: 90px;
+        height: 90px;
+        position: fixed;
+        top: 50%;
+        left: 50%; }
+    .progress-loading .loading p {
+      color: #ffffff;
+      font-size: 18px;
+      padding-top: 5px; }
+
+
+.modal-open {
+  overflow: hidden; }
+
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 40%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0; }
+  .modal.fade .modal-dialog {
+    -webkit-transform: translate(0, -25%);
+    -ms-transform: translate(0, -25%);
+    -o-transform: translate(0, -25%);
+    transform: translate(0, -25%);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
+  .modal.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px; }
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
+  outline: 0; }
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000; }
+  .modal-backdrop.fade {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  .modal-backdrop.in {
+    opacity: 0.5;
+    filter: alpha(opacity=50); }
+
+.modal-header {
+  padding: 15px;
+  min-height: 16.42857px; }
+
+.modal-header .close {
+  margin-top: -2px; }
+
+.modal-title {
+  margin: 0;
+  line-height: 1.42857; }
+
+.modal-body {
+  position: relative;
+  padding: 15px; }
+
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5; }
+  .modal-footer:before, .modal-footer:after {
+    content: " ";
+    display: table; }
+  .modal-footer:after {
+    clear: both; }
+  .modal-footer .btn + .btn {
+    margin-left: 5px;
+    margin-bottom: 0; }
+  .modal-footer .btn-group .btn + .btn {
+    margin-left: -1px; }
+  .modal-footer .btn-block + .btn-block {
+    margin-left: 0; }
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll; }
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto; }
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
+  .modal-sm {
+    width: 300px; } }
